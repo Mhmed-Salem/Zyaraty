@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Mr\.Rider2019.2\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Mr\.Rider2019.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Mr\.Rider2019.2\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\Mr\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Mr\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Zyarat.-2055810152.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Mr\source\repos\Zyarat" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Zyarat" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contract" t="Include">
+          <e p="MedicalRepsContracts" t="Include">
+            <e p="UpdateRepResource.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="MedicalRepController.cs" t="Include" />
+          <e p="WeatherForecastController.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="ApplicationContext.cs" t="Include" />
+          <e p="City.cs" t="Include" />
+          <e p="Doctor.cs" t="Include" />
+          <e p="Evaluation.cs" t="Include" />
+          <e p="Government.cs" t="Include" />
+          <e p="MedicalRep.cs" t="Include" />
+          <e p="MedicalRepPosition.cs" t="Include" />
+          <e p="MedicalSpecialized.cs" t="Include" />
+          <e p="RefreshingToken.cs" t="Include" />
+          <e p="Visit.cs" t="Include" />
+          <e p="VisitBlocking.cs" t="Include" />
+          <e p="VisitReport.cs" t="Include" />
+        </e>
+        <e p="favicon.ico" t="Include" />
+        <e p="Helpers" t="Include">
+          <e p="Delegates.cs" t="Include" />
+        </e>
+        <e p="Mapping" t="Include">
+          <e p="AutoMapping.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20200715192203_init.cs" t="Include" />
+          <e p="20200715192203_init.Designer.cs" t="Include" />
+          <e p="20200715200636_init2.cs" t="Include" />
+          <e p="20200715200636_init2.Designer.cs" t="Include" />
+          <e p="20200715200958_init3.cs" t="Include" />
+          <e p="20200715200958_init3.Designer.cs" t="Include" />
+          <e p="20200715201927_init5.cs" t="Include" />
+          <e p="20200715201927_init5.Designer.cs" t="Include" />
+          <e p="20200715202207_init6.cs" t="Include" />
+          <e p="20200715202207_init6.Designer.cs" t="Include" />
+          <e p="20200717093312_add Blocking.cs" t="Include" />
+          <e p="20200717093312_add Blocking.Designer.cs" t="Include" />
+          <e p="20200717095051_add Visi Report.cs" t="Include" />
+          <e p="20200717095051_add Visi Report.Designer.cs" t="Include" />
+          <e p="20200717125009_add BlockOrUnBlockedToComment.cs" t="Include" />
+          <e p="20200717125009_add BlockOrUnBlockedToComment.Designer.cs" t="Include" />
+          <e p="20200718151419_Add Image toRep.cs" t="Include" />
+          <e p="20200718151419_Add Image toRep.Designer.cs" t="Include" />
+          <e p="20200718224102_Add Refresh Tokens.cs" t="Include" />
+          <e p="20200718224102_Add Refresh Tokens.Designer.cs" t="Include" />
+          <e p="ApplicationContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="DTO" t="Include">
+            <e p="CityDto.cs" t="Include" />
+            <e p="DoctorDto.cs" t="Include" />
+            <e p="EvaluationDto.cs" t="Include" />
+            <e p="GovernmentDto.cs" t="Include" />
+            <e p="IdentityUserDto.cs" t="Include" />
+            <e p="MedicalRepDto.cs" t="Include" />
+            <e p="MedicalRepPositionDto.cs" t="Include" />
+            <e p="MedicalSpecializationDto.cs" t="Include" />
+            <e p="VisitBlockingDto.cs" t="Include" />
+            <e p="VisitDto.cs" t="Include" />
+            <e p="VisitReportDto.cs" t="Include" />
+          </e>
+          <e p="Repositories" t="Include">
+            <e p="ContextRepo.cs" t="Include" />
+            <e p="MedicalRepRepo" t="Include">
+              <e p="IMedicalRepRepo.cs" t="Include" />
+              <e p="MedicalRepRepo.cs" t="Include" />
+            </e>
+          </e>
+          <e p="RequestResponseInteracting" t="Include">
+            <e p="Response.cs" t="Include" />
+          </e>
+          <e p="Services" t="Include">
+            <e p="FileService.cs" t="Include" />
+            <e p="IdentityServices" t="Include">
+              <e p="IdentityService.cs" t="Include" />
+              <e p="IIdentityUser.cs" t="Include" />
+              <e p="TokenAndRefresh.cs" t="Include" />
+            </e>
+            <e p="IUnitWork.cs" t="Include" />
+            <e p="MedicalRepService" t="Include">
+              <e p="IMedicalRepService.cs" t="Include" />
+              <e p="MedicalRepService.cs" t="Include" />
+            </e>
+            <e p="UnitWork.cs" t="Include" />
+          </e>
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="Zyarat.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Options" t="Include">
+          <e p="JWTSettings.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+          <e p="PublishProfiles" t="Include">
+            <e p="FolderProfile.pubxml" t="Include" />
+          </e>
+        </e>
+        <e p="Resources" t="Include">
+          <e p="AddMedicalRepResourcesRequest.cs" t="Include" />
+          <e p="ModifyMedicalRepResourcesRequest.cs" t="Include" />
+          <e p="RegisterServiceResult.cs" t="Include" />
+        </e>
+        <e p="Responses" t="Include">
+          <e p="MedicalRepResponses" t="Include">
+            <e p="GetMedicalRepResponse.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="WeatherForecast.cs" t="Include" />
+        <e p="wwwroot" t="Include">
+          <e p="189ec2e6-92eb-4c3a-b5a2-9dfbfdc9f3f7_21743589_1162103990588313_3722657498792333203_o.jpg" t="Include" />
+          <e p="230a8862-cc61-48e4-a458-db1c6651d061_كو 1.png" t="Include" />
+          <e p="3b879ea5-7818-4b4a-821f-37af381cfb52_كو 1.png" t="Include" />
+          <e p="5b796cb4-4da0-45dc-be23-d5d4148cef5c_كو 1.png" t="Include" />
+          <e p="6d66ecb0-575d-41a2-bd30-1a2b434ac733_كو 1.png" t="Include" />
+          <e p="7946c7f1-4a78-4d8a-b7a5-c030a16d9d4f_9_e5eb8e98cc - Copy.jpg" t="Include" />
+          <e p="8165c873-e9b0-4cf1-b2c8-c165af25b16c_كو 1.png" t="Include" />
+          <e p="8ac636cf-a79a-49db-aa43-4bc0cb4e5fc6_12313714_10153402663370345_8983252820405287690_n.jpg" t="Include" />
+          <e p="8b108acc-fa22-40be-a137-367032429fd4_كو 1.png" t="Include" />
+          <e p="8da5c042-608c-46b8-937b-235db559ab79_كو 1.png" t="Include" />
+          <e p="937925b1-dbbf-45e9-9164-136d98187eaf_كو 1.png" t="Include" />
+          <e p="95f9e696-da7f-4d40-8a13-2fc46cf697c2_كو 1.png" t="Include" />
+          <e p="97d9331d-4cc1-43f9-8dc7-4c795a1ac21a_كو 1.png" t="Include" />
+          <e p="9fcec17b-c946-4d0c-8c88-de5f05820c99_كو 1.png" t="Include" />
+          <e p="ae7dae42-d9bc-4410-a3ce-f2c4245d6e31_كو 1.png" t="Include" />
+          <e p="b445eeba-0450-41b1-9748-7bc1e82449a8_كو 1.png" t="Include" />
+          <e p="c0316131-27b6-4de0-8ec6-180f0fa07fe3_كو 1.png" t="Include" />
+          <e p="cb79e949-9f5f-4ca8-bb8b-0b03c7b25802_كو 1.png" t="Include" />
+          <e p="cf1918ed-75dd-4c7d-b822-c4d11085b167_كو 1.png" t="Include" />
+          <e p="e9c25ff2-596c-4570-9a06-e2eb00986c68_كو 1.png" t="Include" />
+          <e p="f60e3a0c-5a73-483a-8358-009fd6c83072_12313714_10153402663370345_8983252820405287690_n.jpg" t="Include" />
+          <e p="كو 1.png" t="Include" />
+        </e>
+        <e p="Zyarat.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Zyarat.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
