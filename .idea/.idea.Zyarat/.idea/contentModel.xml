@@ -16,10 +16,13 @@
           <e p="MedicalRepsContracts" t="Include">
             <e p="UpdateRepResource.cs" t="Include" />
           </e>
+          <e p="VisitsContracts" t="Include">
+            <e p="AddVisitContract.cs" t="Include" />
+          </e>
         </e>
         <e p="Controllers" t="Include">
           <e p="MedicalRepController.cs" t="Include" />
-          <e p="WeatherForecastController.cs" t="Include" />
+          <e p="VisitController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="ApplicationContext.cs" t="Include" />
@@ -36,6 +39,11 @@
           <e p="VisitReport.cs" t="Include" />
         </e>
         <e p="favicon.ico" t="Include" />
+        <e p="Handlers" t="Include">
+          <e p="DeletingVisitsHandler.cs" t="Include" />
+          <e p="IMedicalRepHandler.cs" t="Include" />
+          <e p="MedicalRepHandlers.cs" t="Include" />
+        </e>
         <e p="Helpers" t="Include">
           <e p="Delegates.cs" t="Include" />
         </e>
@@ -63,6 +71,10 @@
           <e p="20200718151419_Add Image toRep.Designer.cs" t="Include" />
           <e p="20200718224102_Add Refresh Tokens.cs" t="Include" />
           <e p="20200718224102_Add Refresh Tokens.Designer.cs" t="Include" />
+          <e p="20200719174358_Add visit Type.cs" t="Include" />
+          <e p="20200719174358_Add visit Type.Designer.cs" t="Include" />
+          <e p="20200719174724_Add visit Type2.cs" t="Include" />
+          <e p="20200719174724_Add visit Type2.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -70,6 +82,8 @@
             <e p="CityDto.cs" t="Include" />
             <e p="DoctorDto.cs" t="Include" />
             <e p="EvaluationDto.cs" t="Include" />
+            <e p="GetVisitByCityDto.cs" t="Include" />
+            <e p="GetVisitDto.cs" t="Include" />
             <e p="GovernmentDto.cs" t="Include" />
             <e p="IdentityUserDto.cs" t="Include" />
             <e p="MedicalRepDto.cs" t="Include" />
@@ -85,6 +99,10 @@
               <e p="IMedicalRepRepo.cs" t="Include" />
               <e p="MedicalRepRepo.cs" t="Include" />
             </e>
+            <e p="VisitsRepo" t="Include">
+              <e p="IVisitsRepo.cs" t="Include" />
+              <e p="VisitRepo.cs" t="Include" />
+            </e>
           </e>
           <e p="RequestResponseInteracting" t="Include">
             <e p="Response.cs" t="Include" />
@@ -97,6 +115,12 @@
               <e p="TokenAndRefresh.cs" t="Include" />
             </e>
             <e p="IUnitWork.cs" t="Include" />
+            <e p="IVisitService" t="Include">
+              <e p="VisitsServices" t="Include">
+                <e p="IVisitService.cs" t="Include" />
+                <e p="VisitService.cs" t="Include" />
+              </e>
+            </e>
             <e p="MedicalRepService" t="Include">
               <e p="IMedicalRepService.cs" t="Include" />
               <e p="MedicalRepService.cs" t="Include" />

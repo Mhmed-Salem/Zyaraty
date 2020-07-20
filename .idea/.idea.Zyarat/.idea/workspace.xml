@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61e5f741-d18f-472a-b68f-00b96601b2b7" name="Default Changelist" comment="" />
+    <list default="true" id="61e5f741-d18f-472a-b68f-00b96601b2b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Zyarat/Contract/VisitsContracts/AddVisitContract.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/VisitController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/DeletingVisitsHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/IMedicalRepHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepHandlers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitByCityDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/IVisitsRepo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/VisitRepo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/IVisitService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/Visit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/Visit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +49,9 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Zyarat" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IIdentityUser.cs" root0="FORCE_HIGHLIGHTING" />
@@ -54,13 +82,17 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Visit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/WeatherForecastController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/AddMedicalRepResourcesRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Helpers/Delegates.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/VisitController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/CityDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/VisitBlocking.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/869E6C21-96FE-460F-9B92-1C6D00DF784B/52/cc47a340/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/DeletingVisitsHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/VisitReport.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/MedicalRepHandlers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/IMedicalRepHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/DoctorDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/EvaluationDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/GovernmentDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -68,13 +100,20 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/MedicalRepPositionDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/MedicalSpecializationDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/VisitDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/IVisitService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/VisitBlockingDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/VisitReportDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/IdentityUserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AABF22C8-0443-4F75-A371-6B76C765A950/3f/ed22cba9/Profile.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitByCityDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/VisitRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Contract/MedicalRepsContracts/UpdateRepResource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/FileService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Contract/VisitsContracts/AddVisitContract.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/IVisitsRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetMedicalRepResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/TokenAndRefresh.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/ModifyMedicalRepResourcesRequest.cs" root0="FORCE_HIGHLIGHTING" />
@@ -86,27 +125,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/V1/MedicalRepControllers/MedicalRepController.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Contracting/User.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Contracting/UserContract/Request.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Contracting/UserContract/Response/UserDtoResponse.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Contracting/MedicalRepContract/Response/MedicalRepDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/City.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/MdicalRepPositionDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/MedicalSpecialization.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/DoctorDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/EvaluationDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/GovernmentDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/MedicalRepDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/MedicalRepPositionDto.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/MedicalSpecializationDto.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/VisitBlockingDto.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/VisitReport.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/VisitReportDto.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/VisitBlocking.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/VisitDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/Visit.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Contract/MedicalRepsContracts/UpdateRepResource.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Resources/MedicalRepResources.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/IdentityUserDto.cs" />
@@ -123,24 +147,40 @@
         <option value="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IIdentityUser.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Startup.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/TokenAndRefresh.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Resources/AddMedicalRepResourcesRequest.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/CityDto.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetMedicalRepResponse.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Helpers/Delegetes.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Helpers/Delegates.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/FileService.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Contract/VisitsContracts/AddVisitContract.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/Visit.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/IVisitService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/IVisitsRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Handlers/DeletingVisitsHandler.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/WeatherForecastController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitByCityDto.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitDto.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/IVisitService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Handlers/IMedicalRepHandler.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Startup.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/VisitController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/VisitRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepHandlers.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1ejK6Saf4hDGHy8SNpEiJEBVWF0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
@@ -164,7 +204,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Publish to custom server.Publish Zyarat to custom server">
+  <component name="RunManager" selected=".NET Launch Settings Profile.Zyarat">
     <configuration name="Publish Zyarat to custom server" type="DotNetPublishAndUpload" factoryName="Publish to custom server" temporary="true">
       <riderPublish uuid_high="-1623461268325774223" uuid_low="-6493439613717727812" />
       <method v="2" />
@@ -227,7 +267,8 @@
       <workItem from="1595104551932" duration="532000" />
       <workItem from="1595105251300" duration="11202000" />
       <workItem from="1595163259713" duration="6729000" />
-      <workItem from="1595174234402" duration="2611000" />
+      <workItem from="1595174234402" duration="16572000" />
+      <workItem from="1595229975364" duration="17109000" />
     </task>
     <servers />
   </component>
@@ -236,6 +277,19 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
   </component>
@@ -312,19 +366,6 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs</url>
-          <line>104</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" initialLine="104">
-            <startOffsets>
-              <option value="3446" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3505" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/FileService.cs</url>
           <line>47</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/FileService.cs" initialLine="48">
@@ -351,43 +392,134 @@
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs</url>
-          <line>103</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" initialLine="103">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs</url>
+          <line>47</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" initialLine="44">
             <startOffsets>
-              <option value="3394" />
+              <option value="1797" />
             </startOffsets>
             <endOffsets>
-              <option value="3433" />
+              <option value="2131" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="27" />
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs</url>
-          <line>105</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" initialLine="105">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs</url>
+          <line>56</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" initialLine="53">
             <startOffsets>
-              <option value="3518" />
+              <option value="2154" />
             </startOffsets>
             <endOffsets>
-              <option value="3541" />
+              <option value="2154" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs</url>
-          <line>106</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" initialLine="106">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs</url>
+          <line>57</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" initialLine="54">
             <startOffsets>
-              <option value="3554" />
+              <option value="2198" />
             </startOffsets>
             <endOffsets>
-              <option value="3571" />
+              <option value="2248" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="29" />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs</url>
+          <line>58</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" initialLine="56">
+            <startOffsets>
+              <option value="2265" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2295" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs</url>
+          <line>60</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" initialLine="57">
+            <startOffsets>
+              <option value="2340" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2374" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs</url>
+          <line>64</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" initialLine="60">
+            <startOffsets>
+              <option value="2450" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2451" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs</url>
+          <line>66</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" initialLine="61">
+            <startOffsets>
+              <option value="2578" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2644" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs</url>
+          <line>59</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" initialLine="57">
+            <startOffsets>
+              <option value="2312" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2323" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Handlers/MedicalRepHandlers.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepHandlers.cs" initialLine="13">
+            <startOffsets>
+              <option value="352" />
+            </startOffsets>
+            <endOffsets>
+              <option value="361" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Handlers/MedicalRepHandlers.cs</url>
+          <line>15</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepHandlers.cs" initialLine="14">
+            <startOffsets>
+              <option value="459" />
+            </startOffsets>
+            <endOffsets>
+              <option value="477" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

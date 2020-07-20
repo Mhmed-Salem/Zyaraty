@@ -18,8 +18,9 @@ namespace Zyarat.Data
         public Doctor Doctor { set; get; }
         public string Content { set; get; }
         public DateTime DateTime { set; get; }
+        public bool Type { set; get; }
         public List<Evaluation> Evaluation { set; get; }
-        public bool Blocked { set; get; }
+        public bool Active { set; get; }
         
     }
 }

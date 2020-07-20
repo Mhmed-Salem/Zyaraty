@@ -12,10 +12,14 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Zyarat.Data;
+using Zyarat.Handlers;
 using Zyarat.Mapping;
 using Zyarat.Models.Repositories.MedicalRepRepo;
+using Zyarat.Models.Repositories.VisitsRepo;
 using Zyarat.Models.Services;
 using Zyarat.Models.Services.IdentityServices;
+using Zyarat.Models.Services.IVisitService;
+using Zyarat.Models.Services.IVisitService.VisitsServices;
 using Zyarat.Models.Services.MedicalRepService;
 using Zyarat.Options;
 
@@ -57,8 +61,17 @@ namespace Zyarat
                 /** start Inject Services */
                 services.AddScoped<IUnitWork, UnitWork>();
                 services.AddScoped<IMedicalRepRepo, MedicalRepRepo>();
+                services.AddScoped<IVisitsRepo, VisitRepo>();
                 services.AddScoped(typeof(FileService));
                 services.AddScoped<IMedicalRepService, MedicalRepService>();
+                
+                services.AddScoped(typeof(DeletingVisitsHandler));
+                services.AddScoped(typeof(MedicalRepHandlers));
+
+               services.AddScoped<IVisitService,VisitService>();
+
+               
+
                 services.AddScoped<IIdentityUser, IdentityService>();
                 /**end of Inject services */
                 /**Add AutoMapper*/

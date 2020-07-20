@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Zyarat.Contract.MedicalRepsContracts;
+using Zyarat.Contract.VisitsContracts;
 using Zyarat.Data;
 using Zyarat.Models.DTO;
 using Zyarat.Resources;
@@ -26,6 +27,8 @@ namespace Zyarat.Mapping
             CreateMap<AddMedicalRepResourcesRequest, MedicalRep>();
             CreateMap<IdentityUserDto, IdentityUser>();
             CreateMap<MedicalRep, GetMedicalRepResponse>();
+            CreateMap<AddVisitContract, Visit>();
+            CreateMap<Visit, AddVisitContract>();
 
             
         }

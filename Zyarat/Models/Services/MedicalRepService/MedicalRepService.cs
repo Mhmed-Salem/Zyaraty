@@ -103,7 +103,6 @@ namespace Zyarat.Models.Services.MedicalRepService
         {
             var rep = await _repo.GetUserAsync(id);
             var newUrl=await UpdateFileAsync(rep.ProfileUrl, formFile);
-            var x = rep.ProfileUrl;
             if (newUrl==null)
             { 
                 return new Response<MedicalRep>("Error can not update Image profile");
