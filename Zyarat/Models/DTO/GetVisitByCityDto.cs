@@ -13,6 +13,8 @@ namespace Zyarat.Models.DTO
         public bool IsDisLiker { set; get; }
         public DoctorDto DoctorDto { set; get; }
         public DateTime DateTime { set; get; }
+        public bool IsActive { set; get; }
+
 
     }
 }

@@ -20,7 +20,7 @@ namespace Zyarat.Data
         public DateTime DateTime { set; get; }
         public bool Type { set; get; }
         public List<Evaluation> Evaluation { set; get; }
-        public bool Active { set; get; }
+        public bool Active { set; get; }//not blocked due to reports
         
     }
 }

@@ -14,11 +14,13 @@ using Microsoft.IdentityModel.Tokens;
 using Zyarat.Data;
 using Zyarat.Handlers;
 using Zyarat.Mapping;
+using Zyarat.Models.Repositories.EvaluationRepos;
 using Zyarat.Models.Repositories.MedicalRepRepo;
 using Zyarat.Models.Repositories.VisitsRepo;
 using Zyarat.Models.Services;
+using Zyarat.Models.Services.EvaluationsServices;
 using Zyarat.Models.Services.IdentityServices;
-using Zyarat.Models.Services.IVisitService;
+using Zyarat.Models.Services.InterActing;
 using Zyarat.Models.Services.IVisitService.VisitsServices;
 using Zyarat.Models.Services.MedicalRepService;
 using Zyarat.Options;
@@ -64,15 +66,18 @@ namespace Zyarat
                 services.AddScoped<IVisitsRepo, VisitRepo>();
                 services.AddScoped(typeof(FileService));
                 services.AddScoped<IMedicalRepService, MedicalRepService>();
+                services.AddScoped(typeof(MedicalRepVisitsHandlers));
+                services.AddScoped<IVisitService,VisitService>();
+                services.AddScoped<IEvaluationService,EvaluationService>();
                 
-                services.AddScoped(typeof(DeletingVisitsHandler));
-                services.AddScoped(typeof(MedicalRepHandlers));
-
-               services.AddScoped<IVisitService,VisitService>();
-
-               
-
+                services.AddScoped<IEvaluationRepo,EvaluationRepo>();
                 services.AddScoped<IIdentityUser, IdentityService>();
+                services.AddScoped<IVisitInteracting, VisitInteracting>();
+
+                services.AddScoped(typeof(MedicalRepEvaluationsHandlers));
+                services.AddScoped(typeof(VisitAssertion));
+
+
                 /**end of Inject services */
                 /**Add AutoMapper*/
                 services.AddAutoMapper(typeof(AutoMapping));

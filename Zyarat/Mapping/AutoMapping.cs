@@ -29,8 +29,9 @@ namespace Zyarat.Mapping
             CreateMap<MedicalRep, GetMedicalRepResponse>();
             CreateMap<AddVisitContract, Visit>();
             CreateMap<Visit, AddVisitContract>();
+            CreateMap<AddEvaluationDto, Evaluation>();
+            CreateMap<Evaluation, AddEvaluationDto>();
 
-            
         }
     }
 }

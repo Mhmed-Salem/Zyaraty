@@ -19,7 +19,7 @@ namespace Zyarat.Data
         public int MedicalSpecializedId { set; get; }
         public MedicalSpecialized MedicalSpecialized { set; get; }
         public int AdderMedicalRepId { set; get; }
-        public MedicalRep MedicalRep { set; get; }
+        public MedicalRep AdderMedicalRep { set; get; }
         public List<Visit> Visits { set; get; }
 
     }

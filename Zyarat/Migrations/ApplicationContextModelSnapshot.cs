@@ -254,21 +254,18 @@ namespace Zyarat.Migrations
                     b.Property<string>("LName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("MedicalRepId")
-                        .HasColumnType("int");
-
                     b.Property<int>("MedicalSpecializedId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CityId");
+                    b.HasIndex("AdderMedicalRepId");
 
-                    b.HasIndex("MedicalRepId");
+                    b.HasIndex("CityId");
 
                     b.HasIndex("MedicalSpecializedId");
 
-                    b.ToTable("Doctors");
+                    b.ToTable("Doctor");
                 });
 
             modelBuilder.Entity("Zyarat.Data.Evaluation", b =>
@@ -279,9 +276,11 @@ namespace Zyarat.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("DateTime")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
 
-                    b.Property<int>("EvaluaterId")
+                    b.Property<int>("EvaluatorId")
                         .HasColumnType("int");
 
                     b.Property<bool>("Type")
@@ -292,7 +291,7 @@ namespace Zyarat.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EvaluaterId");
+                    b.HasIndex("EvaluatorId");
 
                     b.HasIndex("VisitId");
 
@@ -538,15 +537,17 @@ namespace Zyarat.Migrations
 
             modelBuilder.Entity("Zyarat.Data.Doctor", b =>
                 {
+                    b.HasOne("Zyarat.Data.MedicalRep", "AdderMedicalRep")
+                        .WithMany("AdderDoctor")
+                        .HasForeignKey("AdderMedicalRepId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Zyarat.Data.City", "City")
                         .WithMany("Doctors")
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Zyarat.Data.MedicalRep", "MedicalRep")
-                        .WithMany("AdderDoctor")
-                        .HasForeignKey("MedicalRepId");
 
                     b.HasOne("Zyarat.Data.MedicalSpecialized", "MedicalSpecialized")
                         .WithMany("Doctors")
@@ -557,9 +558,9 @@ namespace Zyarat.Migrations
 
             modelBuilder.Entity("Zyarat.Data.Evaluation", b =>
                 {
-                    b.HasOne("Zyarat.Data.MedicalRep", "Evaluater")
+                    b.HasOne("Zyarat.Data.MedicalRep", "Evaluator")
                         .WithMany()
-                        .HasForeignKey("EvaluaterId")
+                        .HasForeignKey("EvaluatorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

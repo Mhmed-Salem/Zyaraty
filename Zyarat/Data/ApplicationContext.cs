@@ -26,6 +26,11 @@ namespace Zyarat.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            
+            //make the default value for the dateTime of adding the Evaluation equal the time it inserted in 
+           builder.Entity<Evaluation>().Property(evaluation => evaluation.DateTime).HasDefaultValueSql("getdate()");
+
+
 
         }
 

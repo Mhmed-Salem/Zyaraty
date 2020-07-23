@@ -10,8 +10,8 @@ using Zyarat.Data;
 namespace Zyarat.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200715201927_init5")]
-    partial class init5
+    [Migration("20200723093459_firstMig")]
+    partial class firstMig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -256,21 +256,18 @@ namespace Zyarat.Migrations
                     b.Property<string>("LName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("MedicalRepId")
-                        .HasColumnType("int");
-
                     b.Property<int>("MedicalSpecializedId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CityId");
+                    b.HasIndex("AdderMedicalRepId");
 
-                    b.HasIndex("MedicalRepId");
+                    b.HasIndex("CityId");
 
                     b.HasIndex("MedicalSpecializedId");
 
-                    b.ToTable("Doctors");
+                    b.ToTable("Doctor");
                 });
 
             modelBuilder.Entity("Zyarat.Data.Evaluation", b =>
@@ -281,9 +278,11 @@ namespace Zyarat.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("DateTime")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
 
-                    b.Property<int>("EvaluaterId")
+                    b.Property<int>("EvaluatorId")
                         .HasColumnType("int");
 
                     b.Property<bool>("Type")
@@ -294,7 +293,7 @@ namespace Zyarat.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("EvaluaterId");
+                    b.HasIndex("EvaluatorId");
 
                     b.HasIndex("VisitId");
 
@@ -329,17 +328,23 @@ namespace Zyarat.Migrations
                     b.Property<int>("DisLikeCount")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdentityUserId")
-                        .HasColumnType("int");
+                    b.Property<string>("FName")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IdentityUserId1")
+                    b.Property<string>("IdentityUserId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("LikeCount")
                         .HasColumnType("int");
 
                     b.Property<int>("MedicalRepPositionId")
                         .HasColumnType("int");
+
+                    b.Property<string>("ProfileUrl")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UniqueUsers")
                         .HasColumnType("int");
@@ -354,7 +359,7 @@ namespace Zyarat.Migrations
 
                     b.HasIndex("CityId");
 
-                    b.HasIndex("IdentityUserId1");
+                    b.HasIndex("IdentityUserId");
 
                     b.HasIndex("MedicalRepPositionId");
 
@@ -391,12 +396,41 @@ namespace Zyarat.Migrations
                     b.ToTable("MedicalSpecializeds");
                 });
 
+            modelBuilder.Entity("Zyarat.Data.RefreshingToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IP")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshingTokens");
+                });
+
             modelBuilder.Entity("Zyarat.Data.Visit", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
@@ -410,6 +444,9 @@ namespace Zyarat.Migrations
                     b.Property<int>("MedicalRepId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Type")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
 
                     b.HasIndex("DoctorId");
@@ -417,6 +454,27 @@ namespace Zyarat.Migrations
                     b.HasIndex("MedicalRepId");
 
                     b.ToTable("Visits");
+                });
+
+            modelBuilder.Entity("Zyarat.Data.VisitBlocking", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("BlockFrom")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MedicalRepId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MedicalRepId")
+                        .IsUnique();
+
+                    b.ToTable("VisitBlocking");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -481,15 +539,17 @@ namespace Zyarat.Migrations
 
             modelBuilder.Entity("Zyarat.Data.Doctor", b =>
                 {
+                    b.HasOne("Zyarat.Data.MedicalRep", "AdderMedicalRep")
+                        .WithMany("AdderDoctor")
+                        .HasForeignKey("AdderMedicalRepId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Zyarat.Data.City", "City")
                         .WithMany("Doctors")
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Zyarat.Data.MedicalRep", "MedicalRep")
-                        .WithMany("AdderDoctor")
-                        .HasForeignKey("MedicalRepId");
 
                     b.HasOne("Zyarat.Data.MedicalSpecialized", "MedicalSpecialized")
                         .WithMany("Doctors")
@@ -500,9 +560,9 @@ namespace Zyarat.Migrations
 
             modelBuilder.Entity("Zyarat.Data.Evaluation", b =>
                 {
-                    b.HasOne("Zyarat.Data.MedicalRep", "Evaluater")
+                    b.HasOne("Zyarat.Data.MedicalRep", "Evaluator")
                         .WithMany()
-                        .HasForeignKey("EvaluaterId")
+                        .HasForeignKey("EvaluatorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -523,13 +583,20 @@ namespace Zyarat.Migrations
 
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
                         .WithMany()
-                        .HasForeignKey("IdentityUserId1");
+                        .HasForeignKey("IdentityUserId");
 
                     b.HasOne("Zyarat.Data.MedicalRepPosition", "MedicalRepPosition")
                         .WithMany("MedicalReps")
                         .HasForeignKey("MedicalRepPositionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Zyarat.Data.RefreshingToken", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "MyIdentityUser")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Zyarat.Data.Visit", b =>
@@ -543,6 +610,15 @@ namespace Zyarat.Migrations
                     b.HasOne("Zyarat.Data.MedicalRep", "MedicalRep")
                         .WithMany("Visits")
                         .HasForeignKey("MedicalRepId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Zyarat.Data.VisitBlocking", b =>
+                {
+                    b.HasOne("Zyarat.Data.MedicalRep", "MedicalRep")
+                        .WithOne("VisitBlocking")
+                        .HasForeignKey("Zyarat.Data.VisitBlocking", "MedicalRepId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

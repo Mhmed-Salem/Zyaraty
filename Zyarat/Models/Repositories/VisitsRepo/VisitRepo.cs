@@ -11,10 +11,15 @@ namespace Zyarat.Models.Repositories.VisitsRepo
     public class VisitRepo : ContextRepo, IVisitsRepo
     {
         
-
         public async Task<Visit> GetVisit(int visitId)
         {
             return await Context.Visits.FindAsync(visitId);
+        }
+
+        public async Task<Visit> GetVisitWithOwner(int visitId)
+        {
+            return await Context.Visits.Include(v => v.MedicalRep).
+                FirstOrDefaultAsync(visit => visit.Id == visitId);
         }
 
         public async Task AddVisitAsync(Visit visit)

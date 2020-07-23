@@ -21,6 +21,7 @@
           </e>
         </e>
         <e p="Controllers" t="Include">
+          <e p="EvaluationController.cs" t="Include" />
           <e p="MedicalRepController.cs" t="Include" />
           <e p="VisitController.cs" t="Include" />
         </e>
@@ -38,11 +39,11 @@
           <e p="VisitBlocking.cs" t="Include" />
           <e p="VisitReport.cs" t="Include" />
         </e>
-        <e p="favicon.ico" t="Include" />
         <e p="Handlers" t="Include">
-          <e p="DeletingVisitsHandler.cs" t="Include" />
-          <e p="IMedicalRepHandler.cs" t="Include" />
-          <e p="MedicalRepHandlers.cs" t="Include" />
+          <e p="Interacting.cs" t="Include" />
+          <e p="MedicalRepEvaluationsHandlers.cs" t="Include" />
+          <e p="MedicalRepVisitsHandlers.cs" t="Include" />
+          <e p="VisitAssertion.cs" t="Include" />
         </e>
         <e p="Helpers" t="Include">
           <e p="Delegates.cs" t="Include" />
@@ -51,34 +52,13 @@
           <e p="AutoMapping.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20200715192203_init.cs" t="Include" />
-          <e p="20200715192203_init.Designer.cs" t="Include" />
-          <e p="20200715200636_init2.cs" t="Include" />
-          <e p="20200715200636_init2.Designer.cs" t="Include" />
-          <e p="20200715200958_init3.cs" t="Include" />
-          <e p="20200715200958_init3.Designer.cs" t="Include" />
-          <e p="20200715201927_init5.cs" t="Include" />
-          <e p="20200715201927_init5.Designer.cs" t="Include" />
-          <e p="20200715202207_init6.cs" t="Include" />
-          <e p="20200715202207_init6.Designer.cs" t="Include" />
-          <e p="20200717093312_add Blocking.cs" t="Include" />
-          <e p="20200717093312_add Blocking.Designer.cs" t="Include" />
-          <e p="20200717095051_add Visi Report.cs" t="Include" />
-          <e p="20200717095051_add Visi Report.Designer.cs" t="Include" />
-          <e p="20200717125009_add BlockOrUnBlockedToComment.cs" t="Include" />
-          <e p="20200717125009_add BlockOrUnBlockedToComment.Designer.cs" t="Include" />
-          <e p="20200718151419_Add Image toRep.cs" t="Include" />
-          <e p="20200718151419_Add Image toRep.Designer.cs" t="Include" />
-          <e p="20200718224102_Add Refresh Tokens.cs" t="Include" />
-          <e p="20200718224102_Add Refresh Tokens.Designer.cs" t="Include" />
-          <e p="20200719174358_Add visit Type.cs" t="Include" />
-          <e p="20200719174358_Add visit Type.Designer.cs" t="Include" />
-          <e p="20200719174724_Add visit Type2.cs" t="Include" />
-          <e p="20200719174724_Add visit Type2.Designer.cs" t="Include" />
+          <e p="20200723093459_firstMig.cs" t="Include" />
+          <e p="20200723093459_firstMig.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="DTO" t="Include">
+            <e p="AddEvaluationDto.cs" t="Include" />
             <e p="CityDto.cs" t="Include" />
             <e p="DoctorDto.cs" t="Include" />
             <e p="EvaluationDto.cs" t="Include" />
@@ -95,10 +75,15 @@
           </e>
           <e p="Repositories" t="Include">
             <e p="ContextRepo.cs" t="Include" />
+            <e p="EvaluationRepos" t="Include">
+              <e p="EvaluationRepo.cs" t="Include" />
+              <e p="IEvaluationRepo.cs" t="Include" />
+            </e>
             <e p="MedicalRepRepo" t="Include">
               <e p="IMedicalRepRepo.cs" t="Include" />
               <e p="MedicalRepRepo.cs" t="Include" />
             </e>
+            <e p="TestRepo.cs" t="Include" />
             <e p="VisitsRepo" t="Include">
               <e p="IVisitsRepo.cs" t="Include" />
               <e p="VisitRepo.cs" t="Include" />
@@ -108,11 +93,19 @@
             <e p="Response.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
+            <e p="EvaluationsServices" t="Include">
+              <e p="EvaluationService.cs" t="Include" />
+              <e p="IEvaluationService.cs" t="Include" />
+            </e>
             <e p="FileService.cs" t="Include" />
             <e p="IdentityServices" t="Include">
               <e p="IdentityService.cs" t="Include" />
               <e p="IIdentityUser.cs" t="Include" />
               <e p="TokenAndRefresh.cs" t="Include" />
+            </e>
+            <e p="InterActing" t="Include">
+              <e p="IVisitInteracting.cs" t="Include" />
+              <e p="VisitInteracting.cs" t="Include" />
             </e>
             <e p="IUnitWork.cs" t="Include" />
             <e p="IVisitService" t="Include">

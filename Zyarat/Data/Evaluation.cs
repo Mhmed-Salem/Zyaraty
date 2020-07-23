@@ -10,8 +10,8 @@ namespace Zyarat.Data
         public int Id { set; get; }
         public int VisitId { set; get; }
         public Visit Visit { set; get; }
-        public int EvaluaterId { set; get; }//Medical rep who made the evaluation.
-        public MedicalRep Evaluater { set; get; }//ref to Medical rep who made the evaluation object.
+        public int EvaluatorId { set; get; }//Medical rep who made the evaluation.
+        public MedicalRep Evaluator { set; get; }//ref to Medical rep who made the evaluation object.
         public DateTime DateTime { set; get; }//the date and time the medical rep had made the evaluation at.
         /// <summary>
         /// the type of evaluation .it can be like (1) or Unlike (0)

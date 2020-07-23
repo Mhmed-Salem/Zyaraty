@@ -11,6 +11,7 @@ namespace Zyarat.Models.DTO
         public int DisLikes { set; get; }
         public bool IsLiker { set; get; }
         public bool IsDisLiker { set; get; }
+        public bool IsActive { set; get; }
         public DateTime DateTime { set; get; }
 
     }

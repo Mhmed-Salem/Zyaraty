@@ -11,5 +11,6 @@ namespace Zyarat.Models.Repositories.MedicalRepRepo
         MedicalRep ModifyUser(MedicalRep old, MedicalRep newMedicalRep);
         Task<MedicalRep>  AddUser(MedicalRep medicalRep);
         void DeleteUser(MedicalRep rep);
+        Task<MedicalRep> GetVisitOwnerAsync(int visitId);
     }
 }

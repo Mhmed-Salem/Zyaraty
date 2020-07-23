@@ -12,5 +12,8 @@ namespace Zyarat.Models.Services.IVisitService.VisitsServices
         Task<Response<Visit>> AddVisit(AddVisitContract contract);
         Task<Response<IEnumerable<GetVisitByDoctorDto>>> GetVisitByDoctor(int doctorId, int userId);
         Task<Response<IEnumerable<GetVisitByCityDto>>> GetVisitByCity(int cityId, int userId);
+        Task<Response<Visit>> GetVisitAsync(int visitId);
+        bool IsActiveComment(Visit visit);
+
     }
 }

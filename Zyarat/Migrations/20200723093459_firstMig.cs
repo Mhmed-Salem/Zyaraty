@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Zyarat.Migrations
 {
-    public partial class init : Migration
+    public partial class firstMig : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -192,6 +192,28 @@ namespace Zyarat.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "RefreshingTokens",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    RefreshToken = table.Column<string>(nullable: true),
+                    IP = table.Column<string>(nullable: true),
+                    CreationDate = table.Column<DateTime>(nullable: false),
+                    UserId = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RefreshingTokens", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_RefreshingTokens_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Cities",
                 columns: table => new
                 {
@@ -208,7 +230,7 @@ namespace Zyarat.Migrations
                         column: x => x.GovernmentId,
                         principalTable: "Governments",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -217,8 +239,10 @@ namespace Zyarat.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    IdentityUserId1 = table.Column<string>(nullable: true),
-                    IdentityUserId = table.Column<int>(nullable: false),
+                    FName = table.Column<string>(nullable: true),
+                    LName = table.Column<string>(nullable: true),
+                    ProfileUrl = table.Column<string>(nullable: true),
+                    IdentityUserId = table.Column<string>(nullable: true),
                     WorkedOnCompany = table.Column<string>(nullable: true),
                     CityId = table.Column<int>(nullable: false),
                     VisitsCount = table.Column<int>(nullable: false),
@@ -235,10 +259,10 @@ namespace Zyarat.Migrations
                         column: x => x.CityId,
                         principalTable: "Cities",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MedicalReps_AspNetUsers_IdentityUserId1",
-                        column: x => x.IdentityUserId1,
+                        name: "FK_MedicalReps_AspNetUsers_IdentityUserId",
+                        column: x => x.IdentityUserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -247,11 +271,11 @@ namespace Zyarat.Migrations
                         column: x => x.MedicalRepPositionId,
                         principalTable: "MedicalRepPositions",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Doctors",
+                name: "Doctor",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -260,30 +284,49 @@ namespace Zyarat.Migrations
                     LName = table.Column<string>(nullable: true),
                     CityId = table.Column<int>(nullable: false),
                     MedicalSpecializedId = table.Column<int>(nullable: false),
-                    AdderMedicalRepId = table.Column<int>(nullable: false),
-                    MedicalRepId = table.Column<int>(nullable: true)
+                    AdderMedicalRepId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Doctors", x => x.Id);
+                    table.PrimaryKey("PK_Doctor", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Doctors_Cities_CityId",
+                        name: "FK_Doctor_MedicalReps_AdderMedicalRepId",
+                        column: x => x.AdderMedicalRepId,
+                        principalTable: "MedicalReps",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Doctor_Cities_CityId",
                         column: x => x.CityId,
                         principalTable: "Cities",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Doctors_MedicalReps_MedicalRepId",
-                        column: x => x.MedicalRepId,
-                        principalTable: "MedicalReps",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                    table.ForeignKey(
-                        name: "FK_Doctors_MedicalSpecializeds_MedicalSpecializedId",
+                        name: "FK_Doctor_MedicalSpecializeds_MedicalSpecializedId",
                         column: x => x.MedicalSpecializedId,
                         principalTable: "MedicalSpecializeds",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "VisitBlocking",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    BlockFrom = table.Column<DateTime>(nullable: false),
+                    MedicalRepId = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_VisitBlocking", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_VisitBlocking_MedicalReps_MedicalRepId",
+                        column: x => x.MedicalRepId,
+                        principalTable: "MedicalReps",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -295,23 +338,25 @@ namespace Zyarat.Migrations
                     MedicalRepId = table.Column<int>(nullable: false),
                     DoctorId = table.Column<int>(nullable: false),
                     Content = table.Column<string>(nullable: true),
-                    DateTime = table.Column<DateTime>(nullable: false)
+                    DateTime = table.Column<DateTime>(nullable: false),
+                    Type = table.Column<bool>(nullable: false),
+                    Active = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Visits", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Visits_Doctors_DoctorId",
+                        name: "FK_Visits_Doctor_DoctorId",
                         column: x => x.DoctorId,
-                        principalTable: "Doctors",
+                        principalTable: "Doctor",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Visits_MedicalReps_MedicalRepId",
                         column: x => x.MedicalRepId,
                         principalTable: "MedicalReps",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -321,25 +366,25 @@ namespace Zyarat.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     VisitId = table.Column<int>(nullable: false),
-                    EvaluaterId = table.Column<int>(nullable: false),
-                    DateTime = table.Column<DateTime>(nullable: false),
+                    EvaluatorId = table.Column<int>(nullable: false),
+                    DateTime = table.Column<DateTime>(nullable: false, defaultValueSql: "getdate()"),
                     Type = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Evaluations", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Evaluations_MedicalReps_EvaluaterId",
-                        column: x => x.EvaluaterId,
+                        name: "FK_Evaluations_MedicalReps_EvaluatorId",
+                        column: x => x.EvaluatorId,
                         principalTable: "MedicalReps",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Evaluations_Visits_VisitId",
                         column: x => x.VisitId,
                         principalTable: "Visits",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -387,24 +432,24 @@ namespace Zyarat.Migrations
                 column: "GovernmentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Doctors_CityId",
-                table: "Doctors",
+                name: "IX_Doctor_AdderMedicalRepId",
+                table: "Doctor",
+                column: "AdderMedicalRepId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Doctor_CityId",
+                table: "Doctor",
                 column: "CityId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Doctors_MedicalRepId",
-                table: "Doctors",
-                column: "MedicalRepId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Doctors_MedicalSpecializedId",
-                table: "Doctors",
+                name: "IX_Doctor_MedicalSpecializedId",
+                table: "Doctor",
                 column: "MedicalSpecializedId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Evaluations_EvaluaterId",
+                name: "IX_Evaluations_EvaluatorId",
                 table: "Evaluations",
-                column: "EvaluaterId");
+                column: "EvaluatorId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Evaluations_VisitId",
@@ -417,14 +462,25 @@ namespace Zyarat.Migrations
                 column: "CityId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MedicalReps_IdentityUserId1",
+                name: "IX_MedicalReps_IdentityUserId",
                 table: "MedicalReps",
-                column: "IdentityUserId1");
+                column: "IdentityUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_MedicalReps_MedicalRepPositionId",
                 table: "MedicalReps",
                 column: "MedicalRepPositionId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RefreshingTokens_UserId",
+                table: "RefreshingTokens",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VisitBlocking_MedicalRepId",
+                table: "VisitBlocking",
+                column: "MedicalRepId",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Visits_DoctorId",
@@ -458,13 +514,19 @@ namespace Zyarat.Migrations
                 name: "Evaluations");
 
             migrationBuilder.DropTable(
+                name: "RefreshingTokens");
+
+            migrationBuilder.DropTable(
+                name: "VisitBlocking");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "Visits");
 
             migrationBuilder.DropTable(
-                name: "Doctors");
+                name: "Doctor");
 
             migrationBuilder.DropTable(
                 name: "MedicalReps");

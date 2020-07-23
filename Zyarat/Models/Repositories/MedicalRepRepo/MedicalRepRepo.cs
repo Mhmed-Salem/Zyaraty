@@ -18,7 +18,7 @@ namespace Zyarat.Models.Repositories.MedicalRepRepo
 
         public async Task<MedicalRep> GetUserAsync(int id)
         {
-            return await Context.MedicalReps.AsNoTracking()
+            return await Context.MedicalReps
                 .Include(rep => rep.IdentityUser)
                 .Include(rep =>rep.City )
                 .Include(rep => rep.MedicalRepPosition)
@@ -62,6 +62,10 @@ namespace Zyarat.Models.Repositories.MedicalRepRepo
             Context.MedicalReps.Remove(rep);
         }
 
-       
+        public async Task<MedicalRep> GetVisitOwnerAsync(int visitId)
+        {
+            return await Context.MedicalReps.Include(rep => rep.Visits)
+                .FirstOrDefaultAsync(rep => rep.Visits.Any(visit => visit.Id == visitId));
+        }
     }
 }

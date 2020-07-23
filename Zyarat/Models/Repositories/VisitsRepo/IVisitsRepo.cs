@@ -8,6 +8,8 @@ namespace Zyarat.Models.Repositories.VisitsRepo
     public interface IVisitsRepo
     {
         Task<Visit> GetVisit(int visitId);
+        Task<Visit> GetVisitWithOwner(int visitId);
+
         Task AddVisitAsync(Visit visit);
         void DeleteVisit(Visit visit);
        IEnumerable<Visit> GetVisitOfDoctorAsync(int doctorId, int userId);
