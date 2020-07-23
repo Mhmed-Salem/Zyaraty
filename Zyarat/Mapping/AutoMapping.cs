@@ -5,6 +5,7 @@ using Zyarat.Contract.VisitsContracts;
 using Zyarat.Data;
 using Zyarat.Models.DTO;
 using Zyarat.Resources;
+using Zyarat.Responses;
 using Zyarat.Responses.MedicalRepResponses;
 
 namespace Zyarat.Mapping
@@ -31,6 +32,8 @@ namespace Zyarat.Mapping
             CreateMap<Visit, AddVisitContract>();
             CreateMap<AddEvaluationDto, Evaluation>();
             CreateMap<Evaluation, AddEvaluationDto>();
+            CreateMap<Evaluation, AddEvaluationResponse>();
+            CreateMap<Evaluation, GetEvaluationsResponse>();
 
         }
     }

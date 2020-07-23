@@ -14,5 +14,6 @@ namespace Zyarat.Models.Repositories.EvaluationRepos
         Task<Evaluation> AddEvaluationAsync(Evaluation evaluation);
         Task<bool> OppositeEvaluationAsync(int userId,int visitId);
         Task<bool> IsUniqueEvaluatorAsync(int evaluatedIdId, int evaluaterId);
+        Task<int> TimesTheUserEvaluateAnotherUserVisitsAsLikeWithNoTracking(int evaluatedId, int evaluatorId);
     }
 }

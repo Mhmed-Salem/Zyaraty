@@ -26,6 +26,7 @@ namespace Zyarat.Data
         public int LikeCount { set; get;}
         public int DisLikeCount { set; get; }
         public int UniqueUsers { set; get; }
+        public bool Active { set; get; }
         public int MedicalRepPositionId { set; get; }
         public VisitBlocking VisitBlocking { set; get; }
         public MedicalRepPosition MedicalRepPosition { set; get; }

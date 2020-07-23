@@ -38,21 +38,22 @@ namespace Zyarat.Models.Services.EvaluationsServices
             _mapper = mapper;
             _interacting = interacting;
         }
-
+        
+        //tested
         public async Task<Response<Evaluation>> OppositeEvaluationAsync(int userId, int visitId)
         {
             try
             { 
-                var evaluation = await _repo.GetAnEvaluationWithItsVisitAsync(userId, visitId);
+                var evaluation = await _repo.GetAnEvaluationWithItsVisitAsync(visitId,userId);
                 if (evaluation==null)
                 {
                     return new Response<Evaluation>("evaluation is not found to Modify!");
                 }
-                if (_visitAssertion.AssertActivation(evaluation.Visit)&&!evaluation.Visit.Active)
+                if (!_visitAssertion.AssertActivation(evaluation.Visit))
                 {
                     return  new Response<Evaluation>("Visit is not Active Or Deleted !");
                 }
-                await _repo.OppositeEvaluationAsync(userId, visitId);
+                await _repo.OppositeEvaluationAsync(userId:userId, visitId:visitId);
                 await _medicalRepHandlers.HandleEvaluationWithMedicalRepAsync(evaluation, evaluation.Visit,Interacting.Modify);
                 await _unitWork.CommitAsync();
                 return new Response<Evaluation>(evaluation);
@@ -64,6 +65,7 @@ namespace Zyarat.Models.Services.EvaluationsServices
         }
 
    
+        //tested
 
         public async Task<Response<Evaluation>> AddEvaluationAsync(AddEvaluationDto contract)
         {
@@ -75,8 +77,8 @@ namespace Zyarat.Models.Services.EvaluationsServices
                 }
 
                 var visit = await _interacting.GetVisitAsync(contract.VisitId);
-              
-                if (!visit.Success||_visitAssertion.AssertActivation(visit.Source))
+                
+                if (!visit.Success||!_visitAssertion.AssertActivation(visit.Source))
                 {
                     return  new Response<Evaluation>("Visit is not Active Or Deleted !");
                 }
@@ -105,13 +107,13 @@ namespace Zyarat.Models.Services.EvaluationsServices
                 }
 
                 var sVisitAsync = await _interacting.GetVisitAsync(visitId);
-                
-                if (!sVisitAsync.Success|| _visitAssertion.AssertActivation(sVisitAsync.Source))
+                if (!sVisitAsync.Success||!_visitAssertion.AssertActivation(sVisitAsync.Source) )
                 {
                     return  new Response<Evaluation>("Visit is not Active Or Deleted !");
                 }
                 
                 _repo.DeleteEvaluation(ev);
+                await _medicalRepHandlers.HandleEvaluationWithMedicalRepAsync(ev,sVisitAsync.Source,Interacting.Delete);
                 await _unitWork.CommitAsync();
                 return new Response<Evaluation>(ev);
             }
@@ -121,7 +123,7 @@ namespace Zyarat.Models.Services.EvaluationsServices
             }
         }
 
-        public async Task<Response<IEnumerable<Evaluation>>> GetEvaluatersAsync(int commentId)
+        public async Task<Response<IEnumerable<Evaluation>>> GetEvaluatorsAsync(int commentId)
         {
             try
             {

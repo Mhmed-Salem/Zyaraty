@@ -10,7 +10,7 @@ using Zyarat.Data;
 namespace Zyarat.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200723093459_firstMig")]
+    [Migration("20200723115945_firstMig")]
     partial class firstMig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -267,7 +267,7 @@ namespace Zyarat.Migrations
 
                     b.HasIndex("MedicalSpecializedId");
 
-                    b.ToTable("Doctor");
+                    b.ToTable("Doctors");
                 });
 
             modelBuilder.Entity("Zyarat.Data.Evaluation", b =>
@@ -482,7 +482,7 @@ namespace Zyarat.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -491,7 +491,7 @@ namespace Zyarat.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -500,7 +500,7 @@ namespace Zyarat.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -509,13 +509,13 @@ namespace Zyarat.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -524,7 +524,7 @@ namespace Zyarat.Migrations
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -533,7 +533,7 @@ namespace Zyarat.Migrations
                     b.HasOne("Zyarat.Data.Government", "Government")
                         .WithMany("Cities")
                         .HasForeignKey("GovernmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -542,19 +542,19 @@ namespace Zyarat.Migrations
                     b.HasOne("Zyarat.Data.MedicalRep", "AdderMedicalRep")
                         .WithMany("AdderDoctor")
                         .HasForeignKey("AdderMedicalRepId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Zyarat.Data.City", "City")
                         .WithMany("Doctors")
                         .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Zyarat.Data.MedicalSpecialized", "MedicalSpecialized")
                         .WithMany("Doctors")
                         .HasForeignKey("MedicalSpecializedId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -563,7 +563,7 @@ namespace Zyarat.Migrations
                     b.HasOne("Zyarat.Data.MedicalRep", "Evaluator")
                         .WithMany()
                         .HasForeignKey("EvaluatorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Zyarat.Data.Visit", "Visit")
@@ -578,17 +578,18 @@ namespace Zyarat.Migrations
                     b.HasOne("Zyarat.Data.City", "City")
                         .WithMany("MedicalReps")
                         .HasForeignKey("CityId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
                         .WithMany()
-                        .HasForeignKey("IdentityUserId");
+                        .HasForeignKey("IdentityUserId")
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("Zyarat.Data.MedicalRepPosition", "MedicalRepPosition")
                         .WithMany("MedicalReps")
                         .HasForeignKey("MedicalRepPositionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -596,7 +597,8 @@ namespace Zyarat.Migrations
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "MyIdentityUser")
                         .WithMany()
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction);
                 });
 
             modelBuilder.Entity("Zyarat.Data.Visit", b =>
@@ -604,13 +606,13 @@ namespace Zyarat.Migrations
                     b.HasOne("Zyarat.Data.Doctor", "Doctor")
                         .WithMany("Visits")
                         .HasForeignKey("DoctorId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Zyarat.Data.MedicalRep", "MedicalRep")
                         .WithMany("Visits")
                         .HasForeignKey("MedicalRepId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 
@@ -619,7 +621,7 @@ namespace Zyarat.Migrations
                     b.HasOne("Zyarat.Data.MedicalRep", "MedicalRep")
                         .WithOne("VisitBlocking")
                         .HasForeignKey("Zyarat.Data.VisitBlocking", "MedicalRepId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

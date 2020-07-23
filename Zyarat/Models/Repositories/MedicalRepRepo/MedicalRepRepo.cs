@@ -59,7 +59,7 @@ namespace Zyarat.Models.Repositories.MedicalRepRepo
       
         public void  DeleteUser(MedicalRep rep)
         {
-            Context.MedicalReps.Remove(rep);
+            rep.Active = false;
         }
 
         public async Task<MedicalRep> GetVisitOwnerAsync(int visitId)

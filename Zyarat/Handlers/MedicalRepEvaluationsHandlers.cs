@@ -27,51 +27,60 @@ namespace Zyarat.Handlers
 
         public bool RebExists { private set; get; }
 
+        //tested
         public async Task HandleEvaluationWithMedicalRepAsync(Evaluation ev,Visit visit,Interacting interacting)
         {
 
             var rep = await _medicalRepRepo.GetUserAsync(ev.Visit.MedicalRepId);
+            //tested
             if (ev.Type && interacting == Interacting.Add || interacting == Interacting.Modify && ev.Type)
             {
                 ++rep.LikeCount;
             }
-
+            //tested
             if (!ev.Type && interacting == Interacting.Add || interacting == Interacting.Modify && !ev.Type)
             {
                 ++rep.DisLikeCount;
             }
-
+            //tested
             if (ev.Type && interacting == Interacting.Delete || interacting == Interacting.Modify && !ev.Type)
             {
                 --rep.LikeCount;
             }
+            //tested
             else if (!ev.Type && interacting == Interacting.Delete || interacting == Interacting.Modify && ev.Type)
-
             {
                 --rep.DisLikeCount;
             }
 
-            DeleteIfDeserve(visit.MedicalRep);
-
-            if (await _evaluationRepo.IsUniqueEvaluatorAsync(visit.MedicalRepId,ev.EvaluatorId)&& ev.Type)
-            {
-                if (interacting == Interacting.Add)
-                {
-                    ++rep.UniqueUsers;
-                }
-                else --rep.UniqueUsers;
-            }
-
+            UnActiveRepIfDeserve(visit.MedicalRep);
+            
+            /**
+             * Handle UniqueUsers Count 
+             */
+            
+            var countOfEvaluation =await 
+                _evaluationRepo.TimesTheUserEvaluateAnotherUserVisitsAsLikeWithNoTracking(
+                    visit.MedicalRepId, ev.EvaluatorId);
+            if ((countOfEvaluation == 0 && (ev.Type && interacting == Interacting.Add)) ||
+                (countOfEvaluation == 0 && (ev.Type && interacting == Interacting.Modify)))
+                rep.UniqueUsers++;
+            else if ((countOfEvaluation == 1 && (ev.Type && interacting == Interacting.Delete)) ||
+                     (countOfEvaluation == 1 && (!ev.Type && interacting == Interacting.Modify)))
+                rep.UniqueUsers--;
         }
+
+   
     
-        private  void DeleteIfDeserve(MedicalRep rep)
+        private  void UnActiveRepIfDeserve(MedicalRep rep)
         {
             var div = rep.LikeCount + rep.DisLikeCount;
             if (div==0)
             {
                 return;
             }
-            if (rep.DisLikeCount / div * 100 > _allowablePercentageOfDisLikeToLike)
+
+            if ( rep.DisLikeCount / div * 100>= _allowablePercentageOfDisLikeToLike)
             {
                 _medicalRepRepo.DeleteUser(rep);
                 RebExists = false;

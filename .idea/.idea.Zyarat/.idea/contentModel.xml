@@ -52,8 +52,14 @@
           <e p="AutoMapping.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20200723093459_firstMig.cs" t="Include" />
-          <e p="20200723093459_firstMig.Designer.cs" t="Include" />
+          <e p="20200723115945_firstMig.cs" t="Include" />
+          <e p="20200723115945_firstMig.Designer.cs" t="Include" />
+          <e p="20200723120314_firstMig2.cs" t="Include" />
+          <e p="20200723120314_firstMig2.Designer.cs" t="Include" />
+          <e p="20200723120908_firstMig3.cs" t="Include" />
+          <e p="20200723120908_firstMig3.Designer.cs" t="Include" />
+          <e p="20200723155322_AddActivationOrNotToMedicalRep.cs" t="Include" />
+          <e p="20200723155322_AddActivationOrNotToMedicalRep.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -139,11 +145,13 @@
           </e>
         </e>
         <e p="Resources" t="Include">
+          <e p="AddEvaluationResponse.cs" t="Include" />
           <e p="AddMedicalRepResourcesRequest.cs" t="Include" />
           <e p="ModifyMedicalRepResourcesRequest.cs" t="Include" />
           <e p="RegisterServiceResult.cs" t="Include" />
         </e>
         <e p="Responses" t="Include">
+          <e p="GetEvaluationsResponse.cs" t="Include" />
           <e p="MedicalRepResponses" t="Include">
             <e p="GetMedicalRepResponse.cs" t="Include" />
           </e>

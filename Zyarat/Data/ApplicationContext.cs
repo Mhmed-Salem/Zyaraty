@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Diagnostics;
 
 namespace Zyarat.Data
 {
@@ -26,6 +27,18 @@ namespace Zyarat.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            /**
+             * All the foreign key relationships un database is No action.
+             * except for the Evaluation_Visit_FK as it's a Cascade
+             */
+            foreach (var relationship in builder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.NoAction;
+            }
+
+            builder.Entity<Visit>().HasMany(v => v.Evaluation)
+                .WithOne(evaluation => evaluation.Visit)
+                .OnDelete(DeleteBehavior.Cascade);
             
             //make the default value for the dateTime of adding the Evaluation equal the time it inserted in 
            builder.Entity<Evaluation>().Property(evaluation => evaluation.DateTime).HasDefaultValueSql("getdate()");

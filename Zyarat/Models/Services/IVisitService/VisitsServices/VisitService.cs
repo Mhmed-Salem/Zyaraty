@@ -117,7 +117,8 @@ namespace Zyarat.Models.Services.IVisitService.VisitsServices
 
         public  bool IsActiveComment(Visit visit)
         {
-            return visit.DateTime.AddHours(LimitsOfVisitActivationHours) > DateTime.Now;
+            return visit.DateTime.AddHours(LimitsOfVisitActivationHours) > DateTime.Now
+                   && visit.Active;
         }
 
         public async Task<Response<IEnumerable<GetVisitByCityDto>>> GetVisitByCity(int cityId, int userId)

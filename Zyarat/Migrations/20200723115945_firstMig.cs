@@ -102,8 +102,7 @@ namespace Zyarat.Migrations
                         name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
                         column: x => x.RoleId,
                         principalTable: "AspNetRoles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -123,8 +122,7 @@ namespace Zyarat.Migrations
                         name: "FK_AspNetUserClaims_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -143,8 +141,7 @@ namespace Zyarat.Migrations
                         name: "FK_AspNetUserLogins_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -161,14 +158,12 @@ namespace Zyarat.Migrations
                         name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
                         column: x => x.RoleId,
                         principalTable: "AspNetRoles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_AspNetUserRoles_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -187,8 +182,7 @@ namespace Zyarat.Migrations
                         name: "FK_AspNetUserTokens_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -209,8 +203,7 @@ namespace Zyarat.Migrations
                         name: "FK_RefreshingTokens_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -229,8 +222,7 @@ namespace Zyarat.Migrations
                         name: "FK_Cities_Governments_GovernmentId",
                         column: x => x.GovernmentId,
                         principalTable: "Governments",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -258,24 +250,21 @@ namespace Zyarat.Migrations
                         name: "FK_MedicalReps_Cities_CityId",
                         column: x => x.CityId,
                         principalTable: "Cities",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_MedicalReps_AspNetUsers_IdentityUserId",
                         column: x => x.IdentityUserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_MedicalReps_MedicalRepPositions_MedicalRepPositionId",
                         column: x => x.MedicalRepPositionId,
                         principalTable: "MedicalRepPositions",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
-                name: "Doctor",
+                name: "Doctors",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -288,25 +277,22 @@ namespace Zyarat.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Doctor", x => x.Id);
+                    table.PrimaryKey("PK_Doctors", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Doctor_MedicalReps_AdderMedicalRepId",
+                        name: "FK_Doctors_MedicalReps_AdderMedicalRepId",
                         column: x => x.AdderMedicalRepId,
                         principalTable: "MedicalReps",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Doctor_Cities_CityId",
+                        name: "FK_Doctors_Cities_CityId",
                         column: x => x.CityId,
                         principalTable: "Cities",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Doctor_MedicalSpecializeds_MedicalSpecializedId",
+                        name: "FK_Doctors_MedicalSpecializeds_MedicalSpecializedId",
                         column: x => x.MedicalSpecializedId,
                         principalTable: "MedicalSpecializeds",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -325,8 +311,7 @@ namespace Zyarat.Migrations
                         name: "FK_VisitBlocking_MedicalReps_MedicalRepId",
                         column: x => x.MedicalRepId,
                         principalTable: "MedicalReps",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -346,17 +331,15 @@ namespace Zyarat.Migrations
                 {
                     table.PrimaryKey("PK_Visits", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Visits_Doctor_DoctorId",
+                        name: "FK_Visits_Doctors_DoctorId",
                         column: x => x.DoctorId,
-                        principalTable: "Doctor",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "Doctors",
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Visits_MedicalReps_MedicalRepId",
                         column: x => x.MedicalRepId,
                         principalTable: "MedicalReps",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -377,14 +360,12 @@ namespace Zyarat.Migrations
                         name: "FK_Evaluations_MedicalReps_EvaluatorId",
                         column: x => x.EvaluatorId,
                         principalTable: "MedicalReps",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Evaluations_Visits_VisitId",
                         column: x => x.VisitId,
                         principalTable: "Visits",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
@@ -432,18 +413,18 @@ namespace Zyarat.Migrations
                 column: "GovernmentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Doctor_AdderMedicalRepId",
-                table: "Doctor",
+                name: "IX_Doctors_AdderMedicalRepId",
+                table: "Doctors",
                 column: "AdderMedicalRepId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Doctor_CityId",
-                table: "Doctor",
+                name: "IX_Doctors_CityId",
+                table: "Doctors",
                 column: "CityId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Doctor_MedicalSpecializedId",
-                table: "Doctor",
+                name: "IX_Doctors_MedicalSpecializedId",
+                table: "Doctors",
                 column: "MedicalSpecializedId");
 
             migrationBuilder.CreateIndex(
@@ -526,7 +507,7 @@ namespace Zyarat.Migrations
                 name: "Visits");
 
             migrationBuilder.DropTable(
-                name: "Doctor");
+                name: "Doctors");
 
             migrationBuilder.DropTable(
                 name: "MedicalReps");

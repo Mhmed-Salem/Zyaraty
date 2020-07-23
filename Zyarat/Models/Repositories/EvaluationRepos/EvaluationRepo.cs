@@ -12,7 +12,8 @@ namespace Zyarat.Models.Repositories.EvaluationRepos
     {
         public async Task<IEnumerable<Evaluation>> GetEvaluationsAsync(int visitId)
         {
-            return await Context.Evaluations.Where(evaluation => evaluation.VisitId==visitId).ToListAsync();
+            return await Context.Evaluations.Include(evaluation => evaluation.Evaluator)
+                .Where(evaluation => evaluation.VisitId==visitId).ToListAsync();
         }
 
         public async Task<Evaluation> GetAnEvaluationAsync(int visitId, int userId)
@@ -26,13 +27,10 @@ namespace Zyarat.Models.Repositories.EvaluationRepos
             Context.Evaluations.Remove(evaluation);
         }
 
-        public Task<Evaluation> GetAnEvaluationWithItsVisitAsync(int visitId, int userId)
+        public async Task<Evaluation> GetAnEvaluationWithItsVisitAsync(int visitId, int userId)
         {
-            var x = 20;
-            var n= Context.Evaluations.Include(evaluation => evaluation.Visit).FirstOrDefaultAsync(evaluation =>
+            return await Context.Evaluations.Include(evaluation => evaluation.Visit).FirstOrDefaultAsync(evaluation =>
                 evaluation.VisitId == visitId && evaluation.EvaluatorId == userId);
-            var z = 3;
-            return n;
 
         }
 
@@ -50,7 +48,7 @@ namespace Zyarat.Models.Repositories.EvaluationRepos
 
         public async Task<bool> OppositeEvaluationAsync(int userId, int visitId)
         {
-            var evaluation =await GetAnEvaluationAsync(userId, visitId);
+            var evaluation =await GetAnEvaluationAsync(visitId, userId);
             evaluation.Type =! evaluation.Type;
             return evaluation.Type;
         }
@@ -58,7 +56,18 @@ namespace Zyarat.Models.Repositories.EvaluationRepos
         public async Task<bool> IsUniqueEvaluatorAsync(int evaluatedId, int evaluatorId)
         {
             return await Context.Evaluations.Include(evaluation => evaluation.Visit)
-                .AnyAsync(evaluation => evaluation.EvaluatorId ==evaluatorId&&evaluation.Visit.MedicalRepId==evaluatedId);
+                .AsNoTracking()
+                .AnyAsync(evaluation => evaluation.EvaluatorId ==evaluatorId
+                                        &&evaluation.Visit.MedicalRepId==evaluatedId);
+        }
+
+        public async Task<int> TimesTheUserEvaluateAnotherUserVisitsAsLikeWithNoTracking(int evaluatedId, int evaluatorId)
+        {
+            return await Context.Evaluations.AsNoTracking()
+                .Include(evaluation => evaluation.Visit)
+                .CountAsync(evaluation => evaluation.EvaluatorId == evaluatorId
+                                          && evaluation.Visit.MedicalRepId == evaluatedId
+                                          &&evaluation.Type);
         }
 
         public EvaluationRepo(ApplicationContext context) : base(context)
