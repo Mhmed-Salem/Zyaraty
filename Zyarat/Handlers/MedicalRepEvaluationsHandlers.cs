@@ -82,7 +82,7 @@ namespace Zyarat.Handlers
 
             if ( rep.DisLikeCount / div * 100>= _allowablePercentageOfDisLikeToLike)
             {
-                _medicalRepRepo.DeleteUser(rep);
+                _medicalRepRepo.UnActive(rep);
                 RebExists = false;
             }
             else RebExists = true;

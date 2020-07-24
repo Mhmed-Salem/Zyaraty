@@ -86,6 +86,7 @@ namespace Zyarat.Models.Services.EvaluationsServices
                 var ev =await _repo.AddEvaluationAsync(_mapper.Map<AddEvaluationDto, Evaluation>(contract));
                 
                 await _medicalRepHandlers.HandleEvaluationWithMedicalRepAsync(ev,visit.Source,Interacting.Add);
+                
                 await _repo.AddEvaluationAsync(ev);
                 await _unitWork.CommitAsync();
                 return  new Response<Evaluation>(ev);

@@ -122,7 +122,7 @@ namespace Zyarat.Models.Services.MedicalRepService
                     return new Response<MedicalRep>("User does  Not Exist");
                 }
 
-                _repo.DeleteUser(user);
+                _repo.UnActive(user);
                 await _unitWork.CommitAsync();
                 return new Response<MedicalRep>(user);
             }

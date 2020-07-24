@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Zyarat.Data;
@@ -59,6 +60,19 @@ namespace Zyarat.Models.Repositories.VisitsRepo
         public void RemoveVisitsRange(List<Visit> visits)
         {
             Context.Visits.RemoveRange(visits);
+        }
+
+        public void UnActiveVisit(Visit visit)
+        {
+            //if visit type =true ,it would not be deactivated 
+            visit.Active = visit.Type;
+        }
+
+        public async Task<Visit> GetVisitWithItsReportsAsync(int visitId)
+        {
+            return await Context.Visits.Where(visit => visit.Id == visitId)
+                .Include(visit => visit.VisitReports)
+                .FirstOrDefaultAsync();
         }
 
         public VisitRepo(ApplicationContext context) : base(context)

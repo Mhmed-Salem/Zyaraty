@@ -121,6 +121,19 @@ namespace Zyarat.Models.Services.IVisitService.VisitsServices
                    && visit.Active;
         }
 
+        public async Task<Response<Visit>> GetVisitReportsAsync(int visitId)
+        {
+            try
+            {
+                var vis = await _repo.GetVisitWithItsReportsAsync(visitId);
+                return new Response<Visit>(vis);
+            }
+            catch (Exception e)
+            {
+                return new Response<Visit>($"Error: {e.Message}");
+            }
+        }
+
         public async Task<Response<IEnumerable<GetVisitByCityDto>>> GetVisitByCity(int cityId, int userId)
         {
             try

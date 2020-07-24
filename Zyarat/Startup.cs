@@ -16,6 +16,7 @@ using Zyarat.Handlers;
 using Zyarat.Mapping;
 using Zyarat.Models.Repositories.EvaluationRepos;
 using Zyarat.Models.Repositories.MedicalRepRepo;
+using Zyarat.Models.Repositories.ReportRepo;
 using Zyarat.Models.Repositories.VisitsRepo;
 using Zyarat.Models.Services;
 using Zyarat.Models.Services.EvaluationsServices;
@@ -23,6 +24,7 @@ using Zyarat.Models.Services.IdentityServices;
 using Zyarat.Models.Services.InterActing;
 using Zyarat.Models.Services.IVisitService.VisitsServices;
 using Zyarat.Models.Services.MedicalRepService;
+using Zyarat.Models.Services.ReportServices;
 using Zyarat.Options;
 
 namespace Zyarat
@@ -76,6 +78,11 @@ namespace Zyarat
 
                 services.AddScoped(typeof(MedicalRepEvaluationsHandlers));
                 services.AddScoped(typeof(VisitAssertion));
+
+                services.AddScoped<IReportService, ReportService>();
+                services.AddScoped<IReportRepo, ReportRepo>();
+
+                services.AddScoped(typeof(MedicalRepReportHandlers));
 
 
                 /**end of Inject services */

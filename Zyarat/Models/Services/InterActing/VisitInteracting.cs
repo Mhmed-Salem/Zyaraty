@@ -12,10 +12,19 @@ namespace Zyarat.Models.Services.InterActing
         {
             _visitService = visitService;
         }
+        
 
         public async Task<Response<Visit>> GetVisitAsync(int visitId)
         {
             return await _visitService.GetVisitAsync(visitId);
         }
+        
+
+        public async Task<Response<Visit>> GetVisitWithItsReportsAsync(int visitId)
+        {
+            return await _visitService.GetVisitReportsAsync(visitId);
+        }
+        
+        
     }
 }

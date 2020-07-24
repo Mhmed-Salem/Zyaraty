@@ -57,9 +57,10 @@ namespace Zyarat.Models.Repositories.MedicalRepRepo
         }
         
       
-        public void  DeleteUser(MedicalRep rep)
+        public void  UnActive(MedicalRep rep)
         {
             rep.Active = false;
+            rep.DeActiveDate=DateTime.Now;
         }
 
         public async Task<MedicalRep> GetVisitOwnerAsync(int visitId)

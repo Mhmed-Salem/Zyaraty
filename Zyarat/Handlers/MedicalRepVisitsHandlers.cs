@@ -14,6 +14,8 @@ namespace Zyarat.Handlers
 
     public class MedicalRepVisitsHandlers:MedicalRepRepo
     {
+        private const int LimitsOfReportsAfterWhichTheVisitWillBeUnActive = 2;
+        private readonly IVisitsRepo _visitsRepo;
         public async Task HandleAddingVisitAsync(Visit visit)
         {
             var rep =await GetUserAsync(visit.MedicalRepId);
@@ -48,10 +50,18 @@ namespace Zyarat.Handlers
             return rtList;
         }
 
-     
-        public MedicalRepVisitsHandlers(ApplicationContext context) : base(context)
+        public void HandleReportingVisit(Visit visit, IEnumerable<VisitReport> report)
         {
+            if (report.Count()>=LimitsOfReportsAfterWhichTheVisitWillBeUnActive)
+            {
+                _visitsRepo.UnActiveVisit(visit);
+            }
+        }
+
      
+        public MedicalRepVisitsHandlers(ApplicationContext context, IVisitsRepo visitsRepo) : base(context)
+        {
+            _visitsRepo = visitsRepo;
         }
     }
 }

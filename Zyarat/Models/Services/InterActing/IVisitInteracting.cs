@@ -7,5 +7,7 @@ namespace Zyarat.Models.Services.InterActing
     public interface IVisitInteracting
     {
         Task<Response<Visit>> GetVisitAsync(int visitId);
+        Task<Response<Visit>> GetVisitWithItsReportsAsync(int visitId);
+        
     }
 }

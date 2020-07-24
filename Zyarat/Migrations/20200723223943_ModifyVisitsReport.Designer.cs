@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Zyarat.Data;
 
 namespace Zyarat.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20200723223943_ModifyVisitsReport")]
+    partial class ModifyVisitsReport
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -463,28 +465,6 @@ namespace Zyarat.Migrations
                     b.ToTable("Visits");
                 });
 
-            modelBuilder.Entity("Zyarat.Data.VisitReport", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("ReporterId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("VisitId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ReporterId");
-
-                    b.HasIndex("VisitId");
-
-                    b.ToTable("VisitReport");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -620,21 +600,6 @@ namespace Zyarat.Migrations
                     b.HasOne("Zyarat.Data.MedicalRep", "MedicalRep")
                         .WithMany("Visits")
                         .HasForeignKey("MedicalRepId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Zyarat.Data.VisitReport", b =>
-                {
-                    b.HasOne("Zyarat.Data.MedicalRep", "Reporter")
-                        .WithMany("VisitReports")
-                        .HasForeignKey("ReporterId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.HasOne("Zyarat.Data.Visit", "Visit")
-                        .WithMany("VisitReports")
-                        .HasForeignKey("VisitId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });

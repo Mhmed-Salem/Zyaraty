@@ -29,7 +29,7 @@ namespace Zyarat.Data
             base.OnModelCreating(builder);
             /**
              * All the foreign key relationships un database is No action.
-             * except for the Evaluation_Visit_FK as it's a Cascade
+             * except for the Evaluation_Visit_FK as it's a Cascade, and VisitReports
              */
             foreach (var relationship in builder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
             {
@@ -38,6 +38,10 @@ namespace Zyarat.Data
 
             builder.Entity<Visit>().HasMany(v => v.Evaluation)
                 .WithOne(evaluation => evaluation.Visit)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Entity<Visit>().HasMany(v => v.VisitReports)
+                .WithOne(report => report.Visit)
                 .OnDelete(DeleteBehavior.Cascade);
             
             //make the default value for the dateTime of adding the Evaluation equal the time it inserted in 

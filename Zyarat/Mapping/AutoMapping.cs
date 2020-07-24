@@ -22,7 +22,6 @@ namespace Zyarat.Mapping
             CreateMap<MedicalRepPosition, MedicalRepPositionDto>();
             CreateMap<MedicalSpecialized, MedicalSpecializationDto>();
             CreateMap<Visit, VisitDto>();
-            CreateMap<VisitBlocking, VisitBlockingDto>();
             CreateMap<VisitReport, VisitReportDto>();
             CreateMap<UpdateRepResource, MedicalRep>();
             CreateMap<AddMedicalRepResourcesRequest, MedicalRep>();

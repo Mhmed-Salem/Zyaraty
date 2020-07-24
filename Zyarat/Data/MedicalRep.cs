@@ -12,6 +12,7 @@ namespace Zyarat.Data
         {
             Visits = new List<Visit>();
             AdderDoctor = new List<Doctor>();
+            VisitReports=new List<VisitReport>();
         }
         public int Id { set; get; }
         public string FName { set; get; }
@@ -27,11 +28,15 @@ namespace Zyarat.Data
         public int DisLikeCount { set; get; }
         public int UniqueUsers { set; get; }
         public bool Active { set; get; }
+        public DateTime DeActiveDate { set; get; }
+        public bool PermanentDeleted { set; get; }
+        
         public int MedicalRepPositionId { set; get; }
-        public VisitBlocking VisitBlocking { set; get; }
         public MedicalRepPosition MedicalRepPosition { set; get; }
         public List<Visit> Visits { set; get; }
         public List<Doctor> AdderDoctor { set; get; }//Doctors added by this User
+        public List<VisitReport> VisitReports { set; get; }
+        
 
         public string GenerateUserName()
         {

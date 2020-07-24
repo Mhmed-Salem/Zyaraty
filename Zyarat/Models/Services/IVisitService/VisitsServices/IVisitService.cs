@@ -14,6 +14,7 @@ namespace Zyarat.Models.Services.IVisitService.VisitsServices
         Task<Response<IEnumerable<GetVisitByCityDto>>> GetVisitByCity(int cityId, int userId);
         Task<Response<Visit>> GetVisitAsync(int visitId);
         bool IsActiveComment(Visit visit);
+        Task<Response<Visit>> GetVisitReportsAsync(int visitId);
 
     }
 }

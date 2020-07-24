@@ -10,6 +10,7 @@ namespace Zyarat.Data
         public Visit()
         {
             Evaluation = new List<Evaluation>();
+            VisitReports=new List<VisitReport>();
         }
         public int Id { set; get; }
         public MedicalRep MedicalRep { set; get; }
@@ -22,5 +23,6 @@ namespace Zyarat.Data
         public List<Evaluation> Evaluation { set; get; }
         public bool Active { set; get; }//not blocked due to reports
         
+        public List<VisitReport> VisitReports { set; get; }
     }
 }
