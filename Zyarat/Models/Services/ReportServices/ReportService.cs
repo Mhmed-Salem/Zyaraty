@@ -74,8 +74,7 @@ namespace Zyarat.Models.Services.ReportServices
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                return new Response<VisitReport>($"Error:{e.Message}");
             }
         }
     }

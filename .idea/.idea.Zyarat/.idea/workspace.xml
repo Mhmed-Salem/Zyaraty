@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61e5f741-d18f-472a-b68f-00b96601b2b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/ReportController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepReportHandlers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/ReportRepo/IReportRepo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/ReportRepo/ReportRepo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/IReportService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/ReportService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/Visit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/Visit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/VisitBlocking.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/VisitReport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/VisitReport.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepEvaluationsHandlers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepEvaluationsHandlers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepVisitsHandlers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepVisitsHandlers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/IMedicalRepRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/IMedicalRepRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/IVisitsRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/IVisitsRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/VisitRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/VisitRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/EvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/EvaluationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/IVisitService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/IVisitService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/InterActing/IVisitInteracting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/InterActing/IVisitInteracting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/InterActing/VisitInteracting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/InterActing/VisitInteracting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/ReportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/ReportService.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -203,8 +167,8 @@
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/ReportRepo/ReportRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Startup.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/ReportService.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Controllers/ReportController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/ReportService.cs" />
       </list>
     </option>
   </component>
@@ -309,7 +273,7 @@
       <workItem from="1595513821752" duration="17261000" />
       <workItem from="1595539006851" duration="7063000" />
       <workItem from="1595584352616" duration="7314000" />
-      <workItem from="1595600546374" duration="481000" />
+      <workItem from="1595600546374" duration="771000" />
     </task>
     <servers />
   </component>
