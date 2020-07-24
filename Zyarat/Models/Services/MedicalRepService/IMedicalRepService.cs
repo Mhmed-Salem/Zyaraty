@@ -18,6 +18,11 @@ namespace Zyarat.Models.Services.MedicalRepService
         Task<Response<MedicalRep>> GetRepAsync(int repId);
         Task<Response<MedicalRep>> Modify(int id, Update update);
         Task<Response<MedicalRep>> UpdateImageProfile(int id,IFormFile url);
+        
+        Task<Response<IEnumerable<MedicalRep>>> GetUnActiveUsersAsync(int pageNumber, int pageSize);
+        Task<Response<MedicalRep>> ActiveUser(int repId);
+
+        Task<Response<MedicalRep>> DeleteUserPermanently(int repId);
 
     }
 }

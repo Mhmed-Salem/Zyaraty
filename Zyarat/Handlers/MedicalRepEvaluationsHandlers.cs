@@ -31,7 +31,7 @@ namespace Zyarat.Handlers
         public async Task HandleEvaluationWithMedicalRepAsync(Evaluation ev,Visit visit,Interacting interacting)
         {
 
-            var rep = await _medicalRepRepo.GetUserAsync(ev.Visit.MedicalRepId);
+            var rep = await _medicalRepRepo.GetUserAsyncWithAllHisInfo(ev.Visit.MedicalRepId);
             //tested
             if (ev.Type && interacting == Interacting.Add || interacting == Interacting.Modify && ev.Type)
             {

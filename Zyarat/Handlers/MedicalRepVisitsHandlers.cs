@@ -18,13 +18,13 @@ namespace Zyarat.Handlers
         private readonly IVisitsRepo _visitsRepo;
         public async Task HandleAddingVisitAsync(Visit visit)
         {
-            var rep =await GetUserAsync(visit.MedicalRepId);
+            var rep =await GetUserAsyncWithAllHisInfo(visit.MedicalRepId);
             rep.VisitsCount++;
         }
 
         public async Task HandleRemovingVisitAsync(Visit visit)
         {
-            var rep =await GetUserAsync(visit.MedicalRepId);
+            var rep =await GetUserAsyncWithAllHisInfo(visit.MedicalRepId);
             rep.VisitsCount--;
             
         }

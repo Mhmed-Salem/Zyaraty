@@ -20,7 +20,7 @@ namespace Zyarat.Handlers
         {
             if (reports.Count()>=LimitOfReportsTheRepWillDeactivatedAfter)
             {
-                _medicalRepRepo.UnActive(await _medicalRepRepo.GetUserAsync(visit.MedicalRepId));
+                _medicalRepRepo.UnActive(await _medicalRepRepo.GetUserAsyncWithAllHisInfo(visit.MedicalRepId));
             }
         }
     }

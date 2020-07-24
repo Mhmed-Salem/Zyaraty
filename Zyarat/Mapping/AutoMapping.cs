@@ -33,7 +33,7 @@ namespace Zyarat.Mapping
             CreateMap<Evaluation, AddEvaluationDto>();
             CreateMap<Evaluation, AddEvaluationResponse>();
             CreateMap<Evaluation, GetEvaluationsResponse>();
-
+            CreateMap<MedicalRep, GetUnActiveUsersResponse>();
         }
     }
 }

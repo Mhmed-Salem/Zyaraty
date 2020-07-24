@@ -167,6 +167,7 @@
           <e p="GetEvaluationsResponse.cs" t="Include" />
           <e p="MedicalRepResponses" t="Include">
             <e p="GetMedicalRepResponse.cs" t="Include" />
+            <e p="GetUnActiveUsersResponse.cs" t="Include" />
           </e>
         </e>
         <e p="Startup.cs" t="Include" />

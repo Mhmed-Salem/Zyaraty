@@ -20,7 +20,7 @@ namespace Zyarat.Models.Services.MedicalRepService
         private readonly IUnitWork _unitWork;
         private readonly IMedicalRepRepo _repo;
         private readonly IMapper _mapper;
-        private IIdentityUser _identityUser;
+        private readonly IIdentityUser _identityUser;
 
         public MedicalRepService(
             IUnitWork unitWork,
@@ -101,7 +101,7 @@ namespace Zyarat.Models.Services.MedicalRepService
 
         public async  Task<Response<MedicalRep>> UpdateImageProfile(int id, IFormFile formFile)
         {
-            var rep = await _repo.GetUserAsync(id);
+            var rep = await _repo.GetUserAsyncWithAllHisInfo(id);
             var newUrl=await UpdateFileAsync(rep.ProfileUrl, formFile);
             if (newUrl==null)
             { 
@@ -112,11 +112,54 @@ namespace Zyarat.Models.Services.MedicalRepService
             return new Response<MedicalRep>(rep);
         }
 
+        public async  Task<Response<IEnumerable<MedicalRep>>> GetUnActiveUsersAsync(int pageNumber, int pageSize)
+        {
+            try
+            {
+                var source = await _repo.GetUnActiveUsersAsync(pageNumber,pageSize);
+                return new Response<IEnumerable<MedicalRep>>(source);
+            }
+            catch (Exception e)
+            {
+              return new Response<IEnumerable<MedicalRep>>($"Error :{e.Message}");
+            }
+        }
+
+        public async Task<Response<MedicalRep>> ActiveUser(int repId)
+        {
+            try
+            {
+                var user = await _repo.GetUserAsyncWithAllHisInfo(repId);
+                _repo.ActiveUser(user);
+                await _unitWork.CommitAsync();
+                return new Response<MedicalRep>(user);
+            }
+            catch (Exception e)
+            {
+                return new Response<MedicalRep>($"Error: {e.Message}");
+            }
+        }
+
+        public async Task<Response<MedicalRep>> DeleteUserPermanently(int repId)
+        {
+            try
+            {
+                var user = await _repo.GetUserAsyncWithAllHisInfo(repId);
+                _repo.DeleteUserPermanently(user);
+                await _unitWork.CommitAsync();
+                return new Response<MedicalRep>(user);
+            }
+            catch (Exception e)
+            {
+                return new Response<MedicalRep>($"Error :{e.Message}");
+            }
+        }
+
         public async Task<Response<MedicalRep>> DeleteRepAsync(int id)
         {
             try
             {
-                var user = await _repo.GetUserAsync(id);
+                var user = await _repo.GetUserAsyncWithAllHisInfo(id);
                 if (user == null)
                 {
                     return new Response<MedicalRep>("User does  Not Exist");
@@ -137,7 +180,7 @@ namespace Zyarat.Models.Services.MedicalRepService
         {
             try
             {
-                var user = await _repo.GetUserAsync(repId);
+                var user = await _repo.GetUserAsyncWithAllHisInfo(repId);
                 return user == null ? new Response<MedicalRep>("User does  Not Exist") : new Response<MedicalRep>(user);
             }
             catch (Exception e)
@@ -145,8 +188,6 @@ namespace Zyarat.Models.Services.MedicalRepService
                 return new Response<MedicalRep>($"Error:{e.Message}");
             }
         }
-        
-        
     }
 }
 

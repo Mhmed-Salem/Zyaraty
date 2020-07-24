@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -11,6 +12,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Zyarat.Data;
+using Zyarat.Models.Repositories.MedicalRepRepo;
 using Zyarat.Options;
 using Zyarat.Resources;
 
@@ -23,24 +25,25 @@ namespace Zyarat.Models.Services.IdentityServices
         private readonly ApplicationContext _context;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IHttpContextAccessor  _accessor;
+        private readonly IMedicalRepRepo _usMedicalRepRepo;
         
-        public IdentityService(JwtSettings jwtSettings, ApplicationContext context, UserManager<IdentityUser> userManager, IHttpContextAccessor accessor)
+        public IdentityService(JwtSettings jwtSettings, ApplicationContext context, UserManager<IdentityUser> userManager, IHttpContextAccessor accessor, IMedicalRepRepo usMedicalRepRepo)
         {
             _jwtSettings = jwtSettings;
             _context = context;
             _userManager = userManager;
             _accessor = accessor;
+            _usMedicalRepRepo = usMedicalRepRepo;
         }
 
-        private async  Task<string> GenerateToken(IdentityUser user)
+        private async  Task<string> GenerateToken(IdentityUser user,bool isActive)
         {
-            //https://www.blinkingcaret.com/2018/05/30/refresh-tokens-in-asp-net-core-web-api/
             var claims=new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim("id", user.Id),
-                
+                new Claim("IsActive",isActive.ToString())
             };
             await AddRolesToPrincipalClaims(user, claims);
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Secret));
@@ -108,13 +111,13 @@ namespace Zyarat.Models.Services.IdentityServices
             var user = await _userManager.FindByEmailAsync(newUser.Email);
             if (user!=null)
             {
-                return new RegisterServiceResult("the user is already exists");
+                return new RegisterServiceResult("the user is already existed !");
             }
 
             var state=await _userManager.CreateAsync(newUser, password);
             if (!state.Succeeded)
             {
-                return new RegisterServiceResult()
+                return new RegisterServiceResult
                 {
                     Errors = state.Errors.Select(error => error.Description).ToList()
                 };
@@ -130,7 +133,7 @@ namespace Zyarat.Models.Services.IdentityServices
            
             return new RegisterServiceResult
             {
-                Token = await GenerateToken( newUser),
+                Token = await GenerateToken( newUser,true),
                 RefreshToken = refreshToken
             };
         }
@@ -151,7 +154,10 @@ namespace Zyarat.Models.Services.IdentityServices
             {
                 return new RegisterServiceResult("Password is not Valid.");
             }
+
+            var relatedData = await _usMedicalRepRepo.GetUserByIdentityIdAsync(user.Id);
             var newRefreshToken = GenerateRefreshToken();
+            
             await AddRefreshTokenAsync(new RefreshingToken
             {
                 IP =_accessor.HttpContext.Connection.RemoteIpAddress.ToString(),
@@ -160,7 +166,7 @@ namespace Zyarat.Models.Services.IdentityServices
             });
             return new RegisterServiceResult{
                 RefreshToken = newRefreshToken, 
-                Token = await GenerateToken(user)
+                Token = await GenerateToken(user,relatedData.Active)
             };
         }
 
@@ -172,10 +178,13 @@ namespace Zyarat.Models.Services.IdentityServices
             {
                 return new RegisterServiceResult("Invalid Refresh Token");
             }
+            var relatedData = await _usMedicalRepRepo.GetUserByIdentityIdAsync(claimsPrincipal.Claims.FirstOrDefault(claim => claim.Type=="id")?.Value);
+
             await UpdateRefreshToken(refreshToken,newRefreshToken);
             return new RegisterServiceResult
             {
-                Token = await GenerateToken(await _userManager.FindByEmailAsync( claimsPrincipal.Claims.FirstOrDefault(claim => claim.Type == ClaimTypes.Email)?.Value)),
+                Token = await GenerateToken(await _userManager.FindByEmailAsync(
+                    claimsPrincipal.Claims.FirstOrDefault(claim => claim.Type == ClaimTypes.Email)?.Value),relatedData.Active),
                 RefreshToken = refreshToken
             };
         }

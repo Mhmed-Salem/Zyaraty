@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
@@ -180,8 +182,48 @@ namespace Zyarat.Controllers
             
             return Ok(rep);
         }
+
+        [HttpGet("GetUnActiveUsers")]
+        public async Task<IActionResult> GetUnActiveUsers([FromQuery]int pageNumber,[FromQuery]int pageSize)
+        {
+            var state = await _service.GetUnActiveUsersAsync(pageNumber, pageSize);
+            if (!state.Success)
+            {
+                return BadRequest(state.Error);
+            }
+
+            return Ok(_mapper.Map<IEnumerable<MedicalRep>,IEnumerable<GetUnActiveUsersResponse>>(state.Source));
+        }
+
+        [HttpPut("active/{repId}")]
+        public async Task<IActionResult> Active(int repId)
+        {
+            var state = await _service.ActiveUser(repId);
+            if (!state.Success)
+            {
+                return BadRequest(state.Error);
+            }
+
+            return Ok(_mapper.Map<MedicalRep, GetUnActiveUsersResponse>(state.Source));
+        }
         
-     
+        [HttpPut("DeletePermanently/{repId}")]
+        public async Task<IActionResult> DeletePermanently(int repId)
+        {
+            var state = await _service.DeleteUserPermanently(repId);
+            if (!state.Success)
+            {
+                return BadRequest(state.Error);
+            }
+
+            return Ok(_mapper.Map<MedicalRep, GetUnActiveUsersResponse>(state.Source));
+        }
         
+        
+        
+        
+
+
+
     }
 }

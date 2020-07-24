@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61e5f741-d18f-472a-b68f-00b96601b2b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/ReportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/ReportService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetUnActiveUsersResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepEvaluationsHandlers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepEvaluationsHandlers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepReportHandlers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepReportHandlers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepVisitsHandlers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepVisitsHandlers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/IMedicalRepRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/IMedicalRepRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,6 +122,7 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/MedicalRepVisitsHandlers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/Interacting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/VisitAssertion.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetUnActiveUsersResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/RegisterServiceResult.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/AddMedicalRepResourcesRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/ModifyMedicalRepResourcesRequest.cs" root0="FORCE_HIGHLIGHTING" />
@@ -118,10 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepHandlers.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Handlers/InteractingVisit.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Handlers/EvaluationInteracting.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Handlers/Interacting.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Handlers/IHandler.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Handlers/DeletingVisitsHandler.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Handlers/VisitAssertion.cs" />
@@ -136,7 +146,6 @@
         <option value="$PROJECT_DIR$/Zyarat/Migrations/20200722193045_Modify 3.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Migrations/20200722231257_Make the datetime=now by default2.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Migrations/20200722231333_Make the datetime=now by default3.Designer.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Migrations/20200723115945_firstMig.Designer.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Resources/AddEvaluationResponse.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Program.cs" />
@@ -145,11 +154,8 @@
         <option value="$PROJECT_DIR$/Zyarat/Responses/GetEvaluationsResponse.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/EvaluationRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Controllers/EvaluationController.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/EvaluationService.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/RepBlockingHistory.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/IMedicalRepRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/ReportRepo/IReportRpo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/IVisitService.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" />
@@ -165,10 +171,18 @@
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/IReportService.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/ReportRepo/IReportRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/ReportRepo/ReportRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Startup.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Controllers/ReportController.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/ReportService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetUnActiveUsersResponse.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/IMedicalRepRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" />
       </list>
     </option>
   </component>
@@ -273,7 +287,7 @@
       <workItem from="1595513821752" duration="17261000" />
       <workItem from="1595539006851" duration="7063000" />
       <workItem from="1595584352616" duration="7314000" />
-      <workItem from="1595600546374" duration="771000" />
+      <workItem from="1595600546374" duration="9735000" />
     </task>
     <servers />
   </component>
