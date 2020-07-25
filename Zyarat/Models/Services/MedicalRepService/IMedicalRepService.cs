@@ -13,6 +13,8 @@ namespace Zyarat.Models.Services.MedicalRepService
     {
         
         Task<RegisterServiceResult> AddRepAsync(AddMedicalRepResourcesRequest rep);
+        Task<RegisterServiceResult> AddRepForTestAsync(AddMedicalRepResourcesRequest rep);
+
         Task<Response<List<MedicalRep>>> GetAll(int page ,int pageCount);
         Task<Response<MedicalRep>> DeleteRepAsync(int id);
         Task<Response<MedicalRep>> GetRepAsync(int repId);
@@ -21,8 +23,11 @@ namespace Zyarat.Models.Services.MedicalRepService
         
         Task<Response<IEnumerable<MedicalRep>>> GetUnActiveUsersAsync(int pageNumber, int pageSize);
         Task<Response<MedicalRep>> ActiveUser(int repId);
+        Task<Response<RegisterServiceResult>> RefreshTokensAsync(string token, string refreshToken);
+        Task<Response<RegisterServiceResult>> Login(string email,string password);
 
         Task<Response<MedicalRep>> DeleteUserPermanently(int repId);
+        
 
     }
 }

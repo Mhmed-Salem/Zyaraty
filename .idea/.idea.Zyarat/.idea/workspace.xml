@@ -2,20 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61e5f741-d18f-472a-b68f-00b96601b2b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetUnActiveUsersResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/Test.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepEvaluationsHandlers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepEvaluationsHandlers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepReportHandlers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepReportHandlers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepVisitsHandlers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepVisitsHandlers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/IMedicalRepRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/IMedicalRepRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IIdentityUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IIdentityUser.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetUnActiveUsersResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetUnActiveUsersResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/project.assets.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,6 +60,7 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/WeatherForecast.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/IReportService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/ReportService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/Test.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/ReportRepo/ReportRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/EvaluationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/VisitController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -132,9 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Zyarat/Handlers/IHandler.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Handlers/DeletingVisitsHandler.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Handlers/VisitAssertion.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/EvaluationDto.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/IEvaluationService.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/Evaluation.cs" />
@@ -175,14 +179,17 @@
         <option value="$PROJECT_DIR$/Zyarat/Controllers/ReportController.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/ReportService.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetUnActiveUsersResponse.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/IMedicalRepRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetUnActiveUsersResponse.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Resources/AddMedicalRepResourcesRequest.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/Test.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IIdentityUser.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" />
       </list>
     </option>
   </component>
@@ -287,7 +294,7 @@
       <workItem from="1595513821752" duration="17261000" />
       <workItem from="1595539006851" duration="7063000" />
       <workItem from="1595584352616" duration="7314000" />
-      <workItem from="1595600546374" duration="9735000" />
+      <workItem from="1595600546374" duration="20719000" />
     </task>
     <servers />
   </component>

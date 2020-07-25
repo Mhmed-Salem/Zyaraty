@@ -23,12 +23,14 @@ namespace Zyarat.Models.Repositories.MedicalRepRepo
                 .Include(rep => rep.IdentityUser)
                 .Include(rep =>rep.City )
                 .Include(rep => rep.MedicalRepPosition)
+                .Where(rep => !rep.PermanentDeleted)
                 .FirstOrDefaultAsync(rep => rep.Id == id);
         }
 
         public async Task<MedicalRep> GetUserByIdentityIdAsync(string identityId)
         {
             return await Context.MedicalReps.Include(rep => rep.IdentityUser)
+                .Where(rep => !rep.PermanentDeleted)
                 .Where(rep => rep.IdentityUser.Id == identityId).FirstOrDefaultAsync();
         }
 
@@ -38,6 +40,7 @@ namespace Zyarat.Models.Repositories.MedicalRepRepo
                 .Include(rep => rep.IdentityUser)
                 .Include(rep =>rep.City )
                 .Include(rep => rep.MedicalRepPosition)
+                .Where(rep => !rep.PermanentDeleted)
                 .AsEnumerable()
                 .Skip((page - 1) * itemsCount).Take(itemsCount).ToList();
         }
@@ -79,7 +82,9 @@ namespace Zyarat.Models.Repositories.MedicalRepRepo
         public async Task<IEnumerable<MedicalRep>> GetUnActiveUsersAsync(int pageNumber, int pageSize)
         {
             return await  Context.MedicalReps.Where(rep => !rep.Active && !rep.PermanentDeleted)
-                .AsNoTracking().OrderByDescending(rep => rep.DeActiveDate).Skip((pageNumber-1)*pageSize).Take(pageSize).ToListAsync();
+                .AsNoTracking()
+                .Where(rep => !rep.PermanentDeleted)
+                .OrderByDescending(rep => rep.DeActiveDate).Skip((pageNumber-1)*pageSize).Take(pageSize).ToListAsync();
         }
 
         public void ActiveUser(MedicalRep rep)

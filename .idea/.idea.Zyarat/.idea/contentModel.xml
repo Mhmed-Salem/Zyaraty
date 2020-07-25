@@ -24,6 +24,7 @@
           <e p="EvaluationController.cs" t="Include" />
           <e p="MedicalRepController.cs" t="Include" />
           <e p="ReportController.cs" t="Include" />
+          <e p="Test.cs" t="Include" />
           <e p="VisitController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
@@ -65,6 +66,8 @@
           <e p="20200723223943_ModifyVisitsReport.Designer.cs" t="Include" />
           <e p="20200723233530_ModifyVisitsReport2.cs" t="Include" />
           <e p="20200723233530_ModifyVisitsReport2.Designer.cs" t="Include" />
+          <e p="20200724234710_addDefaultValues.cs" t="Include" />
+          <e p="20200724234710_addDefaultValues.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -174,10 +177,13 @@
         <e p="WeatherForecast.cs" t="Include" />
         <e p="wwwroot" t="Include">
           <e p="189ec2e6-92eb-4c3a-b5a2-9dfbfdc9f3f7_21743589_1162103990588313_3722657498792333203_o.jpg" t="Include" />
+          <e p="1e42bc59-1afd-46d0-837e-052da4a7dd0f_59456331_2677529995652867_4413706979772465152_n.jpg" t="Include" />
           <e p="230a8862-cc61-48e4-a458-db1c6651d061_كو 1.png" t="Include" />
           <e p="3b879ea5-7818-4b4a-821f-37af381cfb52_كو 1.png" t="Include" />
+          <e p="49a740d5-4b47-407d-b6d3-8b6510c74968_59456331_2677529995652867_4413706979772465152_n.jpg" t="Include" />
           <e p="5b796cb4-4da0-45dc-be23-d5d4148cef5c_كو 1.png" t="Include" />
           <e p="6d66ecb0-575d-41a2-bd30-1a2b434ac733_كو 1.png" t="Include" />
+          <e p="73ffe786-6b56-46b8-b1e4-94c0d451dd7b_59456331_2677529995652867_4413706979772465152_n.jpg" t="Include" />
           <e p="7946c7f1-4a78-4d8a-b7a5-c030a16d9d4f_9_e5eb8e98cc - Copy.jpg" t="Include" />
           <e p="8165c873-e9b0-4cf1-b2c8-c165af25b16c_كو 1.png" t="Include" />
           <e p="8ac636cf-a79a-49db-aa43-4bc0cb4e5fc6_12313714_10153402663370345_8983252820405287690_n.jpg" t="Include" />
@@ -186,6 +192,7 @@
           <e p="937925b1-dbbf-45e9-9164-136d98187eaf_كو 1.png" t="Include" />
           <e p="95f9e696-da7f-4d40-8a13-2fc46cf697c2_كو 1.png" t="Include" />
           <e p="97d9331d-4cc1-43f9-8dc7-4c795a1ac21a_كو 1.png" t="Include" />
+          <e p="9e55d17e-f235-44a2-bd36-358a80b97eea_59456331_2677529995652867_4413706979772465152_n.jpg" t="Include" />
           <e p="9fcec17b-c946-4d0c-8c88-de5f05820c99_كو 1.png" t="Include" />
           <e p="ae7dae42-d9bc-4410-a3ce-f2c4245d6e31_كو 1.png" t="Include" />
           <e p="b445eeba-0450-41b1-9748-7bc1e82449a8_كو 1.png" t="Include" />

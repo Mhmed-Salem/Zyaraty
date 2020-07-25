@@ -44,6 +44,30 @@ namespace Zyarat.Models.Services.MedicalRepService
                 {
                     rep.ProfileUrl = await UploadAsync(request.Image);
                 }
+                await _repo.AddUser(rep);
+                var identity = new IdentityUser
+                {
+                    Email = request.Email,
+                    PhoneNumber = request.Phone,
+                    UserName = rep.GenerateUserName()
+                };
+                var result = await _identityUser.RegisterAsync(identity, request.Password,rep);
+                rep.IdentityUser = identity;
+                await _unitWork.CommitAsync();
+                return result;
+            }
+            catch (Exception e)
+            {
+                return new RegisterServiceResult($"Can not Register :{e.InnerException}");
+            }
+        }
+
+        public async Task<RegisterServiceResult> AddRepForTestAsync(AddMedicalRepResourcesRequest request)
+        {
+            try
+            {
+                var rep = _mapper.Map<AddMedicalRepResourcesRequest, MedicalRep>(request);
+             
 
                 var identity = new IdentityUser
                 {
@@ -51,7 +75,7 @@ namespace Zyarat.Models.Services.MedicalRepService
                     PhoneNumber = request.Phone,
                     UserName = rep.GenerateUserName()
                 };
-                var result = await _identityUser.RegisterAsync(identity, request.Password);
+                var result = await _identityUser.RegisterAsync(identity, request.Password,rep);
                 rep.IdentityUser = identity;
                 await _repo.AddUser(rep);
                 await _unitWork.CommitAsync();
@@ -61,6 +85,7 @@ namespace Zyarat.Models.Services.MedicalRepService
             {
                 return new RegisterServiceResult($"Can not Register :{e.InnerException}");
             }
+            
         }
 
 
@@ -137,6 +162,32 @@ namespace Zyarat.Models.Services.MedicalRepService
             catch (Exception e)
             {
                 return new Response<MedicalRep>($"Error: {e.Message}");
+            }
+        }
+
+        public async Task<Response<RegisterServiceResult>> RefreshTokensAsync(string token, string refreshToken)
+        {
+            try
+            {
+                var reply = await _identityUser.RefreshTokenAsync(token, refreshToken);
+                return new Response<RegisterServiceResult>(reply);
+            }
+            catch (Exception e)
+            {
+                return new Response<RegisterServiceResult>($"Error: {e.Message}");
+            }
+        }
+
+        public async Task<Response<RegisterServiceResult>> Login(string email, string password)
+        {
+            try
+            {
+                var reply = await _identityUser.LoginAsync(email, password);
+                return new Response<RegisterServiceResult>(reply);
+            }
+            catch (Exception e)
+            {
+                return new Response<RegisterServiceResult>($"Error:{e.Message}");
             }
         }
 

@@ -20,7 +20,6 @@ namespace Zyarat.Controllers
     {
         private readonly IMedicalRepService _service;
         private readonly IMapper _mapper;
-
         public MedicalRepController(IMedicalRepService service, IMapper mapper)
         {
             _service = service;
@@ -78,7 +77,7 @@ namespace Zyarat.Controllers
          */
 
     
-        [HttpPost]
+        [HttpPost("register")]
         public async Task<IActionResult> Register([FromForm]AddMedicalRepResourcesRequest request)
         {
             var state=await _service.AddRepAsync(rep: request);
@@ -92,6 +91,24 @@ namespace Zyarat.Controllers
                 RefreshToken = state.RefreshToken
             });
         }
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromForm] string email,[FromForm]string password)
+        {
+            var state = await _service.Login(email, password);
+            if (!state.Success ||!state.Source.Success)
+            {
+                return BadRequest(state.Error);
+            }
+
+            return Ok(new TokenAndRefresh
+            {
+                Token = state.Source.Token,
+                RefreshToken = state.Source.RefreshToken
+            });
+
+        }
+        
 
         [HttpPut("UpdateImageProfile/{repId}")]
         public async Task<IActionResult> UpdateImageProfile(int repId,[FromForm]IFormFile file)
@@ -220,10 +237,6 @@ namespace Zyarat.Controllers
         }
         
         
-        
-        
-
-
-
     }
+    
 }
