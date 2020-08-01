@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
+using Zyarat.Contract.Doctor;
 using Zyarat.Contract.MedicalRepsContracts;
 using Zyarat.Contract.VisitsContracts;
 using Zyarat.Data;
@@ -39,6 +40,10 @@ namespace Zyarat.Mapping
             CreateMap<Visit, AddVisitDto>();
             CreateMap<Winner, WinnerDto>();
             CreateMap<WinnerDto, Winner>();
+            CreateMap<AddDoctorDto, Doctor>();
+            CreateMap<Doctor, DoctorResponse>();
+
+
 
         }
     }

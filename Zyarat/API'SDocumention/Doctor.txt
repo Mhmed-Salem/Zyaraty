@@ -1,0 +1,42 @@
+﻿----------------DOCTOR'S REST APIS'-----------
+1-URL [GET]
+
+/api/Doctor/1
+
+City Id=1
+
+==Explanation
+Get all the doctors in passed city
+
+==Response 
+[
+    {
+        "id": 1,
+        "fName": "علاء ",//must be in arabic 
+        "lName": "سعيد" //must be in arabic 
+    },
+    .
+    .
+    .
+]
+
+--------------------------------------------------------------------------------------------
+2-
+URL [POST]
+
+/api/Doctor/
+
+==Explanation
+Add new doctor 
+
+==Response 
+the created object 
+
+{
+    "id": 6,
+    "fName": "محمد",
+    "lName": "علي",
+    "cityId": 1,//city th doctor exists in
+    "adderMedicalRepId": 1000,//th medical rep eho add this doctor 
+    "medicalSpecializedId": 1// the spechialization of this doctor it would be 'batna' or 'Qualb'
+}

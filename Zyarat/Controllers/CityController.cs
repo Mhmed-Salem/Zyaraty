@@ -21,7 +21,7 @@ namespace Zyarat.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet()]
+        [HttpGet]
         public async Task<IActionResult> Get()
         {
             var govs = await _context.Governments.Include(government => government.Cities).ToListAsync();

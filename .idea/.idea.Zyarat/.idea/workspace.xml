@@ -2,54 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61e5f741-d18f-472a-b68f-00b96601b2b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/DoctorSpecialization.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Evaluation" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Governements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/MedicalRepPositions.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Rep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Report.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Visit.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Contract/VisitsContracts/AddVisitDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/CityController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/DoctorsSpecializationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepPositionContoller.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Data/Competition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/Competitor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Data/Winner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/MedicalRepForVisitDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/WinnerDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Doctor.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Contract/Doctor/AddDoctorDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/DoctorController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Responses/DoctorResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/EvaluationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/EvaluationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/Test.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/VisitController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/VisitController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepVisitsHandlers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Handlers/MedicalRepVisitsHandlers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/CityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/CityController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitByCityDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitByCityDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/DTO/GovernmentDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/GovernmentDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/project.assets.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,11 +129,14 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/ModifyMedicalRepResourcesRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetMedicalRepResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Responses/GetEvaluationsResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Contract/Doctor/AddDoctorDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/DoctorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/EvaluationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Competition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/VisitController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200724234710_addDefaultValues.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Responses/DoctorResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/AddEvaluationResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Winner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200723115945_firstMig.cs" root0="FORCE_HIGHLIGHTING" />
@@ -197,10 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Zyarat/Migrations/20200728233959_ModifyProc.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/CurrentWinner.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Migrations/20200729001357_ModifyProc110.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Migrations/20200729110121_dqpowjdpwqjfdp.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Migrations/20200729111403_Modify.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetionRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetionType.cs" />
@@ -237,17 +200,21 @@
         <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Rep" />
         <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Report.txt" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/WinnerDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
         <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" />
         <option value="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/CityDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/CityController.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/GovernmentDto.cs" />
         <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Governements.txt" />
         <option value="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepPositionContoller.cs" />
         <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/MedicalRepPositions.txt" />
         <option value="$PROJECT_DIR$/Zyarat/Controllers/DoctorsSpecializationController.cs" />
         <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/DoctorSpecialization.txt" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/CityController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Contract/Doctor/AddDoctorDto.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Responses/DoctorResponse.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/DoctorController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Doctor.txt" />
       </list>
     </option>
   </component>
@@ -361,7 +328,8 @@
       <workItem from="1596056724277" duration="6279000" />
       <workItem from="1596140468921" duration="1330000" />
       <workItem from="1596142600034" duration="10643000" />
-      <workItem from="1596196703779" duration="45952000" />
+      <workItem from="1596196703779" duration="46596000" />
+      <workItem from="1596290598718" duration="4306000" />
     </task>
     <servers />
   </component>

@@ -11,6 +11,7 @@
       <e p="Zyarat" t="IncludeRecursive">
         <e p="API'SDocumention" t="Include">
           <e p="Competition" t="Include" />
+          <e p="Doctor.txt" t="Include" />
           <e p="DoctorSpecialization.txt" t="Include" />
           <e p="Evaluation" t="Include" />
           <e p="Governements.txt" t="Include" />
@@ -23,6 +24,9 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contract" t="Include">
+          <e p="Doctor" t="Include">
+            <e p="AddDoctorDto.cs" t="Include" />
+          </e>
           <e p="MedicalRepsContracts" t="Include">
             <e p="UpdateRepResource.cs" t="Include" />
           </e>
@@ -34,6 +38,7 @@
         <e p="Controllers" t="Include">
           <e p="CityController.cs" t="Include" />
           <e p="CompetitionController.cs" t="Include" />
+          <e p="DoctorController.cs" t="Include" />
           <e p="DoctorsSpecializationController.cs" t="Include" />
           <e p="EvaluationController.cs" t="Include" />
           <e p="MedicalRepController.cs" t="Include" />
@@ -222,6 +227,7 @@
           <e p="RegisterServiceResult.cs" t="Include" />
         </e>
         <e p="Responses" t="Include">
+          <e p="DoctorResponse.cs" t="Include" />
           <e p="GetEvaluationsResponse.cs" t="Include" />
           <e p="MedicalRepResponses" t="Include">
             <e p="GetMedicalRepResponse.cs" t="Include" />
