@@ -69,7 +69,7 @@ namespace Zyarat.Controllers
             return Ok(_mapper.Map<Evaluation,AddEvaluationDto>(state.Source));
         }
 
-        [HttpGet("{visitId}")]
+        [HttpGet("GetEvaluators/{visitId}")]
 
         public async Task<IActionResult> GetEvaluators(int visitId)
         {

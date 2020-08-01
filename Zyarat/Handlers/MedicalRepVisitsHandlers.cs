@@ -21,6 +21,8 @@ namespace Zyarat.Handlers
             var rep =await GetUserAsyncWithAllHisInfo(visit.MedicalRepId);
             rep.VisitsCount++;
         }
+        
+        
 
         public async Task HandleRemovingVisitAsync(Visit visit)
         {

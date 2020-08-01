@@ -1,0 +1,123 @@
+﻿#BEFORE diving to APIS'
+there are two types of Competition 
+1-daily
+2-monthly
+
+1-
+==URL [POST]
+
+/api/Competition/daily  (for daily competition)
+||
+/api/Competition/monthly (for monthly competition)
+
+==Explanation
+Add the next daily ||monthly Competition.
+if the competition is already had been added ,it will throw a badRequest
+==Request Contract
+ from form send 
+ 
+ Roles //string text about some roles the admin specify
+ MinUniqueUsers
+ MinUniqueVisits
+ 
+ ==Response 
+ the created object 
+ 
+ {
+     "roles":"goOn,we have great prizes",
+      "MinUniqueUsers":120,
+      "MinUniqueVisits":30
+ }
+ 
+ -----------------------------------------------------------------------------------------------------------------
+ 2-
+ URL[PUT]
+ 
+ /api/Competition/daily/5
+ 
+ ||
+ /api/Competition/monthly/5
+ 
+ ==Explanation
+ modify the next competition (competition Id=5)
+ 
+ ==Request Contract 
+ from form send 
+ 
+  Roles //string text about some roles the admin specify
+  MinUniqueUsers
+  MinUniqueVisits
+ 
+ ==Response 
+ 
+  {
+      "roles":"goOn,we have great prizes",
+       "MinUniqueUsers":120,
+       "MinUniqueVisits":30
+  }
+  
+----------------------------------------------------------------------------------------------------------------
+3-
+URL [GET]
+/api/Competition/GetMonthlyFinalResult?year=2020&month=5
+==Explanation
+get the result of the monthly competition that had started in year and month
+
+==Response
+ [
+    {
+     "CompetitionId":1,
+     "Rank":1,
+     "MedicalRepId":5
+    },
+    .
+    .
+    .
+ ]
+ -----------------------------------------------------------------------------------------------------
+ 4-
+ URL [GET]
+ /api/Competition/GetDailyFinalResult?year=2020&month=5
+ ==Explanation
+ get the result of the daily competition that had started in year and month
+ 
+ ==Response
+  [
+     {
+      "CompetitionId":1,
+      "Rank":1,
+      "MedicalRepId":5
+     },
+     .
+     .
+     .
+  ]
+
+----------------------------------------------------------------------------------------------------------------------------------
+5-
+URL[GET]
+/api/Competition/daily
+||
+/api/Competition/monthly
+
+==Explanation
+get the current result for the daily or monthly .
+current result of the current running competition
+
+==Response 
+
+ [
+     {
+      "CompetitionId":1,
+      "Rank":1,
+      "MedicalRepId":5
+     },
+     .
+     .
+     .
+  ]
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ 
+ 
+ 

@@ -34,6 +34,12 @@ namespace Zyarat.Mapping
             CreateMap<Evaluation, AddEvaluationResponse>();
             CreateMap<Evaluation, GetEvaluationsResponse>();
             CreateMap<MedicalRep, GetUnActiveUsersResponse>();
+            CreateMap<CompetitionDto, Competition>();
+            CreateMap<Competition, CompetitionDto>();
+            CreateMap<Visit, AddVisitDto>();
+            CreateMap<Winner, WinnerDto>();
+            CreateMap<WinnerDto, Winner>();
+
         }
     }
 }

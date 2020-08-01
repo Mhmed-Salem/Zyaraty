@@ -1,0 +1,57 @@
+﻿==URL [GET]
+/api/Gov
+
+==Explanation
+Get all Governments associated with its cities 
+
+==Response 
+
+[
+    {
+        "id": 1,
+        "gov": "sohag",
+        "cities": [
+            {
+                "id": 1,
+                "cityName": "tahta"
+            },
+            {
+                "id": 2,
+                "cityName": "tema"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "gov": "Assuit",
+        "cities": [
+            {
+                "id": 3,
+                "cityName": "mara"
+            },
+            {
+                "id": 5,
+                "cityName": "faca"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "gov": "qena",
+        "cities": [
+            {
+                "id": 4,
+                "cityName": "nata3"
+            },
+            {
+                "id": 6,
+                "cityName": "dana"
+            }
+        ]
+    },
+   .
+   .
+   .
+]
+
+------------------------------------------------------------------------------------------------

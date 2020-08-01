@@ -9,6 +9,16 @@
     <e p="C:\Users\Mr\source\repos\Zyarat" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="Zyarat" t="IncludeRecursive">
+        <e p="API'SDocumention" t="Include">
+          <e p="Competition" t="Include" />
+          <e p="DoctorSpecialization.txt" t="Include" />
+          <e p="Evaluation" t="Include" />
+          <e p="Governements.txt" t="Include" />
+          <e p="MedicalRepPositions.txt" t="Include" />
+          <e p="Rep" t="Include" />
+          <e p="Report.txt" t="Include" />
+          <e p="Visit.txt" t="Include" />
+        </e>
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -18,19 +28,27 @@
           </e>
           <e p="VisitsContracts" t="Include">
             <e p="AddVisitContract.cs" t="Include" />
+            <e p="AddVisitDto.cs" t="Include" />
           </e>
         </e>
         <e p="Controllers" t="Include">
+          <e p="CityController.cs" t="Include" />
+          <e p="CompetitionController.cs" t="Include" />
+          <e p="DoctorsSpecializationController.cs" t="Include" />
           <e p="EvaluationController.cs" t="Include" />
           <e p="MedicalRepController.cs" t="Include" />
+          <e p="MedicalRepPositionContoller.cs" t="Include" />
           <e p="ReportController.cs" t="Include" />
-          <e p="Test.cs" t="Include" />
           <e p="VisitController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="ApplicationContext.cs" t="Include" />
           <e p="City.cs" t="Include" />
+          <e p="Competition.cs" t="Include" />
           <e p="Doctor.cs" t="Include" />
+          <e p="EFMappingHelpers" t="Include">
+            <e p="Competitor.cs" t="Include" />
+          </e>
           <e p="Evaluation.cs" t="Include" />
           <e p="Government.cs" t="Include" />
           <e p="MedicalRep.cs" t="Include" />
@@ -39,6 +57,7 @@
           <e p="RefreshingToken.cs" t="Include" />
           <e p="Visit.cs" t="Include" />
           <e p="VisitReport.cs" t="Include" />
+          <e p="Winner.cs" t="Include" />
         </e>
         <e p="Handlers" t="Include">
           <e p="Interacting.cs" t="Include" />
@@ -68,12 +87,37 @@
           <e p="20200723233530_ModifyVisitsReport2.Designer.cs" t="Include" />
           <e p="20200724234710_addDefaultValues.cs" t="Include" />
           <e p="20200724234710_addDefaultValues.Designer.cs" t="Include" />
+          <e p="20200728174848_AddCompetitionService.cs" t="Include" />
+          <e p="20200728174848_AddCompetitionService.Designer.cs" t="Include" />
+          <e p="20200728202445_AddStoresProcedureGetCurrentWinners.cs" t="Include" />
+          <e p="20200728202445_AddStoresProcedureGetCurrentWinners.Designer.cs" t="Include" />
+          <e p="20200728233959_ModifyProc.cs" t="Include" />
+          <e p="20200728233959_ModifyProc.Designer.cs" t="Include" />
+          <e p="20200729001357_ModifyProc110.cs" t="Include" />
+          <e p="20200729001357_ModifyProc110.Designer.cs" t="Include" />
+          <e p="20200729110121_dqpowjdpwqjfdp.cs" t="Include" />
+          <e p="20200729110121_dqpowjdpwqjfdp.Designer.cs" t="Include" />
+          <e p="20200729111403_Modify.cs" t="Include" />
+          <e p="20200729111403_Modify.Designer.cs" t="Include" />
+          <e p="20200729211659_Modify112.cs" t="Include" />
+          <e p="20200729211659_Modify112.Designer.cs" t="Include" />
+          <e p="20200729212035_Modify1125.cs" t="Include" />
+          <e p="20200729212035_Modify1125.Designer.cs" t="Include" />
+          <e p="20200729232301_AddStoredProcedureOnEndingCompetition.cs" t="Include" />
+          <e p="20200729232301_AddStoredProcedureOnEndingCompetition.Designer.cs" t="Include" />
+          <e p="20200730202807_alterWinner.cs" t="Include" />
+          <e p="20200730202807_alterWinner.Designer.cs" t="Include" />
+          <e p="20200730221538_alterCompetition.cs" t="Include" />
+          <e p="20200730221538_alterCompetition.Designer.cs" t="Include" />
+          <e p="20200730222937_ADDPROCEDURESOFEVENTS.cs" t="Include" />
+          <e p="20200730222937_ADDPROCEDURESOFEVENTS.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="DTO" t="Include">
             <e p="AddEvaluationDto.cs" t="Include" />
             <e p="CityDto.cs" t="Include" />
+            <e p="CompetitionDto.cs" t="Include" />
             <e p="DoctorDto.cs" t="Include" />
             <e p="EvaluationDto.cs" t="Include" />
             <e p="GetVisitByCityDto.cs" t="Include" />
@@ -81,13 +125,19 @@
             <e p="GovernmentDto.cs" t="Include" />
             <e p="IdentityUserDto.cs" t="Include" />
             <e p="MedicalRepDto.cs" t="Include" />
+            <e p="MedicalRepForVisitDto.cs" t="Include" />
             <e p="MedicalRepPositionDto.cs" t="Include" />
             <e p="MedicalSpecializationDto.cs" t="Include" />
             <e p="VisitBlockingDto.cs" t="Include" />
             <e p="VisitDto.cs" t="Include" />
             <e p="VisitReportDto.cs" t="Include" />
+            <e p="WinnerDto.cs" t="Include" />
           </e>
           <e p="Repositories" t="Include">
+            <e p="CompetitionRepo" t="Include">
+              <e p="CompetitionRepo.cs" t="Include" />
+              <e p="ICompetitionRepo.cs" t="Include" />
+            </e>
             <e p="ContextRepo.cs" t="Include" />
             <e p="EvaluationRepos" t="Include">
               <e p="EvaluationRepo.cs" t="Include" />
@@ -111,6 +161,11 @@
             <e p="Response.cs" t="Include" />
           </e>
           <e p="Services" t="Include">
+            <e p="CompetitionService" t="Include">
+              <e p="CompetitionService.cs" t="Include" />
+              <e p="CompetitionType.cs" t="Include" />
+              <e p="ICompetitionService.cs" t="Include" />
+            </e>
             <e p="EvaluationsServices" t="Include">
               <e p="EvaluationService.cs" t="Include" />
               <e p="IEvaluationService.cs" t="Include" />
@@ -179,9 +234,11 @@
           <e p="189ec2e6-92eb-4c3a-b5a2-9dfbfdc9f3f7_21743589_1162103990588313_3722657498792333203_o.jpg" t="Include" />
           <e p="1e42bc59-1afd-46d0-837e-052da4a7dd0f_59456331_2677529995652867_4413706979772465152_n.jpg" t="Include" />
           <e p="230a8862-cc61-48e4-a458-db1c6651d061_كو 1.png" t="Include" />
+          <e p="2e1e7d12-654d-4ed8-9d0e-9e5391597133_59456331_2677529995652867_4413706979772465152_n.jpg" t="Include" />
           <e p="3b879ea5-7818-4b4a-821f-37af381cfb52_كو 1.png" t="Include" />
           <e p="49a740d5-4b47-407d-b6d3-8b6510c74968_59456331_2677529995652867_4413706979772465152_n.jpg" t="Include" />
           <e p="5b796cb4-4da0-45dc-be23-d5d4148cef5c_كو 1.png" t="Include" />
+          <e p="5d8e0bdd-09d9-451f-be45-0c59a0313427_93269790_1336764853379123_6940602927690022912_o.jpg" t="Include" />
           <e p="6d66ecb0-575d-41a2-bd30-1a2b434ac733_كو 1.png" t="Include" />
           <e p="73ffe786-6b56-46b8-b1e4-94c0d451dd7b_59456331_2677529995652867_4413706979772465152_n.jpg" t="Include" />
           <e p="7946c7f1-4a78-4d8a-b7a5-c030a16d9d4f_9_e5eb8e98cc - Copy.jpg" t="Include" />
@@ -196,11 +253,13 @@
           <e p="9fcec17b-c946-4d0c-8c88-de5f05820c99_كو 1.png" t="Include" />
           <e p="ae7dae42-d9bc-4410-a3ce-f2c4245d6e31_كو 1.png" t="Include" />
           <e p="b445eeba-0450-41b1-9748-7bc1e82449a8_كو 1.png" t="Include" />
+          <e p="b582fcda-20af-46d1-9b50-6593064d5c96_93269790_1336764853379123_6940602927690022912_o.jpg" t="Include" />
           <e p="c0316131-27b6-4de0-8ec6-180f0fa07fe3_كو 1.png" t="Include" />
           <e p="cb79e949-9f5f-4ca8-bb8b-0b03c7b25802_كو 1.png" t="Include" />
           <e p="cf1918ed-75dd-4c7d-b822-c4d11085b167_كو 1.png" t="Include" />
           <e p="e9c25ff2-596c-4570-9a06-e2eb00986c68_كو 1.png" t="Include" />
           <e p="f60e3a0c-5a73-483a-8358-009fd6c83072_12313714_10153402663370345_8983252820405287690_n.jpg" t="Include" />
+          <e p="fc70cea0-1568-422f-81a7-0eca43a05005_93269790_1336764853379123_6940602927690022912_o.jpg" t="Include" />
           <e p="كو 1.png" t="Include" />
         </e>
         <e p="Zyarat.csproj" t="IncludeRecursive" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Zyarat.Contract.VisitsContracts;
 using Zyarat.Data;
 using Zyarat.Handlers;
@@ -80,27 +81,35 @@ namespace Zyarat.Models.Services.IVisitService.VisitsServices
                 return new Response<Visit>($"Can not delete the visit{e.Message}");
             }
         }
-
-        public async Task<Response<IEnumerable<GetVisitByDoctorDto>>> GetVisitByDoctor(int doctorId, int userId)
+       
+       public async Task<Response<IEnumerable<GetVisitByDoctorDto>>> GetVisitByDoctor([FromQuery]int doctorId,[FromQuery] int userId)
         {
             try
             {
                 var visits = _repo.GetVisitOfDoctorAsync(doctorId, userId); 
                 var validVisits=_medicalRepHandler.HandleDeleting(visits);
-                await _unitWork.CommitAsync();
                 var rt= validVisits.Where(visit => visit.Active && visit.DateTime.AddDays(LimitedDaysToDisplayInDoctor)>DateTime.Now)
                     .Select(visit => new GetVisitByDoctorDto
                     {
                         DateTime = visit.DateTime,
-                        Content = visit.Content,
+                        Type = visit.Active,
                         Id = visit.Id,
+                        Rep = new MedicalRepForVisitDto
+                        {
+                            Id = visit.Id,
+                            UserName = visit.MedicalRep.IdentityUser.UserName,
+                            FName = visit.MedicalRep.FName,
+                            LName = visit.MedicalRep.LName,
+                            ProfileUrl = visit.MedicalRep.ProfileUrl
+                        },
+                        Content = visit.Content,
                         IsActive = visit.DateTime.AddHours(LimitsOfVisitActivationHours)>DateTime.Now,
                         Likes = visit.Evaluation.Count(evaluation => evaluation.Type),
                         DisLikes = visit.Evaluation.Count(evaluation => !evaluation.Type),
-                        UserName = visit.MedicalRep.IdentityUser.UserName,
                         IsLiker = visit.Evaluation.Any(evaluation => evaluation.EvaluatorId==visit.MedicalRepId &&evaluation.Type),
-                        IsDisLiker = visit.Evaluation.Any(evaluation => evaluation.EvaluatorId==visit.MedicalRepId &&!evaluation.Type)
+                        IsDisLiker = visit.Evaluation.Any(evaluation => evaluation.EvaluatorId==visit.MedicalRepId &&!evaluation.Type),
                     }).OrderByDescending(dto => dto.DateTime).ThenByDescending(dto=>dto.Likes);
+                await _unitWork.CommitAsync();
                 return new Response<IEnumerable<GetVisitByDoctorDto>>(rt);
             }
             catch (Exception e)
@@ -141,15 +150,23 @@ namespace Zyarat.Models.Services.IVisitService.VisitsServices
                 var visits = _repo.GetLatestInCityAsync(cityId, userId); 
                 var validVisits=_medicalRepHandler.HandleDeleting(visits);
                 var rt= validVisits.Where(visit => visit.Active && visit.DateTime.AddDays(LimitedDaysToDisplayInLatest)>DateTime.Now)
-                    .Select(visit => new GetVisitByCityDto()
+                    .Select(visit => new GetVisitByCityDto
                     {
                         DateTime = visit.DateTime,
+                        Type = visit.Type,
+                        Rep = new MedicalRepForVisitDto
+                        {
+                            Id = visit.MedicalRepId,
+                            FName = visit.MedicalRep.FName,
+                            LName = visit.MedicalRep.LName,
+                            UserName = visit.MedicalRep.IdentityUser.UserName,
+                            ProfileUrl = visit.MedicalRep.ProfileUrl
+                        },
                         Content = visit.Content,
                         Id = visit.Id,
                         IsActive = visit.DateTime.AddHours(LimitsOfVisitActivationHours)>DateTime.Now,
                         Likes = visit.Evaluation.Count(evaluation => evaluation.Type),
                         DisLikes = visit.Evaluation.Count(evaluation => !evaluation.Type),
-                        UserName = visit.MedicalRep.IdentityUser.UserName,
                         DoctorDto = new DoctorDto
                         {
                             FName = visit.Doctor.FName,

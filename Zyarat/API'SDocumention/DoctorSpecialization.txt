@@ -1,0 +1,30 @@
+﻿1-
+URL [GET]
+/api/DoctorsSpecialization
+
+==Explanation
+Get all specialization of the doctors
+==Response 
+
+[
+    {
+        "id": 1,
+        "type": "Batna"
+    },
+    {
+        "id": 2,
+        "type": "Qualb"
+    },
+    {
+        "id": 3,
+        "type": "ezam"
+    },
+    {
+        "id": 4,
+        "type": "hesa"
+    },
+    {
+        "id": 5,
+        "type": "takder"
+    }
+]

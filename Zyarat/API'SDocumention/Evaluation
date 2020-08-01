@@ -1,0 +1,87 @@
+﻿1-
+URL [POST]
+
+==Explanation
+make an evaluation to a specific visit either a like or dislike .
+Here, the type of the valuation 
+event .if the type is 1 the event is Like or the type is 0 the event is dislike .
+you can not make an evaluation for non active visit .and if you make that,you will have 
+an error message .
+
+==Request Contract
+
+from for send a JSON object like that
+{
+    "EvaluatorId":2,
+    "visitId":18,
+    "type":false
+}
+
+==Response 
+
+{
+    "id":31,//the id of the evaluation
+    "EvaluatorId":2,
+    "visitId":18,
+    "type":false
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+2-
+URL [PUT]
+
+/api/Evaluation?visitid=7&medicalRepId=6
+
+==Explanation
+Opposite the evaluation type .like will turn to unlike and unlike will turn to like.
+you can not modify an evaluation for non active visit .and if you make that,you will have 
+an error message.
+
+==Response 
+
+{
+    "id":31,//the id of the evaluation
+    "EvaluatorId":2,
+    "visitId":18,
+    "type":false
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+3-
+URL [Delete]
+/api/Evaluation?visitid=7&medicalRepId=6
+
+==Explanation
+
+Remove the evaluation .you can not delete an evaluation for non active visit .and if you make that,you will have 
+an error message.
+
+==Response 
+{
+    "id":31,//the id of the evaluation
+    "EvaluatorId":2,
+    "visitId":18,
+    "type":false
+}
+----------------------------------------------------------------------------------------------------------
+4-
+URL [GET]
+/api/Evaluation/getevaluators/7
+the visit Id=7
+
+==Explanation 
+Get all Evaluators of a specific visit .it includes both likes an dislikes  
+
+==Response 
+[
+    {
+        "id": 15,//id of evaluation
+        "evaluatorId": 6,
+        "type": true, //type if evaluation .true for like ,false for dislike
+        "name": "ahmed1 Embaby1"
+    },
+    .
+    .
+    .
+    .
+ ]  
+------------------------------------------------------------------------------------------------------------ 

@@ -36,8 +36,7 @@ namespace Zyarat
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
+        public IConfiguration Configuration { get; } 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -54,7 +53,7 @@ namespace Zyarat
             ); 
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
-                options.Password.RequireDigit = true;
+                options.Password.RequireDigit = false;
                 options.Password.RequiredLength = 5;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireNonAlphanumeric = false;

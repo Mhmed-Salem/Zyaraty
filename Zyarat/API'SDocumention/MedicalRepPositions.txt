@@ -1,0 +1,39 @@
+﻿1-
+URL [GET]
+/api/MedicalRepPosition
+
+==Explanations
+
+Get all the positions ,the medical rep can have
+
+==Response 
+[
+    {
+        "id": 1,
+        "title": "manager"
+    },
+    {
+        "id": 2,
+        "title": "pos2"
+    },
+    {
+        "id": 3,
+        "title": "pos3"
+    },
+    {
+        "id": 4,
+        "title": "pos4"
+    },
+    {
+        "id": 5,
+        "title": "pos5"
+    },
+    {
+        "id": 6,
+        "title": "pos6"
+    },
+    {
+        "id": 7,
+        "title": "pos7"
+    }
+]

@@ -111,9 +111,9 @@ namespace Zyarat.Controllers
         
 
         [HttpPut("UpdateImageProfile/{repId}")]
-        public async Task<IActionResult> UpdateImageProfile(int repId,[FromForm]IFormFile file)
+        public async Task<IActionResult> UpdateImageProfile(int repId,[FromForm]IFormFile image)
         {
-            var state = await _service.UpdateImageProfile(repId,file);
+            var state = await _service.UpdateImageProfile(repId,image);
             if (!state.Success) return BadRequest(state.Error);
             var rep = _mapper.Map<MedicalRep, GetMedicalRepResponse>(state.Source);
             
@@ -224,7 +224,7 @@ namespace Zyarat.Controllers
             return Ok(_mapper.Map<MedicalRep, GetUnActiveUsersResponse>(state.Source));
         }
         
-        [HttpPut("DeletePermanently/{repId}")]
+        [HttpDelete("{repId}")]
         public async Task<IActionResult> DeletePermanently(int repId)
         {
             var state = await _service.DeleteUserPermanently(repId);
@@ -235,8 +235,6 @@ namespace Zyarat.Controllers
 
             return Ok(_mapper.Map<MedicalRep, GetUnActiveUsersResponse>(state.Source));
         }
-        
-        
     }
     
 }

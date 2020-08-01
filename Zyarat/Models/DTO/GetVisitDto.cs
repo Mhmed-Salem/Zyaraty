@@ -4,8 +4,9 @@ namespace Zyarat.Models.DTO
 {
     public class GetVisitByDoctorDto
     {
+        public MedicalRepForVisitDto Rep { set; get; }
+        public bool Type { set; get; }
         public int Id { set; get; }
-        public string UserName { set; get; }
         public string Content { set; get; }
         public int Likes { set; get; }
         public int DisLikes { set; get; }

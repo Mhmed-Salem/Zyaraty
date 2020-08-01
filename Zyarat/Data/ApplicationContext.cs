@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Diagnostics;
+using Zyarat.Data.EFMappingHelpers;
 
 namespace Zyarat.Data
 {
@@ -22,6 +23,11 @@ namespace Zyarat.Data
         public DbSet<MedicalSpecialized> MedicalSpecializeds { set; get; }
         public DbSet<Visit> Visits { set; get; }
         public DbSet<RefreshingToken> RefreshingTokens { set; get; }
+        public DbSet<Competition> Competitions { set; get; }
+        public DbSet<Winner> Winners { set; get; }
+        public DbSet<EFMappingHelpers.Competitor> CurrentWinners { set; get; }
+
+
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -49,7 +55,10 @@ namespace Zyarat.Data
 
            builder.Entity<MedicalRep>().Property(rep => rep.Active).HasDefaultValue(true);
            builder.Entity<MedicalRep>().Property(rep => rep.PermanentDeleted).HasDefaultValue(false);
-           
+
+           builder.Entity<EFMappingHelpers.Competitor>().HasNoKey();
+
+
         }
 
     }

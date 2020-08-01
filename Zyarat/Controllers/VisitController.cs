@@ -23,8 +23,8 @@ namespace Zyarat.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("GetVisitsInDoctor/{doctorId}/{userId}")]
-        public async Task<IActionResult> GetVisitsInDoctor(int doctorId,int userId)
+        [HttpGet("GetVisitsInDoctor")]
+        public async Task<IActionResult> GetVisitsInDoctor([FromQuery]int doctorId,[FromQuery]int userId)
         {
             var state =  await _service.GetVisitByDoctor(doctorId, userId);
             if (!state.Success)
@@ -35,8 +35,8 @@ namespace Zyarat.Controllers
             return Ok(state.Source);
         }
         
-     [HttpGet("GetVisitsInCity/{cityId}/{userId}")]
-        public async Task<IActionResult> GetVisitsInCity(int cityId,int userId)
+     [HttpGet("GetVisitsInCity")]
+        public async Task<IActionResult> GetVisitsInCity([FromQuery]int cityId,[FromQuery]int userId)
         {
             var state =  await _service.GetVisitByCity(cityId, userId);
             if (!state.Success)
@@ -53,7 +53,7 @@ namespace Zyarat.Controllers
             var state = await _service.AddVisit(contract);
             if (!state.Success)
                 BadRequest(state.Error);
-            return Ok(_mapper.Map<Visit,AddVisitContract>(state.Source));
+            return Ok(_mapper.Map<Visit,AddVisitDto>(state.Source));
         }
     }
 }

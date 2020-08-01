@@ -1,0 +1,110 @@
+﻿1-
+URL [GET]
+
+/api/visit/GetVisitsInDoctor?doctorId=1&userId=5
+
+==Explanation
+
+Get  all the visits for the specific doctor 
+
+==Response 
+Array of visit that contains 
+
+--the JSON Response 
+[
+    {
+        "id": 13,  //the id of the visit 
+        "typ": false//type of the visit .true: if the visit from the drop down lists way.False:if the visit had been made from th optional way 
+        "rep": {
+            "id": 13,
+            "fName": "ahmed4",
+            "lName": "Embaby4",
+            "profileUrl": null,
+            "userName": "ahmed4_Embaby468"
+        },
+        "content": "912",//content of the visit 
+        "likes": 1,      //number of likes the visit had got 
+        "disLikes": 1,   ////number of dislikes the visit had got 
+        "isLiker": false, //if user who makes the request had made a like for this visit ,it will be true ,else it will be false 
+        "isDisLiker": false, //if user who makes the request had made a dislike for this visit ,it will be true ,else it will be false
+        "isActive": false,
+        "dateTime": "2020-07-30T02:39:29.1265754"
+    },
+   .
+   .
+   .
+   .
+   
+]
+-----------------------------------------------------------------------------------------------------------------
+2-
+==URL [GET]
+
+https://localhost:5001/api/visit/GetVisitsInCity?cityId=1&userId=5
+
+==Explanation
+
+get all last visits in a specific city (cityId)
+the userId is the user who make a request.
+the pagination should be made in the client side 
+
+==Contract Response 
+
+[
+    {
+        "id": 11,//the id of the visit 
+        "typ": false//type of the visit .true: if the visit from the drop down lists way.False:if the visit had been made from th optional way 
+        "rep": {//the owner of the visit owner 
+            "id": 7,
+            "fName": "ahmed2",
+            "lName": "Embaby2",
+            "profileUrl": null,
+            "userName": "ahmed2_Embaby29859"
+        },
+        "content": "the doctor is not found",//the content of the visit
+        "likes": 2,
+        "disLikes": 1,
+        "isLiker": false, //if user who makes the request had made a like for this visit ,it will be true ,else it will be false 
+        "isDisLiker": false, //if user who makes the request had made a dislike for this visit ,it will be true ,else it will be false
+        "doctorDto": {//the doctor who the user make the visit about 
+            "id": 3,
+            "fName": "a2",
+            "lName": "b2",
+            "city": null,
+            "medicalSpecialized": null
+        },
+        "dateTime": "2020-07-30T02:39:03.4644538",//the datetime of making th visit 
+        "dateTime": "2020-07-30T02:39:29.1265754"//the datetime the visit had been made
+    },
+    .
+    .
+    .
+ ]
+ 
+-------------------------------------------------------------------------------------------------------------------------------
+3-
+URL [POST]
+/api/visit/
+==Request Contract 
+
+Send a JSON object as a request
+
+{
+   "content":"fqewnfmkwvsvdcmklsfmdklvmsndklvbklnlksbnf",
+   "medicalRepId":100,
+   "DoctorId":1,
+   "type":true
+}
+
+==Explanation 
+Add a new visit 
+==Response 
+the Created visit object
+{
+    "id": 20,
+    "content": "fqewnfmkwvsvdcmklsfmdklvmsndklvbklnlksbnf",
+    "medicalRepId": 100,//the visit make id
+    "doctorId": 1,//the doctor to him ,the visit had been made
+    "typ": false//type of the visit .true: if the visit from the drop down lists way.False:if the visit had been made from th optional way 
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------

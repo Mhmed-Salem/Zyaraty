@@ -235,6 +235,33 @@ namespace Zyarat.Migrations
                     b.ToTable("Cities");
                 });
 
+            modelBuilder.Entity("Zyarat.Data.Competition", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("MinUniqueUser")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MinUniqueVisit")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Roles")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Type")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Competitions");
+                });
+
             modelBuilder.Entity("Zyarat.Data.Doctor", b =>
                 {
                     b.Property<int>("Id")
@@ -266,6 +293,32 @@ namespace Zyarat.Migrations
                     b.HasIndex("MedicalSpecializedId");
 
                     b.ToTable("Doctors");
+                });
+
+            modelBuilder.Entity("Zyarat.Data.EFMappingHelpers.Competitor", b =>
+                {
+                    b.Property<string>("CityName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gov")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UniqueEvaluators")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UniqueVisits")
+                        .HasColumnType("int");
+
+                    b.ToTable("CurrentWinners");
                 });
 
             modelBuilder.Entity("Zyarat.Data.Evaluation", b =>
@@ -489,6 +542,31 @@ namespace Zyarat.Migrations
                     b.ToTable("VisitReport");
                 });
 
+            modelBuilder.Entity("Zyarat.Data.Winner", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CompetitionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MedicalRepId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rank")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompetitionId");
+
+                    b.HasIndex("MedicalRepId");
+
+                    b.ToTable("Winners");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -640,6 +718,21 @@ namespace Zyarat.Migrations
                         .WithMany("VisitReports")
                         .HasForeignKey("VisitId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Zyarat.Data.Winner", b =>
+                {
+                    b.HasOne("Zyarat.Data.Competition", "Competition")
+                        .WithMany("Winners")
+                        .HasForeignKey("CompetitionId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Zyarat.Data.MedicalRep", "MedicalRep")
+                        .WithMany()
+                        .HasForeignKey("MedicalRepId")
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

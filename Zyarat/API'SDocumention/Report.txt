@@ -1,0 +1,17 @@
+﻿1-
+URL(POST)
+/api/report?visitid=2&reporterid=1
+
+==Explanation
+medicalRep(reporterId) can make a report to a visit (VisitId).
+not all types of visit can have a report on but only the once that called 'Optional'(type=false).
+you can not make a report to the non active report .
+
+==Response 
+    {
+      "id":17,
+      "visitId":2,
+      "ReporterId":1
+    }
+
+-------------------------------------------------------------------------------------------------------------------------------    

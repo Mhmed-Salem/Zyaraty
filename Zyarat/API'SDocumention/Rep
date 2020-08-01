@@ -1,0 +1,343 @@
+﻿-------------Medical Rep REST APIS----------------------
+1-
+==URL [GET]
+/api/rep/GetAllReps?pageNumber=20&pageSize=30 
+
+==Explanation
+GET the active(the reps who not blocked) medical reps.it works with pagination
+
+==Response 
+[
+ {
+        "cityName": "tahta",
+        "id": 8899,
+        "email": "eng9379amaeae@gmail.com",
+        "userName": "ahmed9379_Embaby93799389",//rep's unique userName 
+        "phoneNumber": "01011051728",
+        "fName": "ahmed9379",
+        "lName": "Embaby9379",
+        "likeCount": 0,
+        "uniqueUsers": 0,
+        "visitsCount": 0,
+        "profileUrl": "null",//the Url Of the rep's image profile 
+        "disLikeCount": 0,
+        "workedOnCompany": "cvwsmvklnsdvlnsdnsvnlks"
+    },
+    {
+        "cityName": "tema",
+        "id": 1759,
+        "email": "eng1754amaeae@gmail.com",
+        "userName": "ahmed1754_Embaby17544246",
+        "phoneNumber": "01011051728",
+        "fName": "ahmed1754",
+        "lName": "Embaby1754",
+        "likeCount": 0,
+        "uniqueUsers": 0,
+        "visitsCount": 0,
+        "profileUrl": null,
+        "disLikeCount": 0,
+        "workedOnCompany": "cvwsmvklnsdvlnsdnsvnlks"
+    },
+    .
+    .
+    .
+    .
+]
+---------------------------------------------------------------------------------------------------------
+2-
+==URL [GET]
+/api/rep/5
+
+==Explanation
+GET the medical rep who has the passed id
+
+==Response 
+{
+    "id": 5,
+    "fName": "ahmed0",
+    "lName": "Embaby0",
+    "profileUrl": null,
+    "workedOnCompany": "cvwsmvklnsdvlnsdnsvnlks",
+    "email": "eng0amaeae@gmail.com",
+    "phone": "01011051728",
+    "userName": "ahmed0_Embaby02490",
+    "city": {
+        "id": 1,
+        "cityName": "tahta"
+    },
+    "medicalRepPosition": {
+        "id": 4,
+        "title": "pos4"
+    },
+    "visitsCount": 5,
+    "likeCount": 6,
+    "disLikeCount": 2,
+    "uniqueUsers": 4
+}
+
+--------------------------------------------------------------------------------------------------------
+
+3-
+==URL [POST]
+/api/rep/register
+
+==Explanation
+Add new Medical Rep Account 
+
+==Contact Request 
+from from send 
+
+fname //required
+lname //required
+password //required
+email   //required
+phone  //required
+cityId
+MedicalRepPositionId
+WorkedOnCompany
+Image
+
+==Response
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZlbmd0YW1hZWFlQGdtYWlsLmNvbSIsImp0aSI6IjJkZmFiNDQ4LWM5YzYtNDNmOC05NGQxLWNhM2QyNGY1YzU1NyIsImlkIjoiMTAyNTIiLCJJc0FjdGl2ZSI6IlRydWUiLCJuYmYiOjE1OTYyMjc1NzAsImV4cCI6MTU5NjIzNDc3MH0.heCU8BQ7xmXCivVQpjTsCJV0qGsrLuGsYPK9M4VAsZU",
+    "refreshToken": "fkh4kXyoZf8XyrnHrjv8pNrSXUXRzwd5WABwrh0xZZA="
+}
+
+4-
+==URL [POST]
+
+/api/rep/login
+
+==Explanation 
+Login for a medical rep 
+
+==Request contract
+
+from a form send 
+ email
+ password //can not be less than 5 digits
+ 
+ ==Contract Response
+ 
+ {
+     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZlbmd0YW1hZWFlQGdtYWlsLmNvbSIsImp0aSI6IjAwM2JhMzU2LWM0ZDQtNGE1NC1iOTFjLTMxYTBjNjFmYzY1MyIsImlkIjoiMTAyNTIiLCJJc0FjdGl2ZSI6IlRydWUiLCJuYmYiOjE1OTYyMjg3MTIsImV4cCI6MTU5NjIzNTkxMn0.kueFkUMEZR4l4taOo2ishfzn0_z8mTdIS-OFElEGPLA",
+     "refreshToken": "ijRNB6RKKXZEMkfo/MkV1ofpq3hJSZXGKUcNnyvEpLI="
+ }
+ 
+ ====Notice that 
+ the payload of The Token is like that
+ 
+ {
+   "email": "fengtamaeae@gmail.com",
+   "jti": "003ba356-c4d4-4a54-b91c-31a0c61fc653",
+   "id": "10252",
+   "IsActive": "True",//if not blocked ,it will be true
+   "nbf": 1596228712,
+   "exp": 1596235912
+ }
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------
+
+5-
+
+==URL [PUT]
+it takes the id of the rep 
+/api/rep/UpdateImageProfile/25
+
+==Request 
+from form send 
+
+image 
+
+==Contract Response 
+the new data of rep
+{
+    "id": 25,
+    "fName": "ahmed20",
+    "lName": "Embaby20",
+    "profileUrl": "C:\\Users\\Mr\\source\\repos\\Zyarat\\Zyarat\\wwwroot\\2e1e7d12-654d-4ed8-9d0e-9e5391597133_59456331_2677529995652867_4413706979772465152_n.jpg",
+    "workedOnCompany": "cvwsmvklnsdvlnsdnsvnlks",
+    "email": "eng20amaeae@gmail.com",
+    "phone": "01011051728",
+    "userName": "ahmed20_Embaby202830",
+    "city": {
+        "id": 4,
+        "cityName": "nata3"
+    },
+    "medicalRepPosition": {
+        "id": 2,
+        "title": "pos2"
+    },
+    "visitsCount": 0,
+    "likeCount": 0,
+    "disLikeCount": 0,
+    "uniqueUsers": 0
+}
+--------------------------------------------------------------------------------------------------------------
+6-
+
+==URL [PUT]
+
+id=25, new phone=01225555511
+
+/api/rep/UpdatePhone/25/01225555511
+
+==Explanation
+update Phone Number
+==Response 
+
+{
+    "id": 25,
+    "fName": "ahmed20",
+    "lName": "Embaby20",
+    "profileUrl": "C:\\Users\\Mr\\source\\repos\\Zyarat\\Zyarat\\wwwroot\\2e1e7d12-654d-4ed8-9d0e-9e5391597133_59456331_2677529995652867_4413706979772465152_n.jpg",
+    "workedOnCompany": "cvwsmvklnsdvlnsdnsvnlks",
+    "email": "eng20amaeae@gmail.com",
+    "phone": "01225555511",
+    "userName": "ahmed20_Embaby202830",
+    "city": {
+        "id": 4,
+        "cityName": "nata3"
+    },
+    "medicalRepPosition": {
+        "id": 2,
+        "title": "pos2"
+    },
+    "visitsCount": 0,
+    "likeCount": 0,
+    "disLikeCount": 0,
+    "uniqueUsers": 0
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+7-
+==URL [PUT]
+Rep id=25,new Company=pharma
+/api/rep/UpdateCompany/25/Pharma
+==Explanation  Update The company the user 
+==Contract Response
+
+{
+    "id": 25,
+    "fName": "ahmed20",
+    "lName": "Embaby20",
+    "profileUrl": "C:\\Users\\Mr\\source\\repos\\Zyarat\\Zyarat\\wwwroot\\2e1e7d12-654d-4ed8-9d0e-9e5391597133_59456331_2677529995652867_4413706979772465152_n.jpg",
+    "workedOnCompany": "Pharma",
+    "email": "eng20amaeae@gmail.com",
+    "phone": "01225555511",
+    "userName": "ahmed20_Embaby202830",
+    "city": {
+        "id": 4,
+        "cityName": "nata3"
+    },
+    "medicalRepPosition": {
+        "id": 2,
+        "title": "pos2"
+    },
+    "visitsCount": 0,
+    "likeCount": 0,
+    "disLikeCount": 0,
+    "uniqueUsers": 0
+}
+
+----------------------------------------------------------------------------------------------------------------
+8-
+==URL [PUT]
+Rep id=25,
+Rep position id=1
+/api/rep/UpdatePosition/25/1
+
+==Response 
+
+{
+    "id": 25,
+    "fName": "ahmed20",
+    "lName": "Embaby20",
+    "profileUrl": "C:\\Users\\Mr\\source\\repos\\Zyarat\\Zyarat\\wwwroot\\2e1e7d12-654d-4ed8-9d0e-9e5391597133_59456331_2677529995652867_4413706979772465152_n.jpg",
+    "workedOnCompany": "Pharma",
+    "email": "eng20amaeae@gmail.com",
+    "phone": "01225555511",
+    "userName": "ahmed20_Embaby202830",
+    "city": {
+        "id": 4,
+        "cityName": "nata3"
+    },
+    "medicalRepPosition": {
+        "id": 1,
+        "title": "manager"
+    },
+    "visitsCount": 0,
+    "likeCount": 0,
+    "disLikeCount": 0,
+    "uniqueUsers": 0
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+9-
+==URL [GET]
+
+/api/rep/GetUnActiveUsers?pageNumber=5&pageSize=15
+
+==Explanation
+
+Get the Un Active users (who blocked due to a bad visit) 
+
+==Response 
+[
+    {
+        "id": 2,
+        "fName": "r2",
+        "lName": "m2",
+        "profileUrl": null,
+        "workedOnCompany": "flv;s",
+        "cityId": 3,
+        "visitsCount": 0,
+        "likeCount": 0,
+        "disLikeCount": 0,
+        "uniqueUsers": 0
+    }
+    .
+    .
+    .
+    .
+    .
+]
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+10-
+==URL [DELETE]
+
+/api/rep/10000
+
+==Explanation
+Delete the medical rep of id=10000
+
+==Response 
+return the deleted user 
+
+{
+    "id": 10000,
+    "fName": "ahmed10480",
+    "lName": "Embaby10480",
+    "profileUrl": null,
+    "workedOnCompany": "cvwsmvklnsdvlnsdnsvnlks",
+    "email": "eng10480amaeae@gmail.com",
+    "phone": "01011051728",
+    "userName": "ahmed10480_Embaby104808090",
+    "city": {
+        "id": 4,
+        "cityName": "nata3"
+    },
+    "medicalRepPosition": {
+        "id": 1,
+        "title": "manager"
+    },
+    "visitsCount": 0,
+    "likeCount": 0,
+    "disLikeCount": 0,
+    "uniqueUsers": 0
+}
+
+------------------------------------------------------------------------------------------------------------------
