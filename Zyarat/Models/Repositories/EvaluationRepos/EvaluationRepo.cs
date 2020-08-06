@@ -34,7 +34,7 @@ namespace Zyarat.Models.Repositories.EvaluationRepos
 
         }
 
-        public async Task<bool> IsEvaluaterAsync(int userId, int visitId)
+        public async Task<bool> IsEvaluatorAsync(int userId, int visitId)
         {
             return await Context.Evaluations.AnyAsync(evaluation =>
                 evaluation.VisitId == visitId && evaluation.EvaluatorId == userId);

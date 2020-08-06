@@ -41,6 +41,10 @@
           <e p="DoctorController.cs" t="Include" />
           <e p="DoctorsSpecializationController.cs" t="Include" />
           <e p="EvaluationController.cs" t="Include" />
+          <e p="Hubs" t="Include">
+            <e p="MyUserProvider.cs" t="Include" />
+            <e p="NotificationHub.cs" t="Include" />
+          </e>
           <e p="MedicalRepController.cs" t="Include" />
           <e p="MedicalRepPositionContoller.cs" t="Include" />
           <e p="ReportController.cs" t="Include" />

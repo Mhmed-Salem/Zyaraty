@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
@@ -224,10 +222,12 @@ namespace Zyarat.Controllers
             return Ok(_mapper.Map<MedicalRep, GetUnActiveUsersResponse>(state.Source));
         }
         
+        
         [HttpDelete("{repId}")]
         public async Task<IActionResult> DeletePermanently(int repId)
         {
             var state = await _service.DeleteUserPermanently(repId);
+            
             if (!state.Success)
             {
                 return BadRequest(state.Error);
@@ -235,6 +235,11 @@ namespace Zyarat.Controllers
 
             return Ok(_mapper.Map<MedicalRep, GetUnActiveUsersResponse>(state.Source));
         }
+
+
+        
     }
     
+    
+
 }

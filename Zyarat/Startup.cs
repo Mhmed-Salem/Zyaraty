@@ -1,16 +1,19 @@
 using System;
 using System.Text;
+using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Zyarat.Controllers.Hubs;
 using Zyarat.Data;
 using Zyarat.Handlers;
 using Zyarat.Mapping;
@@ -41,7 +44,7 @@ namespace Zyarat
         public void ConfigureServices(IServiceCollection services)
         {
             /**Database services and identity**/
-            var ConsoleLoggetFactory = LoggerFactory.Create(builder => 
+            var consoleLoggerFactory = LoggerFactory.Create(builder => 
             {
                 builder.AddFilter((s, level) =>
                     s == DbLoggerCategory.Database.Command.Name
@@ -49,7 +52,7 @@ namespace Zyarat
             });
             services.AddDbContextPool<ApplicationContext>(
                 builder => builder.UseSqlServer(Configuration.GetConnectionString("ZyaratConnection"))
-                    .UseLoggerFactory(ConsoleLoggetFactory)
+                    .UseLoggerFactory(consoleLoggerFactory)
             ); 
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
@@ -83,9 +86,11 @@ namespace Zyarat
 
                 services.AddScoped(typeof(MedicalRepReportHandlers));
 
+                services.AddScoped<IUserIdProvider, MyUserProvider>();
+
 
                 /**end of Inject services */
-                /**Add AutoMapper*/
+                /**Add AutoMapper..*/
                 services.AddAutoMapper(typeof(AutoMapping));
                 /**end of adding Mapper*/
                 /**start of JWT Settings*/
@@ -112,8 +117,21 @@ namespace Zyarat
                             ValidateLifetime = true,
                             ClockSkew = TimeSpan.Zero
                         };
+                        x.Events = new JwtBearerEvents
+                        {
+                            OnMessageReceived = context =>
+                            {
+                                var token = context.Request.Query["access_Token"];
+                                if (!string.IsNullOrEmpty(token))
+                                {
+                                    context.Token = token;
+                                }
+                                return Task.CompletedTask;
+                            }
+                        };
                     });
                 /**end of Jwt Settings*/
+            services.AddSignalR();
             services.AddControllers();
         }
 
@@ -134,6 +152,7 @@ namespace Zyarat
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<NotificationHub>("/notification");
             });
         }
     }

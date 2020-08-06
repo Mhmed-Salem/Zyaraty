@@ -71,7 +71,7 @@ namespace Zyarat.Models.Services.EvaluationsServices
         {
             try
             {
-                if (await _repo.IsEvaluaterAsync(contract.EvaluatorId,contract.VisitId))
+                if (await _repo.IsEvaluatorAsync(contract.EvaluatorId,contract.VisitId))
                 {
                     return new Response<Evaluation>("You have already made Evaluation to this Visit!");
                 }

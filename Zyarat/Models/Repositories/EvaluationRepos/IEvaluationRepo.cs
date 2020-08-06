@@ -10,7 +10,7 @@ namespace Zyarat.Models.Repositories.EvaluationRepos
         Task<Evaluation> GetAnEvaluationAsync(int visitId,int userId);
         void DeleteEvaluation(Evaluation evaluation);
         Task<Evaluation> GetAnEvaluationWithItsVisitAsync(int visitId, int userId);
-        Task<bool> IsEvaluaterAsync(int userId,int visitId);
+        Task<bool> IsEvaluatorAsync(int userId,int visitId);
         Task<Evaluation> AddEvaluationAsync(Evaluation evaluation);
         Task<bool> OppositeEvaluationAsync(int userId,int visitId);
         Task<bool> IsUniqueEvaluatorAsync(int evaluatedIdId, int evaluaterId);
