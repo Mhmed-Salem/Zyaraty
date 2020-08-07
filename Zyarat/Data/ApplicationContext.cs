@@ -25,7 +25,7 @@ namespace Zyarat.Data
         public DbSet<RefreshingToken> RefreshingTokens { set; get; }
         public DbSet<Competition> Competitions { set; get; }
         public DbSet<Winner> Winners { set; get; }
-        public DbSet<EFMappingHelpers.Competitor> CurrentWinners { set; get; }
+        public DbSet<Competitor> CurrentWinners { set; get; }
 
 
 

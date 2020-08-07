@@ -68,3 +68,4 @@ C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Debug\netcoreapp3.1\Microsoft.Identit
 C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Debug\netcoreapp3.1\System.Net.WebSockets.WebSocketProtocol.dll

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic.CompilerServices;
 using Zyarat.Data;
 using Zyarat.Models.DTO;
 using Zyarat.Models.Services.CompetitionService;
@@ -106,7 +108,8 @@ namespace Zyarat.Controllers
             }
             else return BadRequest($"no Type named {type} ");
 
-            var state = await _service.GetCurrentResult(competitionType);
+            var state = await _service.GetCurrentResult(competitionType,
+                IntegerType.FromString(HttpContext.User.Claims.FirstOrDefault(claim => claim.Type=="id")?.Value));
             if(!state.Success)
                 return BadRequest(state.Error);
             return Ok(state.Source);

@@ -11,7 +11,7 @@ namespace Zyarat.Models.Services.CompetitionService
     {
         Task<Response<Competition>> AddNextCompetition(Competition competition);
         Task<Response<Competition>> ModifyNextCompetition(int id,Competition competition);
-        Task<Response<IEnumerable<Competitor>>> GetCurrentResult(CompetitionType type);
+        Task<Response<IEnumerable<Competitor>>> GetCurrentResult(CompetitionType type,int userId);
         Task<Response<IEnumerable<Winner>>> GetFinalResult(CompetitionType type, int year, int month, int day);
     }
 }

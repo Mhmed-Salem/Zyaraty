@@ -10,7 +10,7 @@ an error message .
 
 ==Request Contract
 
-from for send a JSON object like that
+from body send a JSON object like that
 {
     "EvaluatorId":2,
     "visitId":18,

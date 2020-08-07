@@ -59,10 +59,12 @@
             <e p="Competitor.cs" t="Include" />
           </e>
           <e p="Evaluation.cs" t="Include" />
+          <e p="EvaluationNotification.cs" t="Include" />
           <e p="Government.cs" t="Include" />
           <e p="MedicalRep.cs" t="Include" />
           <e p="MedicalRepPosition.cs" t="Include" />
           <e p="MedicalSpecialized.cs" t="Include" />
+          <e p="NotificationType.cs" t="Include" />
           <e p="RefreshingToken.cs" t="Include" />
           <e p="Visit.cs" t="Include" />
           <e p="VisitReport.cs" t="Include" />

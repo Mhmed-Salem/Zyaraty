@@ -17,11 +17,13 @@ using Zyarat.Controllers.Hubs;
 using Zyarat.Data;
 using Zyarat.Handlers;
 using Zyarat.Mapping;
+using Zyarat.Models.Repositories.CompetitionRepo;
 using Zyarat.Models.Repositories.EvaluationRepos;
 using Zyarat.Models.Repositories.MedicalRepRepo;
 using Zyarat.Models.Repositories.ReportRepo;
 using Zyarat.Models.Repositories.VisitsRepo;
 using Zyarat.Models.Services;
+using Zyarat.Models.Services.CompetitionService;
 using Zyarat.Models.Services.EvaluationsServices;
 using Zyarat.Models.Services.IdentityServices;
 using Zyarat.Models.Services.InterActing;
@@ -83,10 +85,13 @@ namespace Zyarat
 
                 services.AddScoped<IReportService, ReportService>();
                 services.AddScoped<IReportRepo, ReportRepo>();
+                services.AddScoped<ICompetitionRepo, CompetitionRepo>();
+                services.AddScoped<ICompetitionService, CompetitionService>();
+
 
                 services.AddScoped(typeof(MedicalRepReportHandlers));
 
-                services.AddScoped<IUserIdProvider, MyUserProvider>();
+                services.AddSingleton<IUserIdProvider, MyUserProvider>();
 
 
                 /**end of Inject services */

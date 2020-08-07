@@ -42,9 +42,10 @@ namespace Zyarat.Models.Repositories.CompetitionRepo
 
         public async Task<IEnumerable<Competitor>> GetCurrentResult(DateTime from,int minUniqueUsers,int minUniqueVisits)
         {
-            return await Context.CurrentWinners.FromSqlInterpolated(
+            var x = await Context.CurrentWinners.FromSqlInterpolated(
                     $"EXEC GetCompetitors @from={from}, @minUniqueUsers={minUniqueUsers},@minUniqueVisits={minUniqueVisits} ")
                 .ToListAsync();
+            return x;
         }
 
         public IEnumerable<Winner>GetFinalResult(int cId)

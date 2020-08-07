@@ -27,7 +27,7 @@ Array of visit that contains
         "disLikes": 1,   ////number of dislikes the visit had got 
         "isLiker": false, //if user who makes the request had made a like for this visit ,it will be true ,else it will be false 
         "isDisLiker": false, //if user who makes the request had made a dislike for this visit ,it will be true ,else it will be false
-        "isActive": false,
+        "isActive": false, 
         "dateTime": "2020-07-30T02:39:29.1265754"
     },
    .

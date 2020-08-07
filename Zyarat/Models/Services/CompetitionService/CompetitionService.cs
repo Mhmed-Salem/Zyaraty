@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Zyarat.Data;
 using Zyarat.Data.EFMappingHelpers;
@@ -12,6 +13,7 @@ namespace Zyarat.Models.Services.CompetitionService
     {
         private readonly ICompetitionRepo _repo;
         private readonly IUnitWork _unitWork;
+        private const int ReturnedRowNumber = 20;
 
         public CompetitionService(ICompetitionRepo repo, IUnitWork unitWork)
         {
@@ -44,7 +46,9 @@ namespace Zyarat.Models.Services.CompetitionService
             }
         }
 
-        public async  Task<Response<Competition>> ModifyNextCompetition(int id, Competition competition)
+     
+
+        public async  Task<Response<Competition>> ModifyNextCompetition(int id,Competition competition)
         {
             try
             {
@@ -70,14 +74,34 @@ namespace Zyarat.Models.Services.CompetitionService
             }
         }
 
-        public async  Task<Response<IEnumerable<Competitor>>> GetCurrentResult(CompetitionType type)
+        public async  Task<Response<IEnumerable<Competitor>>> GetCurrentResult(CompetitionType type,int repId)
         {
             try
             {
                 var last = await _repo.GetLastCompetition(type != CompetitionType.Daily);
-                var from=new DateTime(last.DateTime.Year,last.DateTime.Month,last.DateTime.Day,2,0,0);
-                return new Response<IEnumerable<Competitor>>(
-                    await _repo.GetCurrentResult(from,last.MinUniqueUser,last.MinUniqueVisit));
+                var allCompetitors = await _repo.GetCurrentResult(
+                    from: new DateTime(last.DateTime.Year, last.DateTime.Month, last.DateTime.Day, 2, 0, 0),
+                    last.MinUniqueUser,
+                    last.MinUniqueVisit);
+                /**
+                 * take the top @ReturnedRowNumber of rows with the  rank of  a specific User
+                 * in the competition .if the passed user is not in the competition ,it will
+                 * only return the top @ReturnedRowNumber of rows.
+                 **/
+                var rt=new List<Competitor>();
+                var found = false;
+                foreach (var competitor in allCompetitors)
+                {
+                    if (found && competitor.Ranking > ReturnedRowNumber) break;
+                    if (competitor.Ranking > ReturnedRowNumber && (found || competitor.Id != repId)) continue;
+                    rt.Add(competitor);
+                    if (!found&&competitor.Id==repId)
+                    {
+                        found = true;
+                    }
+                }
+                //end of result filtering
+                return new Response<IEnumerable<Competitor>>(rt);
             }
             catch (Exception e)
             {
