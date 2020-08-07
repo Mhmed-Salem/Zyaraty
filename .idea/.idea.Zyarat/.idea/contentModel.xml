@@ -59,11 +59,14 @@
             <e p="Competitor.cs" t="Include" />
           </e>
           <e p="Evaluation.cs" t="Include" />
-          <e p="EvaluationNotification.cs" t="Include" />
+          <e p="GlobalMessage.cs" t="Include" />
+          <e p="GlobalNotificationReading.cs" t="Include" />
           <e p="Government.cs" t="Include" />
           <e p="MedicalRep.cs" t="Include" />
           <e p="MedicalRepPosition.cs" t="Include" />
           <e p="MedicalSpecialized.cs" t="Include" />
+          <e p="MessageContent.cs" t="Include" />
+          <e p="Notification.cs" t="Include" />
           <e p="NotificationType.cs" t="Include" />
           <e p="RefreshingToken.cs" t="Include" />
           <e p="Visit.cs" t="Include" />
@@ -122,6 +125,8 @@
           <e p="20200730221538_alterCompetition.Designer.cs" t="Include" />
           <e p="20200730222937_ADDPROCEDURESOFEVENTS.cs" t="Include" />
           <e p="20200730222937_ADDPROCEDURESOFEVENTS.Designer.cs" t="Include" />
+          <e p="20200807042322_add Notifications Entityes.cs" t="Include" />
+          <e p="20200807042322_add Notifications Entityes.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">

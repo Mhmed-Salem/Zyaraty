@@ -26,6 +26,16 @@ namespace Zyarat.Data
         public DbSet<Competition> Competitions { set; get; }
         public DbSet<Winner> Winners { set; get; }
         public DbSet<Competitor> CurrentWinners { set; get; }
+        
+        public DbSet<Notification> Notifications { set; get; }
+        public DbSet<NotificationType> NotificationTypes { set; get; }
+        public DbSet<MessageContent> MessageContents { set; get; }
+        public DbSet<GlobalMessage> GlobalMessages { set; get; }
+        public DbSet<GlobalNotificationReading> GlobalNotificationReadings { set; get; }
+
+
+
+
 
 
 
@@ -56,7 +66,27 @@ namespace Zyarat.Data
            builder.Entity<MedicalRep>().Property(rep => rep.Active).HasDefaultValue(true);
            builder.Entity<MedicalRep>().Property(rep => rep.PermanentDeleted).HasDefaultValue(false);
 
-           builder.Entity<EFMappingHelpers.Competitor>().HasNoKey();
+           builder.Entity<Competitor>().HasNoKey();
+           
+           /**Seed NotificationType data*/
+           builder.Entity<NotificationType>().HasData(new NotificationType()
+           {
+               Id = 1,
+               Type = "evaluation",
+               Template = "{UserName} make a {like/dislike} to you comment in Dr/{doctorName}"
+           });
+           builder.Entity<NotificationType>().HasData(new NotificationType()
+           {
+               Id = 2,
+               Type = "message",
+               Template = "{message Content}"
+           });
+           builder.Entity<NotificationType>().HasData(new NotificationType()
+           {
+               Id = 3,
+               Type = "globalMessage",
+               Template = "{message Content}"
+           });
 
 
         }
