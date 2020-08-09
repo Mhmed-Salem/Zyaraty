@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Diagnostics;
 using Zyarat.Data.EFMappingHelpers;
+using Zyarat.Models.Factories;
 
 namespace Zyarat.Data
 {
@@ -27,11 +28,13 @@ namespace Zyarat.Data
         public DbSet<Winner> Winners { set; get; }
         public DbSet<Competitor> CurrentWinners { set; get; }
         
-        public DbSet<Notification> Notifications { set; get; }
+        public DbSet<EventNotification> EventNotifications { set; get; }
         public DbSet<NotificationType> NotificationTypes { set; get; }
         public DbSet<MessageContent> MessageContents { set; get; }
         public DbSet<GlobalMessage> GlobalMessages { set; get; }
-        public DbSet<GlobalNotificationReading> GlobalNotificationReadings { set; get; }
+        public DbSet<Message> Messages { set; get; }
+
+        
 
 
 
@@ -67,24 +70,21 @@ namespace Zyarat.Data
            builder.Entity<MedicalRep>().Property(rep => rep.PermanentDeleted).HasDefaultValue(false);
 
            builder.Entity<Competitor>().HasNoKey();
-           
+           builder.Entity<NotificationType>().HasKey(type => type.Type);
            /**Seed NotificationType data*/
            builder.Entity<NotificationType>().HasData(new NotificationType()
            {
-               Id = 1,
-               Type = "evaluation",
-               Template = "{UserName} make a {like/dislike} to you comment in Dr/{doctorName}"
+               Type = NotificationTypesEnum.Evaluation,
+               Template = @"{UserName} makes a {like/dislike} to you comment in Dr/{doctorName}  : {visit} "
            });
-           builder.Entity<NotificationType>().HasData(new NotificationType()
+           builder.Entity<NotificationType>().HasData(new NotificationType
            {
-               Id = 2,
-               Type = "message",
+               Type = NotificationTypesEnum.Message,
                Template = "{message Content}"
            });
-           builder.Entity<NotificationType>().HasData(new NotificationType()
+           builder.Entity<NotificationType>().HasData(new NotificationType
            {
-               Id = 3,
-               Type = "globalMessage",
+               Type = NotificationTypesEnum.GlobalMessage,
                Template = "{message Content}"
            });
 

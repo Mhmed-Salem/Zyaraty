@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Zyarat.Data;
 
 namespace Zyarat.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20200807234146_modNotificatiobs44")]
+    partial class modNotificatiobs44
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -391,26 +393,6 @@ namespace Zyarat.Migrations
                     b.ToTable("EventNotifications");
                 });
 
-            modelBuilder.Entity("Zyarat.Data.GlobalMessage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("DateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("MessageContentId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("MessageContentId");
-
-                    b.ToTable("GlobalMessages");
-                });
-
             modelBuilder.Entity("Zyarat.Data.Government", b =>
                 {
                     b.Property<int>("Id")
@@ -527,20 +509,20 @@ namespace Zyarat.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ContentId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ReceiverId")
+                    b.Property<int>("MessageContentId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("NotificationTypeType")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ContentId");
+                    b.HasIndex("MessageContentId");
 
-                    b.HasIndex("ReceiverId");
+                    b.HasIndex("NotificationTypeType");
 
                     b.ToTable("Messages");
                 });
@@ -566,6 +548,28 @@ namespace Zyarat.Migrations
                     b.HasIndex("NotificationTypeType");
 
                     b.ToTable("MessageContents");
+                });
+
+            modelBuilder.Entity("Zyarat.Data.MessageReading", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("GlobalMessageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MedicalRepId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("GlobalMessageId");
+
+                    b.HasIndex("MedicalRepId");
+
+                    b.ToTable("MessageReadings");
                 });
 
             modelBuilder.Entity("Zyarat.Data.NotificationType", b =>
@@ -816,15 +820,6 @@ namespace Zyarat.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Zyarat.Data.GlobalMessage", b =>
-                {
-                    b.HasOne("Zyarat.Data.MessageContent", "MessageContent")
-                        .WithMany()
-                        .HasForeignKey("MessageContentId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Zyarat.Data.MedicalRep", b =>
                 {
                     b.HasOne("Zyarat.Data.City", "City")
@@ -847,17 +842,16 @@ namespace Zyarat.Migrations
 
             modelBuilder.Entity("Zyarat.Data.Message", b =>
                 {
-                    b.HasOne("Zyarat.Data.MessageContent", "Content")
+                    b.HasOne("Zyarat.Data.MessageContent", "MessageContent")
                         .WithMany()
-                        .HasForeignKey("ContentId")
+                        .HasForeignKey("MessageContentId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.HasOne("Zyarat.Data.MedicalRep", "Receiver")
-                        .WithMany("Messages")
-                        .HasForeignKey("ReceiverId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                    b.HasOne("Zyarat.Data.NotificationType", null)
+                        .WithMany("GlobalMessages")
+                        .HasForeignKey("NotificationTypeType")
+                        .OnDelete(DeleteBehavior.NoAction);
                 });
 
             modelBuilder.Entity("Zyarat.Data.MessageContent", b =>
@@ -865,6 +859,21 @@ namespace Zyarat.Migrations
                     b.HasOne("Zyarat.Data.NotificationType", "NotificationType")
                         .WithMany()
                         .HasForeignKey("NotificationTypeType")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Zyarat.Data.MessageReading", b =>
+                {
+                    b.HasOne("Zyarat.Data.Message", "GlobalMessage")
+                        .WithMany("Readings")
+                        .HasForeignKey("GlobalMessageId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Zyarat.Data.MedicalRep", "MedicalRep")
+                        .WithMany()
+                        .HasForeignKey("MedicalRepId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });

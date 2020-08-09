@@ -2,7 +2,7 @@
 
 namespace Zyarat.Data
 {
-    public class Notification
+    public class EventNotification
     {
         public int Id { set; get; }
         public int MedicalRepId { set; get; }//the user who received Notification
@@ -15,6 +15,7 @@ namespace Zyarat.Data
         public int DataId { set; get; }//the id of the entity 
         public NotificationType NotificationType { set; get; }
         public int NotificationTypeId { set; get; }
-        
+        public string Message { set; get; }
+        public bool Read { set; get; }
     }
 }

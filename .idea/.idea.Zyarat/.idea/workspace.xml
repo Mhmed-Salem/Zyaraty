@@ -2,24 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61e5f741-d18f-472a-b68f-00b96601b2b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Zyarat/Data/GlobalNotificationReading.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Data/MessageContent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Data/Notification.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/TotalMessage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Data/Message.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Helpers/StringHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/GlobalMessageFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/IGlobalMessageFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/IMessageFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/MessageFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/INotificationEventFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/NotificationEventFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationTypesEnum.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationRepo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationTypeRepo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationRepo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationTypeRepo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Resources/AddGlobalMessageResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Resources/SendNotificationToGroup.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Responses/SendAMessageToGroupResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Evaluation" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Evaluation" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/EvaluationNotification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/GlobalMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/City.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/City.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/GlobalMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/GlobalMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/GlobalNotificationReading.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/MessageContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/MessageContent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/Notification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/EventNotification.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Data/NotificationType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/NotificationType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/EvaluationRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/EvaluationRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/IEvaluationRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/IEvaluationRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/WeatherForecast.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/project.assets.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,10 +86,8 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/MedicalRepReportHandlers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Data/Notification.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/WeatherForecast.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Data/EventNotification.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Data/GlobalNotificationReading.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/GlobalMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/IReportService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/MessageContent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -107,29 +131,45 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/UnitWork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/MedicalRepEvaluationsHandlers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IUnitWork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/INotificationEventFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/InterActing/VisitInteracting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/InterActing/IVisitInteracting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/NotificationTypesEnum.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/IVisitService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/TokenAndRefresh.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/NotificationEventFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IIdentityUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationTypeRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/IEvaluationService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationTypeRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/TestRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/ContextRepo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/IGlobalMessageFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/VisitRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/IVisitsRepo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/GlobalMessageFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/IMedicalRepRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/IEvaluationRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/RequestResponseInteracting/Response.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Helpers/Delegates.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Options/JwtSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/MessageFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Data/Message.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/TotalMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Contract/VisitsContracts/AddVisitContract.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Contract/MedicalRepsContracts/UpdateRepResource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/IMessageFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/MedicalRepVisitsHandlers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/Interacting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/VisitAssertion.cs" root0="FORCE_HIGHLIGHTING" />
@@ -137,8 +177,13 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/RegisterServiceResult.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/AddMedicalRepResourcesRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/ModifyMedicalRepResourcesRequest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Responses/SendAMessageToGroupResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetMedicalRepResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Resources/SendNotificationToGroup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Resources/AddGlobalMessageResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Responses/GetEvaluationsResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Helpers/StringHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Contract/Doctor/AddDoctorDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/DoctorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/EvaluationController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -177,57 +222,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/Competitor.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionType.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/RequestResponseInteracting/Response.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/Competition.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/MedicalRepForVisitDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Contract/VisitsContracts/AddVisitDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/VisitController.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitByCityDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/EvaluationController.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Rep" />
-        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Report.txt" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/WinnerDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/CityDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/GovernmentDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Governements.txt" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepPositionContoller.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/MedicalRepPositions.txt" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/DoctorsSpecializationController.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/DoctorSpecialization.txt" />
-        <option value="$PROJECT_DIR$/Zyarat/Contract/Doctor/AddDoctorDto.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Responses/DoctorResponse.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/DoctorController.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Doctor.txt" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/CityController.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/Hubs/MyUserProvider.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationHub.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/IEvaluationRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/appsettings.json" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/EvaluationRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/EvaluationNotification.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Visit.txt" />
-        <option value="E:/API'SDocumention/Competition" />
-        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Evaluation" />
-        <option value="$PROJECT_DIR$/Zyarat/Startup.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/Competitor.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/City.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/GlobalNotificationReading.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/GlobalMessage.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationTypes.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/IEvaluationType.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationType.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/IEvaluationRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/EvaluationRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/Notification.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/NotificationType.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/INotificationFactory.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/NotificationFactory.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/INotificationEventFactory.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/EventNotification.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/MessageReading.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/MessageContent.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/IMessageFactory.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/IGlobalMessageFactory.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/GlobalMessageFactory.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/GlobalMessageContent.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Startup.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/TotalMessage.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/Message.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/MessageFactory.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Resources/SendNotificationToGroup.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Responses/SendAMessageToGroupResponse.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Resources/AddGlobalMessageResponse.cs" />
+        <option value="F:/API'SDocumention/Evaluation" />
         <option value="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/GlobalMessage.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/NotificationType.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Evaluation" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/EvaluationController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationTypesEnum.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationTypeRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationTypeRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Helpers/StringHelper.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Program.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/NotificationEventFactory.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationController.cs" />
       </list>
     </option>
   </component>
@@ -349,7 +394,12 @@
       <workItem from="1596561951758" duration="7512000" />
       <workItem from="1596636349331" duration="3552000" />
       <workItem from="1596737272675" duration="7893000" />
-      <workItem from="1596766880209" duration="6732000" />
+      <workItem from="1596766880209" duration="7074000" />
+      <workItem from="1596806225821" duration="23138000" />
+      <workItem from="1596860007591" duration="7043000" />
+      <workItem from="1596899822151" duration="10848000" />
+      <workItem from="1596916640217" duration="5074000" />
+      <workItem from="1596936594817" duration="16877000" />
     </task>
     <servers />
   </component>
@@ -419,6 +469,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Helpers/StringHelper.cs</url>
+          <line>13</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Helpers/StringHelper.cs" initialLine="13">
+            <startOffsets>
+              <option value="410" />
+            </startOffsets>
+            <endOffsets>
+              <option value="411" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="94" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

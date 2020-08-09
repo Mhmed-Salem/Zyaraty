@@ -42,6 +42,9 @@ namespace Zyarat.Mapping
             CreateMap<WinnerDto, Winner>();
             CreateMap<AddDoctorDto, Doctor>();
             CreateMap<Doctor, DoctorResponse>();
+            CreateMap<EventNotificationDto, EventNotification>();
+            CreateMap<EventNotification, EventNotificationDto>();
+
 
 
 

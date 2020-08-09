@@ -16,6 +16,15 @@ namespace Zyarat.Models.Repositories.EvaluationRepos
                 .Where(evaluation => evaluation.VisitId==visitId).ToListAsync();
         }
 
+        public async  Task<Evaluation> GetEvaluationWithItsVisitAndDoctorAndRepByIdAsync(int evaluationId)
+        {
+            return await Context.Evaluations.Where(evaluation => evaluation.Id == evaluationId)
+                .Include(evaluation => evaluation.Visit)
+                .Include(evaluation => evaluation.Evaluator)
+                .Include(evaluation => evaluation.Visit.Doctor)
+                .FirstOrDefaultAsync();
+        }
+
         public async Task<Evaluation> GetAnEvaluationAsync(int visitId, int userId)
         {
             return await Context.Evaluations.FirstOrDefaultAsync(evaluation =>

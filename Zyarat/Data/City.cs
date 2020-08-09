@@ -13,6 +13,7 @@ namespace Zyarat.Data
             MedicalReps = new List<MedicalRep>();
         }
         public int Id { get; set; }
+        
         public int GovernmentId { get; set; }
         public string CityName { get; set; }
         public Government Government { set; get; }

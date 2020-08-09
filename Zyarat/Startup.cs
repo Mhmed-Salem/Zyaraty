@@ -17,9 +17,12 @@ using Zyarat.Controllers.Hubs;
 using Zyarat.Data;
 using Zyarat.Handlers;
 using Zyarat.Mapping;
+using Zyarat.Models.Factories.MessageFactory;
+using Zyarat.Models.Factories.NotificationFactory;
 using Zyarat.Models.Repositories.CompetitionRepo;
 using Zyarat.Models.Repositories.EvaluationRepos;
 using Zyarat.Models.Repositories.MedicalRepRepo;
+using Zyarat.Models.Repositories.NotificationRepo;
 using Zyarat.Models.Repositories.ReportRepo;
 using Zyarat.Models.Repositories.VisitsRepo;
 using Zyarat.Models.Services;
@@ -29,6 +32,7 @@ using Zyarat.Models.Services.IdentityServices;
 using Zyarat.Models.Services.InterActing;
 using Zyarat.Models.Services.IVisitService.VisitsServices;
 using Zyarat.Models.Services.MedicalRepService;
+using Zyarat.Models.Services.NotificationService;
 using Zyarat.Models.Services.ReportServices;
 using Zyarat.Options;
 
@@ -91,6 +95,19 @@ namespace Zyarat
 
                 services.AddScoped(typeof(MedicalRepReportHandlers));
 
+                services.AddScoped<INotificationRepo, NotificationRepo>();
+                services.AddScoped<INotificationEventFactory, NotificationEventFactory>();
+                services.AddScoped<INotificationTypeRepo, NotificationTypeRepo>();
+                
+                services.AddScoped<IGlobalMessageFactory, GlobalMessageFactory>();
+                services.AddScoped<IMessageFactory, MessageFactory>();
+                services.AddScoped<INotificationService, NotificationService>();
+
+
+                
+                
+
+            
                 services.AddSingleton<IUserIdProvider, MyUserProvider>();
 
 

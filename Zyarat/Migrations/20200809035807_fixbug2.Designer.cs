@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Zyarat.Data;
 
 namespace Zyarat.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20200809035807_fixbug2")]
+    partial class fixbug2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -404,9 +406,14 @@ namespace Zyarat.Migrations
                     b.Property<int>("MessageContentId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("NotificationTypeType")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("MessageContentId");
+
+                    b.HasIndex("NotificationTypeType");
 
                     b.ToTable("GlobalMessages");
                 });
@@ -823,6 +830,11 @@ namespace Zyarat.Migrations
                         .HasForeignKey("MessageContentId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.HasOne("Zyarat.Data.NotificationType", null)
+                        .WithMany("GlobalMessages")
+                        .HasForeignKey("NotificationTypeType")
+                        .OnDelete(DeleteBehavior.NoAction);
                 });
 
             modelBuilder.Entity("Zyarat.Data.MedicalRep", b =>

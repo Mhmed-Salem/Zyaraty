@@ -7,6 +7,7 @@ namespace Zyarat.Models.Repositories.EvaluationRepos
     public interface IEvaluationRepo
     {
         Task<IEnumerable<Evaluation>> GetEvaluationsAsync(int visitId);
+        Task<Evaluation> GetEvaluationWithItsVisitAndDoctorAndRepByIdAsync(int evaluationId);
         Task<Evaluation> GetAnEvaluationAsync(int visitId,int userId);
         void DeleteEvaluation(Evaluation evaluation);
         Task<Evaluation> GetAnEvaluationWithItsVisitAsync(int visitId, int userId);

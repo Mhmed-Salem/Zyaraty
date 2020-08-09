@@ -1,6 +1,8 @@
 ﻿1-
 URL [POST]
 
+/api/Evaluation
+
 ==Explanation
 make an evaluation to a specific visit either a like or dislike .
 Here, the type of the valuation 

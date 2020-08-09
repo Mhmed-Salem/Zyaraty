@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Zyarat.Models.Factories;
 
 namespace Zyarat.Data
 {
@@ -6,14 +7,13 @@ namespace Zyarat.Data
     {
         public NotificationType()
         {
-            GlobalMessages=new List<GlobalMessage>();
-            Notifications=new List<Notification>();
+            Notifications=new List<EventNotification>();
+            MessageContents=new List<MessageContent>();
         }
-        public int Id { set; get; }
-        public string Type { set; get; }
+        public NotificationTypesEnum Type { set; get; }
         public string Template { set; get; }
-        public List<GlobalMessage> GlobalMessages { set; get; }
-        public List<Notification> Notifications { set; get; }
-        
+        public List<EventNotification> Notifications { set; get; }
+        public List<MessageContent> MessageContents;
+
     }
 }
