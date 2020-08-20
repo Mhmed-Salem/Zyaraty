@@ -4,324 +4,17 @@
     <list default="true" id="61e5f741-d18f-472a-b68f-00b96601b2b7" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Messages.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/NotificationService.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/ClientsRepo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/INotificationClient.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/MessageController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/NotificationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/TestController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/CountMessages.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Data/GlobalNotificationReading.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Data/KeysObjs/EventNotificationPrimaryKey.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/EventRead.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/GlobalMessageReadingHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/GlobalMssageRead.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/IReadable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/IReadingHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/MessageRead.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/ReadingHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816125948_AddNotificationSytenIndexes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200817083723_addIndextoEventNotification.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818095153_improveNotificationMessageFormat.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818095153_improveNotificationMessageFormat.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818185458_addProcedureGetUnradMessages.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818185700_addProcedureGetUnradMessages102.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818185700_addProcedureGetUnradMessages102.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818191752_addProcedureGetUnradMessages103.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819142739_ModifyNamesInCompetition.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819152919_ModifyOnEndingProcs.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819153015_ModifyOnEndingProcs101.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819153015_ModifyOnEndingProcs101.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819184556_ModifyGetCurrentCompetitorsProc.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200820141314_SolveAbigInallProc.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionWinnerForAdmin.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/GlobalMessageDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/MessageDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/NotificationTypeDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/EvaluationEventBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/EventBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/EvaluationOpposite.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/EventRoute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/IEventRoute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationOppositer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/MessageKey.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Properties/PublishProfiles/CustomProfile.pubxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Properties/PublishProfiles/CustomProfile.pubxml.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/AutoMapper.Extensions.Microsoft.DependencyInjection.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/AutoMapper.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.AspNetCore.Authentication.JwtBearer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.AspNetCore.Cryptography.Internal.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Bcl.HashCode.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Data.SqlClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.EntityFrameworkCore.SqlServer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Caching.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Caching.Memory.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Configuration.Binder.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Configuration.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Identity.Core.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Identity.Stores.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Logging.Configuration.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Logging.Console.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Options.ConfigurationExtensions.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Options.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Primitives.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Identity.Client.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Newtonsoft.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Collections.Immutable.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Configuration.ConfigurationManager.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Diagnostics.DiagnosticSource.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Net.WebSockets.WebSocketProtocol.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Runtime.Caching.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Zyarat.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Zyarat.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Zyarat.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Zyarat.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Zyarat.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win-arm64/native/sni.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win-x64/native/sni.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win-x86/native/sni.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/web.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/189ec2e6-92eb-4c3a-b5a2-9dfbfdc9f3f7_21743589_1162103990588313_3722657498792333203_o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/1e42bc59-1afd-46d0-837e-052da4a7dd0f_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/230a8862-cc61-48e4-a458-db1c6651d061_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/2e1e7d12-654d-4ed8-9d0e-9e5391597133_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/3b879ea5-7818-4b4a-821f-37af381cfb52_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/49a740d5-4b47-407d-b6d3-8b6510c74968_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/5b796cb4-4da0-45dc-be23-d5d4148cef5c_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/5d8e0bdd-09d9-451f-be45-0c59a0313427_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/6d66ecb0-575d-41a2-bd30-1a2b434ac733_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/73ffe786-6b56-46b8-b1e4-94c0d451dd7b_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/7946c7f1-4a78-4d8a-b7a5-c030a16d9d4f_9_e5eb8e98cc - Copy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/8165c873-e9b0-4cf1-b2c8-c165af25b16c_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/8ac636cf-a79a-49db-aa43-4bc0cb4e5fc6_12313714_10153402663370345_8983252820405287690_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/8b108acc-fa22-40be-a137-367032429fd4_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/8da5c042-608c-46b8-937b-235db559ab79_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/937925b1-dbbf-45e9-9164-136d98187eaf_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/95f9e696-da7f-4d40-8a13-2fc46cf697c2_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/97d9331d-4cc1-43f9-8dc7-4c795a1ac21a_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/9e55d17e-f235-44a2-bd36-358a80b97eea_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/9fcec17b-c946-4d0c-8c88-de5f05820c99_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/ae7dae42-d9bc-4410-a3ce-f2c4245d6e31_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/b445eeba-0450-41b1-9748-7bc1e82449a8_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/b582fcda-20af-46d1-9b50-6593064d5c96_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/c0316131-27b6-4de0-8ec6-180f0fa07fe3_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/cb79e949-9f5f-4ca8-bb8b-0b03c7b25802_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/cf1918ed-75dd-4c7d-b822-c4d11085b167_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/e9c25ff2-596c-4570-9a06-e2eb00986c68_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/f60e3a0c-5a73-483a-8358-009fd6c83072_12313714_10153402663370345_8983252820405287690_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/fc70cea0-1568-422f-81a7-0eca43a05005_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Newtonsoft.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/System.Net.WebSockets.WebSocketProtocol.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/win-x64/Zyarat.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.AspNetCore.Authentication.JwtBearer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Newtonsoft.Json.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/System.Net.WebSockets.WebSocketProtocol.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/189ec2e6-92eb-4c3a-b5a2-9dfbfdc9f3f7_21743589_1162103990588313_3722657498792333203_o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/1e42bc59-1afd-46d0-837e-052da4a7dd0f_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/230a8862-cc61-48e4-a458-db1c6651d061_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/2e1e7d12-654d-4ed8-9d0e-9e5391597133_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/3b879ea5-7818-4b4a-821f-37af381cfb52_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/49a740d5-4b47-407d-b6d3-8b6510c74968_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/5b796cb4-4da0-45dc-be23-d5d4148cef5c_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/5d8e0bdd-09d9-451f-be45-0c59a0313427_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/6d66ecb0-575d-41a2-bd30-1a2b434ac733_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/73ffe786-6b56-46b8-b1e4-94c0d451dd7b_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/7946c7f1-4a78-4d8a-b7a5-c030a16d9d4f_9_e5eb8e98cc - Copy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/8165c873-e9b0-4cf1-b2c8-c165af25b16c_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/8ac636cf-a79a-49db-aa43-4bc0cb4e5fc6_12313714_10153402663370345_8983252820405287690_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/8b108acc-fa22-40be-a137-367032429fd4_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/8da5c042-608c-46b8-937b-235db559ab79_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/937925b1-dbbf-45e9-9164-136d98187eaf_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/95f9e696-da7f-4d40-8a13-2fc46cf697c2_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/97d9331d-4cc1-43f9-8dc7-4c795a1ac21a_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/9e55d17e-f235-44a2-bd36-358a80b97eea_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/9fcec17b-c946-4d0c-8c88-de5f05820c99_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/ae7dae42-d9bc-4410-a3ce-f2c4245d6e31_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/b445eeba-0450-41b1-9748-7bc1e82449a8_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/b582fcda-20af-46d1-9b50-6593064d5c96_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/c0316131-27b6-4de0-8ec6-180f0fa07fe3_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/cb79e949-9f5f-4ca8-bb8b-0b03c7b25802_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/cf1918ed-75dd-4c7d-b822-c4d11085b167_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/e9c25ff2-596c-4570-9a06-e2eb00986c68_كو 1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/f60e3a0c-5a73-483a-8358-009fd6c83072_12313714_10153402663370345_8983252820405287690_n.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/fc70cea0-1568-422f-81a7-0eca43a05005_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Zyarat.Parameters.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Zyarat.SourceManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Zyarat/DesignTimeBuild/.dtbcache" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Zyarat/DesignTimeBuild/.dtbcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Zyarat/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Zyarat/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Zyarat/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Zyarat/v16/Server/sqlite3/storage.ide" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Doctor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Doctor.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Evaluation" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Evaluation" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Rep" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Rep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Visit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Visit.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/CityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/CityController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/DoctorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/DoctorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationHub.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/Competition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/Competition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/TotalMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/TotalMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/EventNotification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/EventNotification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/GlobalMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/GlobalMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/Message.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723115945_firstMig.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723115945_firstMig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816081132_InitandProc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723120314_firstMig2.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723120314_firstMig2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819152919_ModifyOnEndingProcs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723120908_firstMig3.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723120908_firstMig3.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723155322_AddActivationOrNotToMedicalRep.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723155322_AddActivationOrNotToMedicalRep.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723223943_ModifyVisitsReport.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723223943_ModifyVisitsReport.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723233530_ModifyVisitsReport2.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723233530_ModifyVisitsReport2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200724234710_addDefaultValues.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200724234710_addDefaultValues.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728174848_AddCompetitionService.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728174848_AddCompetitionService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728202445_AddStoresProcedureGetCurrentWinners.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728202445_AddStoresProcedureGetCurrentWinners.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728233959_ModifyProc.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728233959_ModifyProc.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729001357_ModifyProc110.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729001357_ModifyProc110.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729110121_dqpowjdpwqjfdp.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729110121_dqpowjdpwqjfdp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729111403_Modify.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729111403_Modify.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729211659_Modify112.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729211659_Modify112.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819184556_ModifyGetCurrentCompetitorsProc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729212035_Modify1125.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729212035_Modify1125.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729232301_AddStoredProcedureOnEndingCompetition.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729232301_AddStoredProcedureOnEndingCompetition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730202807_alterWinner.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730202807_alterWinner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730221538_alterCompetition.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730221538_alterCompetition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730222937_ADDPROCEDURESOFEVENTS.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730222937_ADDPROCEDURESOFEVENTS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200820141314_SolveAbigInallProc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807042322_add Notifications Entityes.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807042322_add Notifications Entityes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807141358_modNotificatiobs.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807141358_modNotificatiobs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807144348_modNotificatiobs1.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807144348_modNotificatiobs1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807145417_modNotificatiobs4.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807145417_modNotificatiobs4.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807163635_modNotificatiobs11.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807163635_modNotificatiobs11.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807234146_modNotificatiobs44.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807234146_modNotificatiobs44.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816082349_addMessageReadProp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808043743_NewDesign.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819142739_ModifyNamesInCompetition.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808043743_NewDesign.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808045038_NewDesign1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816125948_AddNotificationSytenIndexes.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808045038_NewDesign1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808060135_NewDesign15.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818191752_addProcedureGetUnradMessages103.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808060135_NewDesign15.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808204801_finishpersitentNotificationService.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200817083723_addIndextoEventNotification.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808204801_finishpersitentNotificationService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809030943_fixbug1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818185458_addProcedureGetUnradMessages.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809030943_fixbug1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809035807_fixbug2.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816081132_InitandProc.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809035807_fixbug2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809040155_fixbug3.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816082349_addMessageReadProp.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809040155_fixbug3.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/DTO/WinnerDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/WinnerDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/INotificationEventFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/NotificationEventFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/EvaluationRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/EvaluationRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/IEvaluationRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/IEvaluationRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationRepo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/IVisitsRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/IVisitsRepo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/EvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/EvaluationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/IEvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/IEvaluationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/IVisitService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/IVisitService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/InterActing/VisitInteracting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/InterActing/VisitInteracting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Resources/AddGlobalMessageResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Resources/GlobalMessageResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Responses/SendAMessageToGroupResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Responses/SendAMessageToGroupResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Zyarat.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Zyarat.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Zyarat.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Zyarat.csproj.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -567,10 +260,10 @@
         <option value="$PROJECT_DIR$/Zyarat/Migrations/20200820141314_SolveAbigInallProc.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" />
         <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" />
       </list>
     </option>
@@ -723,7 +416,7 @@
       <workItem from="1597826660266" duration="27688000" />
       <workItem from="1597905886031" duration="10042000" />
       <workItem from="1597928396654" duration="6716000" />
-      <workItem from="1597940890501" duration="7711000" />
+      <workItem from="1597940890501" duration="10194000" />
     </task>
     <servers />
   </component>
@@ -1528,26 +1221,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>134</line>
+          <line>162</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="121">
             <startOffsets>
-              <option value="5119" />
+              <option value="6508" />
             </startOffsets>
             <endOffsets>
-              <option value="5192" />
+              <option value="6581" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="454" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs</url>
-          <line>119</line>
+          <line>136</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" initialLine="119">
             <startOffsets>
-              <option value="4176" />
+              <option value="4989" />
             </startOffsets>
             <endOffsets>
-              <option value="4276" />
+              <option value="5089" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="458" />
@@ -1610,117 +1303,117 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>59</line>
+          <line>56</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="56">
             <startOffsets>
-              <option value="2197" />
+              <option value="2163" />
             </startOffsets>
             <endOffsets>
-              <option value="2256" />
+              <option value="2222" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="472" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>61</line>
+          <line>58</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="57">
             <startOffsets>
-              <option value="2324" />
+              <option value="2294" />
             </startOffsets>
             <endOffsets>
-              <option value="2344" />
+              <option value="2314" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="473" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>63</line>
+          <line>62</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="59">
             <startOffsets>
-              <option value="2448" />
+              <option value="2492" />
             </startOffsets>
             <endOffsets>
-              <option value="2515" />
+              <option value="2570" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="474" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>62</line>
+          <line>61</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="58">
             <startOffsets>
-              <option value="2361" />
+              <option value="2394" />
             </startOffsets>
             <endOffsets>
-              <option value="2431" />
+              <option value="2475" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="475" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>75</line>
+          <line>74</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="66">
             <startOffsets>
-              <option value="3009" />
+              <option value="3070" />
             </startOffsets>
             <endOffsets>
-              <option value="3059" />
+              <option value="3120" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="479" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>76</line>
+          <line>75</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="67">
             <startOffsets>
-              <option value="3076" />
+              <option value="3137" />
             </startOffsets>
             <endOffsets>
-              <option value="3116" />
+              <option value="3177" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="480" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>77</line>
+          <line>76</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="68">
             <startOffsets>
-              <option value="3133" />
+              <option value="3194" />
             </startOffsets>
             <endOffsets>
-              <option value="3163" />
+              <option value="3224" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="481" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>78</line>
+          <line>77</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="69">
             <startOffsets>
-              <option value="3180" />
+              <option value="3241" />
             </startOffsets>
             <endOffsets>
-              <option value="3226" />
+              <option value="3287" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="482" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>82</line>
+          <line>81</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="73">
             <startOffsets>
-              <option value="3303" />
+              <option value="3364" />
             </startOffsets>
             <endOffsets>
-              <option value="3359" />
+              <option value="3420" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="483" />
@@ -1883,42 +1576,68 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>73</line>
+          <line>72</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="73">
             <startOffsets>
-              <option value="2904" />
+              <option value="2965" />
             </startOffsets>
             <endOffsets>
-              <option value="2974" />
+              <option value="3035" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="496" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>70</line>
+          <line>69</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="70">
             <startOffsets>
-              <option value="2720" />
+              <option value="2781" />
             </startOffsets>
             <endOffsets>
-              <option value="2865" />
+              <option value="2926" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="497" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>72</line>
+          <line>71</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="72">
             <startOffsets>
-              <option value="2882" />
+              <option value="2943" />
             </startOffsets>
             <endOffsets>
-              <option value="2883" />
+              <option value="2944" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="498" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>55</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="63">
+            <startOffsets>
+              <option value="2145" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2146" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="499" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>59</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="67">
+            <startOffsets>
+              <option value="2330" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2376" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="500" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

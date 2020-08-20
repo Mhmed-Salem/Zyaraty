@@ -74,7 +74,7 @@ namespace Zyarat.Controllers
                 MinUniqueUsers = source.MinUniqueUsers,
                 MinUniqueVisits = source.MinUniqueVisits,
                 DateTime = DateTime.Now
-            },new DateTime(2020,8,21,3,1,1));
+            },new DateTime(2020,8,22,2,1,1));
             if (!state.Success)
             {
                 return BadRequest(state.Error);
@@ -96,6 +96,23 @@ namespace Zyarat.Controllers
             var compel = _mapper.Map<CompetitionDto, Competition>(source);
             compel.Type = t;
             var state = await _service.ModifyNextCompetition(compel);
+            if(!state.Success)
+                return BadRequest(state.Error);
+            return Ok(_mapper.Map<Competition,CompetitionDto>(state.Source));
+        }
+        [HttpPut("ModifyTest/{type}")]
+        public async Task<IActionResult> Modify_Test([FromRoute]string type,[FromForm]CompetitionDto source)
+        {
+            bool t ;
+            if (type.ToLower().Equals("daily"))
+                t = false;
+            else if (type.ToLower().Equals("monthly"))
+                t = true;
+            else return BadRequest($"there is not Competition Type named {type} ");
+            var compel = _mapper.Map<CompetitionDto, Competition>(source);
+            compel.Type = t;
+            var state = await _service.ModifyNextCompetition_Test(compel,
+                new DateTime(2020,8,23,2,3,14));
             if(!state.Success)
                 return BadRequest(state.Error);
             return Ok(_mapper.Map<Competition,CompetitionDto>(state.Source));

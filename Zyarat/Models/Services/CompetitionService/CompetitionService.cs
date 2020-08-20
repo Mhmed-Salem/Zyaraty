@@ -15,11 +15,14 @@ namespace Zyarat.Models.Services.CompetitionService
         private readonly ICompetitionRepo _repo;
         private readonly IUnitWork _unitWork;
         private const int ReturnedRowNumber = 20;
+        private const int HourOffset = 2;
+        private TimeOffSetHandler _offSetHandler;
 
         public CompetitionService(ICompetitionRepo repo, IUnitWork unitWork)
         {
             _repo = repo;
             _unitWork = unitWork;
+            _offSetHandler=new TimeOffSetHandler(HourOffset);
         }
 
         public async Task<Response<Competition>> AddNextCompetition(Competition competition)
@@ -27,15 +30,9 @@ namespace Zyarat.Models.Services.CompetitionService
             try
             {
                 var last =await _repo.GetLastCompetition(competition.Type);
-                var time = DateTime.Now.TimeOfDay;
-                var now=DateTime.Now;
-                var d1=new DateTime(now.Year,now.Month,now.Day);//for daily comparison
-                var d2=new DateTime(now.Year,now.Month,1);//for monthly comparision
-                if (!(time.Hours > 0 && time.Hours < 2))
-                {
-                    d1=d1.AddDays(1);
-                    d2 = d2.AddMonths(1);
-                }
+                var now = _offSetHandler.GetDate();
+                var d1=new DateTime(now.Year,now.Month,now.Day).AddDays(1);//for daily comparison
+                var d2=new DateTime(now.Year,now.Month,1).AddDays(1);//for monthly comparision
                 if (last!=null&&(!competition.Type && d1 <= last.DateTime.Date
                                   || competition.Type && d2 <= last.DateTime.Date))
                 {
@@ -58,16 +55,18 @@ namespace Zyarat.Models.Services.CompetitionService
             try
             {
                 var last =await _repo.GetLastCompetition(competition.Type);
-                var time = DateTime.Now.TimeOfDay;
-                var now=addDateTime;
-                var d1=new DateTime(now.Year,now.Month,now.Day);//for daily comparison
-                var d2=new DateTime(now.Year,now.Month,1);//for monthly comparision
-                if (!(time.Hours > 0 && time.Hours < 2))
+              //  var time = DateTime.Now.TimeOfDay;
+              //  var now=addDateTime;
+               var now = _offSetHandler.GetDate(addDateTime);
+
+                var d1=new DateTime(now.Year,now.Month,now.Day).AddDays(1);//for daily comparison
+                var d2=new DateTime(now.Year,now.Month,1).AddDays(1);//for monthly comparision
+               /** if (!(time.Hours > 0 && time.Hours < 2))
                 {
                     d1=d1.AddDays(1);
                     d2 = d2.AddMonths(1);
                 }
-              
+              **/
                 if (last!=null&&(!competition.Type && d1 <= last.DateTime.Date
                                  || competition.Type && d2 <= last.DateTime.Date))
                 {
@@ -103,7 +102,7 @@ namespace Zyarat.Models.Services.CompetitionService
             try
             {
                 var c =await _repo.GetLastCompetition(competition.Type);
-                var now=DateTime.Now;
+                var now=_offSetHandler.GetDate();
                 var d1=new DateTime(now.Year,now.Month,now.Day);//for daily comparison
                 var d2=new DateTime(now.Year,now.Month,1);//for monthly comparision
                 if (c==null || (competition.Type && !d2.AddMonths(1).Equals(c.DateTime)
@@ -128,17 +127,41 @@ namespace Zyarat.Models.Services.CompetitionService
             }
         }
 
+        public async  Task<Response<Competition>> ModifyNextCompetition_Test(Competition competition, DateTime modifyTime)
+        {
+            try
+            {
+                var c =await _repo.GetLastCompetition(competition.Type);
+                var now=_offSetHandler.GetDate(modifyTime);
+                var d1=new DateTime(now.Year,now.Month,now.Day);//for daily comparison
+                var d2=new DateTime(now.Year,now.Month,1);//for monthly comparision
+                if (c==null || (competition.Type && !d2.AddMonths(1).Equals(c.DateTime)
+                                ||!competition.Type && !d1.AddDays(1).Equals(c.DateTime)))
+                {
+                    return new Response<Competition>("the Competition does not exist ! ");
+                }
+                
+                c.Roles = competition.Roles;
+                c.MinUniqueUsers = competition.MinUniqueUsers;
+                c.MinUniqueVisits = competition.MinUniqueVisits;
+                
+                var newCompetition=_repo.ModifyCompetition(c);
+
+                await _unitWork.CommitAsync();
+                return new Response<Competition>(newCompetition);
+
+            }
+            catch (Exception e)
+            { 
+                return new Response<Competition>($"Error :{e.Message}");
+            }        }
+
         public async  Task<Response<IEnumerable<Competitor>>> GetCurrentResult(CompetitionType type,int repId)
         {
             try
             {
                 var last = await _repo.GetLastCompetition(type != CompetitionType.Daily);
-                var compareDate = DateTime.Now.Date;
-                var time = DateTime.Now.TimeOfDay;
-                if (time.Hours>0 &&time.Hours<2)
-                {
-                    compareDate = compareDate.AddDays(-1);
-                }
+                var compareDate = _offSetHandler.GetDate();
                 if (last==null||!compareDate.Equals(last.DateTime))
                 {
                     return new Response<IEnumerable<Competitor>>("No Competition!");
