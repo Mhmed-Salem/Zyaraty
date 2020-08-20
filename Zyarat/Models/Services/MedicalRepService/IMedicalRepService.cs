@@ -13,6 +13,7 @@ namespace Zyarat.Models.Services.MedicalRepService
     {
         
         Task<RegisterServiceResult> AddRepAsync(AddMedicalRepResourcesRequest rep);
+        int GetOnlineUsers();
         Task<RegisterServiceResult> AddRepForTestAsync(AddMedicalRepResourcesRequest rep);
 
         Task<Response<List<MedicalRep>>> GetAll(int page ,int pageCount);

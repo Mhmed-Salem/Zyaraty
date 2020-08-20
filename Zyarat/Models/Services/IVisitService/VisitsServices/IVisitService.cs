@@ -9,6 +9,7 @@ namespace Zyarat.Models.Services.IVisitService.VisitsServices
 {
     public interface IVisitService
     {
+        Task<Response<Visit>> GetVisit(int visitId);
         Task<Response<Visit>> AddVisit(AddVisitContract contract);
         Task<Response<IEnumerable<GetVisitByDoctorDto>>> GetVisitByDoctor(int doctorId, int userId);
         Task<Response<IEnumerable<GetVisitByCityDto>>> GetVisitByCity(int cityId, int userId);

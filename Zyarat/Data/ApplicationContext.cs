@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -27,19 +27,15 @@ namespace Zyarat.Data
         public DbSet<Competition> Competitions { set; get; }
         public DbSet<Winner> Winners { set; get; }
         public DbSet<Competitor> CurrentWinners { set; get; }
-        
         public DbSet<EventNotification> EventNotifications { set; get; }
         public DbSet<NotificationType> NotificationTypes { set; get; }
+        
         public DbSet<MessageContent> MessageContents { set; get; }
-        public DbSet<GlobalMessage> GlobalMessages { set; get; }
+        public DbSet<GlobalMessage> GlobalMessages { set; get; } 
+        public DbSet<GlobalMessageReading>GlobalMessageReading{ set; get; }
         public DbSet<Message> Messages { set; get; }
 
-        
-
-
-
-
-
+        public DbSet<CountMessages> CountMessages { set; get; }
 
 
 
@@ -47,7 +43,7 @@ namespace Zyarat.Data
         {
             base.OnModelCreating(builder);
             /**
-             * All the foreign key relationships un database is No action.
+             * All the foreign key relationships in database is No action.
              * except for the Evaluation_Visit_FK as it's a Cascade, and VisitReports
              */
             foreach (var relationship in builder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
@@ -70,12 +66,30 @@ namespace Zyarat.Data
            builder.Entity<MedicalRep>().Property(rep => rep.PermanentDeleted).HasDefaultValue(false);
 
            builder.Entity<Competitor>().HasNoKey();
+           builder.Entity<CountMessages>().HasNoKey();
            builder.Entity<NotificationType>().HasKey(type => type.Type);
+           
+           /**Adding Indexes*/
+           builder.Entity<GlobalMessageReading>()
+               .HasKey(reading => new {reading.ReaderId, reading.GlobalMessageId});
+           builder.Entity<EventNotification>()
+               .HasKey(notification => new {notification.DataId, notification.NotificationTypeId});
+           builder.Entity<EventNotification>()
+               .HasIndex(notification => new {notification.MedicalRepId, notification.DateTime})
+               .IsClustered(false);
+           builder.Entity<GlobalMessage>()
+               .HasIndex(message => message.DateTime)
+               .IsClustered(false);
+           builder.Entity<Message>()
+               .HasIndex(message => new {message.ReceiverId, message.DateTime})
+               .IsClustered(false);
+           /**End of Adding Indexes*/
+           
            /**Seed NotificationType data*/
-           builder.Entity<NotificationType>().HasData(new NotificationType()
+           builder.Entity<NotificationType>().HasData(new NotificationType
            {
                Type = NotificationTypesEnum.Evaluation,
-               Template = @"{UserName} makes a {like/dislike} to you comment in Dr/{doctorName}  : {visit} "
+               Template = "{UserName} had made a {like/dislike} to your comment in Dr/{doctorName} :  \"{visit}\" "
            });
            builder.Entity<NotificationType>().HasData(new NotificationType
            {
@@ -87,7 +101,7 @@ namespace Zyarat.Data
                Type = NotificationTypesEnum.GlobalMessage,
                Template = "{message Content}"
            });
-
+           /**end if seeding data*/
 
         }
 

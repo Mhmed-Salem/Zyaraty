@@ -14,6 +14,7 @@ namespace Zyarat.Data
             AdderDoctor = new List<Doctor>();
             VisitReports=new List<VisitReport>();
             Messages=new List<Message>();
+            Winners=new List<Winner>();
         }
         public int Id { set; get; }
         public string FName { set; get; }
@@ -38,6 +39,7 @@ namespace Zyarat.Data
         public List<Doctor> AdderDoctor { set; get; }//Doctors added by this User
         public List<VisitReport> VisitReports { set; get; }
         public List<Message> Messages { set; get; }
+        public List<Winner> Winners { set; get; }
 
         public string GenerateUserName()
         {

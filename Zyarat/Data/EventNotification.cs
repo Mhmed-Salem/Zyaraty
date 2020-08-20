@@ -4,7 +4,6 @@ namespace Zyarat.Data
 {
     public class EventNotification
     {
-        public int Id { set; get; }
         public int MedicalRepId { set; get; }//the user who received Notification
         public MedicalRep MedicalRep { set; get; } 
         public DateTime DateTime { set; get; }

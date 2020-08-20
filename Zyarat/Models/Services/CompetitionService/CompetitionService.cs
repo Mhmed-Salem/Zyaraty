@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Zyarat.Data;
 using Zyarat.Data.EFMappingHelpers;
+using Zyarat.Models.DTO;
 using Zyarat.Models.Repositories.CompetitionRepo;
 using Zyarat.Models.RequestResponseInteracting;
 
@@ -25,17 +26,23 @@ namespace Zyarat.Models.Services.CompetitionService
         {
             try
             {
-                var c =await _repo.GetLastCompetition(competition.Type);
-                if (!competition.Type&&DateTime.Now.Date.AddDays(1)<=c.DateTime.Date
-                    ||competition.Type&&DateTime.Now.Date.AddMonths(1)<=c.DateTime.Date)
+                var last =await _repo.GetLastCompetition(competition.Type);
+                var time = DateTime.Now.TimeOfDay;
+                var now=DateTime.Now;
+                var d1=new DateTime(now.Year,now.Month,now.Day);//for daily comparison
+                var d2=new DateTime(now.Year,now.Month,1);//for monthly comparision
+                if (!(time.Hours > 0 && time.Hours < 2))
+                {
+                    d1=d1.AddDays(1);
+                    d2 = d2.AddMonths(1);
+                }
+                if (last!=null&&(!competition.Type && d1 <= last.DateTime.Date
+                                  || competition.Type && d2 <= last.DateTime.Date))
                 {
                     return new Response<Competition>("the Competition already exists ! ");
                 }
 
-                if (competition.Type)
-                {
-                    competition.DateTime=new DateTime(competition.DateTime.Year,competition.DateTime.Month,1);
-                }
+                competition.DateTime = competition.Type ? d2 : d1;
                 await _repo.AddCompetition(competition);
                 await _unitWork.CommitAsync();
                 return new Response<Competition>(competition);
@@ -46,21 +53,68 @@ namespace Zyarat.Models.Services.CompetitionService
             }
         }
 
-     
+        public async Task<Response<Competition>> AddNextCompetition_Test(Competition competition, DateTime addDateTime)
+        {
+            try
+            {
+                var last =await _repo.GetLastCompetition(competition.Type);
+                var time = DateTime.Now.TimeOfDay;
+                var now=addDateTime;
+                var d1=new DateTime(now.Year,now.Month,now.Day);//for daily comparison
+                var d2=new DateTime(now.Year,now.Month,1);//for monthly comparision
+                if (!(time.Hours > 0 && time.Hours < 2))
+                {
+                    d1=d1.AddDays(1);
+                    d2 = d2.AddMonths(1);
+                }
+              
+                if (last!=null&&(!competition.Type && d1 <= last.DateTime.Date
+                                 || competition.Type && d2 <= last.DateTime.Date))
+                {
+                    return new Response<Competition>("the Competition already exists ! ");
+                }
+                competition.DateTime = competition.Type ? d2 : d1;
+                await _repo.AddCompetition(competition);
+                await _unitWork.CommitAsync();
+                return new Response<Competition>(competition);
+            }
+            catch (Exception e)
+            {
+                return new Response<Competition>($"Error :{e.Message}");
+            }
+        }
 
-        public async  Task<Response<Competition>> ModifyNextCompetition(int id,Competition competition)
+        public Task<Response<Competition>> GetNextCompetition(CompetitionType type)
+        {
+            try
+            {
+                throw new Exception();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+
+        public async  Task<Response<Competition>> ModifyNextCompetition(Competition competition)
         {
             try
             {
                 var c =await _repo.GetLastCompetition(competition.Type);
-                if (DateTime.Now.Date.AddDays(1)>c.DateTime.Date)
+                var now=DateTime.Now;
+                var d1=new DateTime(now.Year,now.Month,now.Day);//for daily comparison
+                var d2=new DateTime(now.Year,now.Month,1);//for monthly comparision
+                if (c==null || (competition.Type && !d2.AddMonths(1).Equals(c.DateTime)
+                    ||!competition.Type && !d1.AddDays(1).Equals(c.DateTime)))
                 {
                     return new Response<Competition>("the Competition does not exist ! ");
                 }
-
+                
                 c.Roles = competition.Roles;
-                c.MinUniqueUser = competition.MinUniqueUser;
-                c.MinUniqueVisit = competition.MinUniqueVisit;
+                c.MinUniqueUsers = competition.MinUniqueUsers;
+                c.MinUniqueVisits = competition.MinUniqueVisits;
                 
                 var newCompetition=_repo.ModifyCompetition(c);
 
@@ -79,10 +133,20 @@ namespace Zyarat.Models.Services.CompetitionService
             try
             {
                 var last = await _repo.GetLastCompetition(type != CompetitionType.Daily);
+                var compareDate = DateTime.Now.Date;
+                var time = DateTime.Now.TimeOfDay;
+                if (time.Hours>0 &&time.Hours<2)
+                {
+                    compareDate = compareDate.AddDays(-1);
+                }
+                if (last==null||!compareDate.Equals(last.DateTime))
+                {
+                    return new Response<IEnumerable<Competitor>>("No Competition!");
+                }
                 var allCompetitors = await _repo.GetCurrentResult(
-                    from: new DateTime(last.DateTime.Year, last.DateTime.Month, last.DateTime.Day, 2, 0, 0),
-                    last.MinUniqueUser,
-                    last.MinUniqueVisit);
+                    new DateTime(last.DateTime.Year, last.DateTime.Month, last.DateTime.Day, 2, 0, 0),
+                    last.MinUniqueUsers,
+                    last.MinUniqueVisits);
                 /**
                  * take the top @ReturnedRowNumber of rows with the  rank of  a specific User
                  * in the competition .if the passed user is not in the competition ,it will
@@ -109,17 +173,17 @@ namespace Zyarat.Models.Services.CompetitionService
             }
         }
 
-        public async  Task<Response<IEnumerable<Winner>>> GetFinalResult(CompetitionType type, int year, int month, int day)
+        public async Task<Response<IEnumerable<CompetitionWinner>>> GetFinalResult(CompetitionType type, int year, int month, int day)
         {
             try
             {
                 var c = await _repo.GetCompetition(type == CompetitionType.Monthly, year, month, day);
-                return c==null ? new Response<IEnumerable<Winner>>("th competition Is not existed!") : 
-                    new Response<IEnumerable<Winner>>(_repo.GetFinalResult(c.Id));
+                return c==null ? new Response<IEnumerable<CompetitionWinner>>("th competition Is not existed!") : 
+                    new Response<IEnumerable<CompetitionWinner>>(await _repo.GetWinnersInCompetition(c.Id));
             }
             catch (Exception e)
             {
-                return new Response<IEnumerable<Winner>>($"Error :{e.Message}");
+                return new Response<IEnumerable<CompetitionWinner>>($"Error :{e.Message}");
             }
         }
     }

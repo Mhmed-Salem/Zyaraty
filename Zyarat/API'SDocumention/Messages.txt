@@ -1,0 +1,166 @@
+﻿=======================================Before starting==============================
+It's a service for the message from admin to users.Admin can a message to a specific user
+or set of specific users or all users .
+if the message will be  sent to all users ,then it's called "GlobalMessage".
+messages to a user or set of users ===>message
+messages to all users ==>GlobalMessage
+
+
+-------------------------------------------------------------------------------------
+1-
+URL[POST]
+
+/api/message/AddGlobalMessage/{message}
+==Explanation
+Add new Global message 
+ex)
+/api/message/AddGlobalMessage/hello fom admin2
+
+==Response 
+{
+    "id": 2,
+    "content": "hello fom admin2",
+    "dateTime": "2020-08-18T13:22:47.5562774+02:00",
+    "read": false,
+    "type": "GlobalMessage"
+}
+-------------------------------------------------------------------------------------
+2-
+URL[POST]
+/api/message/AddMessage/{userId}/{Message}
+ex)
+/api/message/AddMessage/22/hello fom admin2
+==explanation
+it adds a message to a specific user(userId)
+
+==Response 
+{
+    "id": 1,
+    "content": "hello fom admin2",
+    "dateTime": "2020-08-18T13:31:26.5915877+02:00",
+    "read": false,
+    "type": "Message",
+    "receivers": [ //the array here  will always contain a single value
+        22
+    ]
+}
+
+-------------------------------------------------------------------------------------
+3-
+URL[POST]
+/api/message/AddMessageToGroup
+
+==Explanation
+Add a message to group of users 
+
+==Request
+[From body]
+
+{
+     "content":"to group Message",//must be less than 100 characters 
+     "Receivers":[80,88,95,154,1252,85]//the ids of receivers 
+ }
+
+==Response 
+{
+    "id": 7,
+    "content": "to group Message",
+    "receivers": [
+        80,
+        88,
+        95,
+        154,
+        1252,
+        85
+    ]
+}
+
+-----------------------------------------------------------------------------------
+4-
+URL[GET]
+/api/message/GetMessage/{messageId}
+ex)
+/api/message/GetMessage/5
+
+==Explanation 
+Get the message which is sent to a specific user or set of users which called 
+"Message"
+
+==Response 
+
+{
+    "id": 5,
+    "content": "to group Message",
+    "dateTime": "2020-08-18T13:37:12.1234328",
+    "read": true,
+    "type": "Message",
+    "receivers": []//always empty
+}
+
+------------------------------------------------------------------------------
+5-
+URL[GET]
+
+/api/message/Getglobal/{messageId}/{readerId}
+
+ex)
+/api/message/Getglobal/1/1000
+
+==Explanation
+get the global message of id={messageId} for the user {readerId} 
+
+==Response 
+
+{
+    "id": 1,
+    "content": "hello fom admin",
+    "dateTime": "2020-08-18T12:58:41.4502518",
+    "read": false,
+    "type": "GlobalMessage"
+}
+------------------------------------------------------------------------------
+6-
+URL[GET]
+/api/message/GetMessages?repId=6&pageNumber=1&pageSize=12
+
+==Explanation
+Get all messages (messages and global messages) for a specific user(repId) in 
+paginating format 
+
+==Response 
+
+[
+    {
+        "id": 12,
+        "content": "hello fom admin",
+        "typesEnum": 2,
+        "dateTime": "2020-08-18T12:58:41.4502518",
+        "read": false
+    },
+    {
+        "id": 2,
+        "content": "hello fom admin2",
+        "typesEnum": 2,
+        "dateTime": "2020-08-18T13:22:47.5562774",
+        "read": true
+    }
+]
+
+-----------------------------------------------------------------------------------------------
+7-
+URL[GET]
+/api/message/CountUnRead/{repId}
+
+ex)
+/api/message/CountUnRead/10
+
+
+==Explanation
+get the number of the messages that the user(repId) have not read yet.
+the messages is the both message and global message 
+
+==Response (the number if un read messages)
+
+6
+
+--------------------------------------------------------------------------------------------------

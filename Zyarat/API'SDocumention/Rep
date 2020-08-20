@@ -341,3 +341,11 @@ return the deleted user
 }
 
 ------------------------------------------------------------------------------------------------------------------
+11-
+URL[GET]
+/api/rep/CountOnlineUsers
+==Explanation
+get the number of online users in the moment this API invoked in;
+==Response 
+2500
+---------------------------------------------------------------------------------------------------------------

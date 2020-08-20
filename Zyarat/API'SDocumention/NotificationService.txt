@@ -1,0 +1,99 @@
+﻿     ==============================Before Starting=====================
+the Notification service is a reaction of making any event .the event that
+has a notification reaction -in this time in which i wrote this docs- is only evaluation.
+perhaps,in the future we have more than this type .
+adding or Opposite or deleting an evaluation is cause to insert or opposite or delete 
+a Notification but all those stuffs is made out of the scene without the client 
+doing it explicitly .
+if you want to add notification that a user had made a like /dislike in a visit,
+only add the evaluation(from evaluation endpoint) and it will do adding both evaluation 
+and the notification for the visit owner.
+you should know that adding an evaluation or removing or opposite only effects 
+the database ,but you shouldn not think that it will send a notification to 
+online users as a realtime service .
+real time service is a separated layer in the app .
+using any off apps' APIS can not cause to send real time app notification.
+---------------------------------------------------------------------------------------------------
+
+1-
+URL[GET]
+/api/Notification/getevents?repId=190&pageNumber=1&pageSize=20
+
+==explanation
+Get all the notification of a specific user(repId).it works as a server pagination.
+th response is contains a paginated elements in data of adding this notification in 
+descending order (the top the element is the more new it is).
+the response contains "dataId" which is the id of the event that cause this notification
+ex)if this notification type is "evaluation".so it comes when the user makes an 
+evaluation and the "dataId" will be the id of the evaluation.the response is array
+of notification element ,each one contains a "message" .
+"message":is the content of evaluation so if a the  a user had made like 
+to a visit for this repId ,the message will be in this format 
+"{UserName} had made a {like/dislike} to your comment in Dr/{doctorName} :  {visit} "
+with setting of placing holders .
+
+
+
+==Response 
+[
+    {
+        "id": 0,
+        "medicalRepId": 190,//receiver
+        "dateTime": "2020-08-18T10:23:21.5237609",//date time of adding the notification events
+        "dataId": 16,
+        "type": "Evaluation",//type of event causes the notification
+        "message": "ahmed20113 Embaby20113 makes a DisLike to your comment in Dr/ahmed20131 Embaby20131  fqewnfmkwvsvdcmklsfmdklvmsndklvbklnlksbnf ",
+        "read": true//is read before this once 
+    },
+    .,
+    .,
+    .,
+]
+------------------------------------------------------------------------------------------------------------------------------------------
+2-
+URL [GET]
+/api/notification/{type}/{dataId}
+
+==Explanation
+Get an event.the event is known with both type and dataId.
+type :is the type of the event that cause the notification .
+if this notification for evaluation event then type will be evaluation.
+dataId:the id of the event .so if thus event is form making an evaluation,so
+the dataId will be id of the evaluation.
+
+please,understand that ,to get any Notification you must pass both type and dataId
+
+ex)
+/api/notification/evaluation/15
+type=evaluation
+dataId=15
+
+==Response 
+{
+    "id": 0,
+    "medicalRepId": 170,
+    "dateTime": "2020-08-18T10:23:09.0505019",
+    "dataId": 15,
+    "type": "Evaluation",
+    "message": "ahmed20123 Embaby20123 makes a DisLike to your comment in Dr/ahmed20118 Embaby20118  fqewnfmkwvsvdcmklsfmdklvmsndklvbklnlksbnf ",
+    "read": true
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+3-
+URL[GET]
+/api/Notification/CountUnRead/{repId}
+
+ex)
+/api/Notification/CountUnRead/22
+
+==Explanation
+get the number of all notification ,the user have not rad yet
+
+==Response 
+
+5
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+

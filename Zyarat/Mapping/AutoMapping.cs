@@ -44,10 +44,8 @@ namespace Zyarat.Mapping
             CreateMap<Doctor, DoctorResponse>();
             CreateMap<EventNotificationDto, EventNotification>();
             CreateMap<EventNotification, EventNotificationDto>();
-
-
-
-
+            CreateMap<NotificationType, NotificationTypeDto>();
+            CreateMap<NotificationTypeDto, NotificationType>();
         }
     }
 }

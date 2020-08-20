@@ -235,9 +235,16 @@ namespace Zyarat.Controllers
 
             return Ok(_mapper.Map<MedicalRep, GetUnActiveUsersResponse>(state.Source));
         }
-
-
         
+        
+        [HttpGet("CountOnlineUsers")]
+        public IActionResult OnlineUsers()
+        {
+            return Ok(_service.GetOnlineUsers());
+        }
+        
+        
+
     }
     
     

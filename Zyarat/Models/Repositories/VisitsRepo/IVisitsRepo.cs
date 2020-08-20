@@ -9,7 +9,6 @@ namespace Zyarat.Models.Repositories.VisitsRepo
     {
         Task<Visit> GetVisit(int visitId);
         Task<Visit> GetVisitWithOwner(int visitId);
-
         Task AddVisitAsync(Visit visit);
         void DeleteVisit(Visit visit);
         IEnumerable<Visit> GetVisitOfDoctorAsync(int doctorId, int userId);
@@ -17,6 +16,7 @@ namespace Zyarat.Models.Repositories.VisitsRepo
         void RemoveVisitsRange(List<Visit> visits);
         void UnActiveVisit(Visit visit);
         Task<Visit> GetVisitWithItsReportsAsync(int visitId);
+        
 
     }
 }

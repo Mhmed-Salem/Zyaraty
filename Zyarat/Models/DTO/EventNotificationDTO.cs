@@ -1,4 +1,5 @@
 ﻿using System;
+using Zyarat.Models.Factories;
 
 namespace Zyarat.Models.DTO
 {
@@ -8,7 +9,7 @@ namespace Zyarat.Models.DTO
         public int MedicalRepId { set; get; }//the user who received Notification
         public DateTime DateTime { set; get; }
         public int DataId { set; get; }//the id of the entity 
-        public int NotificationTypeId { set; get; }
+        public string Type { set; get; }
         public string Message { set; get; }
         public bool Read { set; get; }
     }

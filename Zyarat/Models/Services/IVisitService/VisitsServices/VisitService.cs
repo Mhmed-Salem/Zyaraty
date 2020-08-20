@@ -33,12 +33,28 @@ namespace Zyarat.Models.Services.IVisitService.VisitsServices
 
   
         
-        public VisitService(IUnitWork unitWork, IVisitsRepo repo, IMapper mapper, MedicalRepVisitsHandlers handler)
+        public VisitService(IUnitWork unitWork,
+            IVisitsRepo repo,
+            IMapper mapper,
+            MedicalRepVisitsHandlers handler)
         {
             //_unitWork = unitWork;
             _unitWork = unitWork;
             _repo = repo;
             _medicalRepHandler = handler;
+        }
+
+        public async  Task<Response<Visit>> GetVisit(int visitId)
+        {
+            try
+            {
+                var visit = await _repo.GetVisit(visitId);
+                return visit == null ? new Response<Visit>("Error :Not Found") : new Response<Visit>(visit);
+            }
+            catch (Exception e)
+            {
+              return new Response<Visit>($"Error :{e.Message}");
+            }
         }
 
         public async Task<Response<Visit>> AddVisit(AddVisitContract contract)

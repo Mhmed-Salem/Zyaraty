@@ -10,10 +10,12 @@ Get all the doctors in passed city
 
 ==Response 
 [
-    {
-        "id": 1,
-        "fName": "علاء ",//must be in arabic 
-        "lName": "سعيد" //must be in arabic 
+     {
+        "fName": "a1",
+        "lName": "b1",
+        "cityId": 1,
+        "adderMedicalRepId": 1,
+        "medicalSpecializedId": 1
     },
     .
     .

@@ -60,3 +60,12 @@ C:\Users\Mr\source\repos\Zyarat\Zyarat\obj\Release\netcoreapp3.1\Zyarat.RazorTar
 C:\Users\Mr\source\repos\Zyarat\Zyarat\obj\Release\netcoreapp3.1\Zyarat.csproj.CopyComplete
 C:\Users\Mr\source\repos\Zyarat\Zyarat\obj\Release\netcoreapp3.1\Zyarat.dll
 C:\Users\Mr\source\repos\Zyarat\Zyarat\obj\Release\netcoreapp3.1\Zyarat.pdb
+C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Release\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Release\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Mr\source\repos\Zyarat\Zyarat\bin\Release\netcoreapp3.1\System.Net.WebSockets.WebSocketProtocol.dll

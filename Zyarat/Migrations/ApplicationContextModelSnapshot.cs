@@ -245,10 +245,10 @@ namespace Zyarat.Migrations
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("MinUniqueUser")
+                    b.Property<int>("MinUniqueUsers")
                         .HasColumnType("int");
 
-                    b.Property<int>("MinUniqueVisit")
+                    b.Property<int>("MinUniqueVisits")
                         .HasColumnType("int");
 
                     b.Property<string>("Roles")
@@ -324,6 +324,14 @@ namespace Zyarat.Migrations
                     b.ToTable("CurrentWinners");
                 });
 
+            modelBuilder.Entity("Zyarat.Data.EFMappingHelpers.CountMessages", b =>
+                {
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.ToTable("CountMessages");
+                });
+
             modelBuilder.Entity("Zyarat.Data.Evaluation", b =>
                 {
                     b.Property<int>("Id")
@@ -356,12 +364,10 @@ namespace Zyarat.Migrations
 
             modelBuilder.Entity("Zyarat.Data.EventNotification", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
                     b.Property<int>("DataId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NotificationTypeId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateTime")
@@ -373,20 +379,18 @@ namespace Zyarat.Migrations
                     b.Property<string>("Message")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("NotificationTypeId")
-                        .HasColumnType("int");
-
                     b.Property<int>("NotificationTypeType")
                         .HasColumnType("int");
 
                     b.Property<bool>("Read")
                         .HasColumnType("bit");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("MedicalRepId");
+                    b.HasKey("DataId", "NotificationTypeId");
 
                     b.HasIndex("NotificationTypeType");
+
+                    b.HasIndex("MedicalRepId", "DateTime")
+                        .HasAnnotation("SqlServer:Clustered", false);
 
                     b.ToTable("EventNotifications");
                 });
@@ -406,9 +410,27 @@ namespace Zyarat.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DateTime")
+                        .HasAnnotation("SqlServer:Clustered", false);
+
                     b.HasIndex("MessageContentId");
 
                     b.ToTable("GlobalMessages");
+                });
+
+            modelBuilder.Entity("Zyarat.Data.GlobalMessageReading", b =>
+                {
+                    b.Property<int>("ReaderId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GlobalMessageId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ReaderId", "GlobalMessageId");
+
+                    b.HasIndex("GlobalMessageId");
+
+                    b.ToTable("GlobalMessageReading");
                 });
 
             modelBuilder.Entity("Zyarat.Data.Government", b =>
@@ -533,6 +555,9 @@ namespace Zyarat.Migrations
                     b.Property<DateTime>("DateTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("Read")
+                        .HasColumnType("bit");
+
                     b.Property<int>("ReceiverId")
                         .HasColumnType("int");
 
@@ -540,7 +565,8 @@ namespace Zyarat.Migrations
 
                     b.HasIndex("ContentId");
 
-                    b.HasIndex("ReceiverId");
+                    b.HasIndex("ReceiverId", "DateTime")
+                        .HasAnnotation("SqlServer:Clustered", false);
 
                     b.ToTable("Messages");
                 });
@@ -584,7 +610,7 @@ namespace Zyarat.Migrations
                         new
                         {
                             Type = 0,
-                            Template = "{UserName} makes a {like/dislike} to you comment in Dr/{doctorName}  : {visit} "
+                            Template = "{UserName} had made a {like/dislike} to your comment in Dr/{doctorName} :  \"{visit}\" "
                         },
                         new
                         {
@@ -821,6 +847,21 @@ namespace Zyarat.Migrations
                     b.HasOne("Zyarat.Data.MessageContent", "MessageContent")
                         .WithMany()
                         .HasForeignKey("MessageContentId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Zyarat.Data.GlobalMessageReading", b =>
+                {
+                    b.HasOne("Zyarat.Data.GlobalMessage", "GlobalMessage")
+                        .WithMany("Readings")
+                        .HasForeignKey("GlobalMessageId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Zyarat.Data.MedicalRep", "Reader")
+                        .WithMany()
+                        .HasForeignKey("ReaderId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
                 });

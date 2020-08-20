@@ -27,7 +27,7 @@ Array of visit that contains
         "disLikes": 1,   ////number of dislikes the visit had got 
         "isLiker": false, //if user who makes the request had made a like for this visit ,it will be true ,else it will be false 
         "isDisLiker": false, //if user who makes the request had made a dislike for this visit ,it will be true ,else it will be false
-        "isActive": false, 
+        "isActive": false,
         "dateTime": "2020-07-30T02:39:29.1265754"
     },
    .
@@ -40,7 +40,7 @@ Array of visit that contains
 2-
 ==URL [GET]
 
-https://localhost:5001/api/visit/GetVisitsInCity?cityId=1&userId=5
+/api/visit/GetVisitsInCity?cityId=1&userId=5
 
 ==Explanation
 
@@ -74,6 +74,7 @@ the pagination should be made in the client side
             "medicalSpecialized": null
         },
         "dateTime": "2020-07-30T02:39:03.4644538",//the datetime of making th visit 
+        "dateTime": "2020-07-30T02:39:29.1265754"//the datetime the visit had been made
     },
     .
     .

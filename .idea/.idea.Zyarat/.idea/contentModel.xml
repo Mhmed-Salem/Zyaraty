@@ -16,6 +16,8 @@
           <e p="Evaluation" t="Include" />
           <e p="Governements.txt" t="Include" />
           <e p="MedicalRepPositions.txt" t="Include" />
+          <e p="Messages.txt" t="Include" />
+          <e p="NotificationService.txt" t="Include" />
           <e p="Rep" t="Include" />
           <e p="Report.txt" t="Include" />
           <e p="Visit.txt" t="Include" />
@@ -42,13 +44,17 @@
           <e p="DoctorsSpecializationController.cs" t="Include" />
           <e p="EvaluationController.cs" t="Include" />
           <e p="Hubs" t="Include">
+            <e p="ClientsRepo.cs" t="Include" />
+            <e p="INotificationClient.cs" t="Include" />
             <e p="MyUserProvider.cs" t="Include" />
-            <e p="NotificationController.cs" t="Include" />
             <e p="NotificationHub.cs" t="Include" />
           </e>
           <e p="MedicalRepController.cs" t="Include" />
           <e p="MedicalRepPositionContoller.cs" t="Include" />
+          <e p="MessageController.cs" t="Include" />
+          <e p="NotificationController.cs" t="Include" />
           <e p="ReportController.cs" t="Include" />
+          <e p="TestController.cs" t="Include" />
           <e p="VisitController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
@@ -58,12 +64,17 @@
           <e p="Doctor.cs" t="Include" />
           <e p="EFMappingHelpers" t="Include">
             <e p="Competitor.cs" t="Include" />
+            <e p="CountMessages.cs" t="Include" />
             <e p="TotalMessage.cs" t="Include" />
           </e>
           <e p="Evaluation.cs" t="Include" />
           <e p="EventNotification.cs" t="Include" />
           <e p="GlobalMessage.cs" t="Include" />
+          <e p="GlobalNotificationReading.cs" t="Include" />
           <e p="Government.cs" t="Include" />
+          <e p="KeysObjs" t="Include">
+            <e p="EventNotificationPrimaryKey.cs" t="Include" />
+          </e>
           <e p="MedicalRep.cs" t="Include" />
           <e p="MedicalRepPosition.cs" t="Include" />
           <e p="MedicalSpecialized.cs" t="Include" />
@@ -80,6 +91,15 @@
           <e p="MedicalRepEvaluationsHandlers.cs" t="Include" />
           <e p="MedicalRepReportHandlers.cs" t="Include" />
           <e p="MedicalRepVisitsHandlers.cs" t="Include" />
+          <e p="NotificationHandlers" t="Include">
+            <e p="EventRead.cs" t="Include" />
+            <e p="GlobalMessageReadingHandler.cs" t="Include" />
+            <e p="GlobalMssageRead.cs" t="Include" />
+            <e p="IReadable.cs" t="Include" />
+            <e p="IReadingHandler.cs" t="Include" />
+            <e p="MessageRead.cs" t="Include" />
+            <e p="ReadingHandler.cs" t="Include" />
+          </e>
           <e p="VisitAssertion.cs" t="Include" />
         </e>
         <e p="Helpers" t="Include">
@@ -90,70 +110,32 @@
           <e p="AutoMapping.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20200723115945_firstMig.cs" t="Include" />
-          <e p="20200723115945_firstMig.Designer.cs" t="Include" />
-          <e p="20200723120314_firstMig2.cs" t="Include" />
-          <e p="20200723120314_firstMig2.Designer.cs" t="Include" />
-          <e p="20200723120908_firstMig3.cs" t="Include" />
-          <e p="20200723120908_firstMig3.Designer.cs" t="Include" />
-          <e p="20200723155322_AddActivationOrNotToMedicalRep.cs" t="Include" />
-          <e p="20200723155322_AddActivationOrNotToMedicalRep.Designer.cs" t="Include" />
-          <e p="20200723223943_ModifyVisitsReport.cs" t="Include" />
-          <e p="20200723223943_ModifyVisitsReport.Designer.cs" t="Include" />
-          <e p="20200723233530_ModifyVisitsReport2.cs" t="Include" />
-          <e p="20200723233530_ModifyVisitsReport2.Designer.cs" t="Include" />
-          <e p="20200724234710_addDefaultValues.cs" t="Include" />
-          <e p="20200724234710_addDefaultValues.Designer.cs" t="Include" />
-          <e p="20200728174848_AddCompetitionService.cs" t="Include" />
-          <e p="20200728174848_AddCompetitionService.Designer.cs" t="Include" />
-          <e p="20200728202445_AddStoresProcedureGetCurrentWinners.cs" t="Include" />
-          <e p="20200728202445_AddStoresProcedureGetCurrentWinners.Designer.cs" t="Include" />
-          <e p="20200728233959_ModifyProc.cs" t="Include" />
-          <e p="20200728233959_ModifyProc.Designer.cs" t="Include" />
-          <e p="20200729001357_ModifyProc110.cs" t="Include" />
-          <e p="20200729001357_ModifyProc110.Designer.cs" t="Include" />
-          <e p="20200729110121_dqpowjdpwqjfdp.cs" t="Include" />
-          <e p="20200729110121_dqpowjdpwqjfdp.Designer.cs" t="Include" />
-          <e p="20200729111403_Modify.cs" t="Include" />
-          <e p="20200729111403_Modify.Designer.cs" t="Include" />
-          <e p="20200729211659_Modify112.cs" t="Include" />
-          <e p="20200729211659_Modify112.Designer.cs" t="Include" />
-          <e p="20200729212035_Modify1125.cs" t="Include" />
-          <e p="20200729212035_Modify1125.Designer.cs" t="Include" />
-          <e p="20200729232301_AddStoredProcedureOnEndingCompetition.cs" t="Include" />
-          <e p="20200729232301_AddStoredProcedureOnEndingCompetition.Designer.cs" t="Include" />
-          <e p="20200730202807_alterWinner.cs" t="Include" />
-          <e p="20200730202807_alterWinner.Designer.cs" t="Include" />
-          <e p="20200730221538_alterCompetition.cs" t="Include" />
-          <e p="20200730221538_alterCompetition.Designer.cs" t="Include" />
-          <e p="20200730222937_ADDPROCEDURESOFEVENTS.cs" t="Include" />
-          <e p="20200730222937_ADDPROCEDURESOFEVENTS.Designer.cs" t="Include" />
-          <e p="20200807042322_add Notifications Entityes.cs" t="Include" />
-          <e p="20200807042322_add Notifications Entityes.Designer.cs" t="Include" />
-          <e p="20200807141358_modNotificatiobs.cs" t="Include" />
-          <e p="20200807141358_modNotificatiobs.Designer.cs" t="Include" />
-          <e p="20200807144348_modNotificatiobs1.cs" t="Include" />
-          <e p="20200807144348_modNotificatiobs1.Designer.cs" t="Include" />
-          <e p="20200807145417_modNotificatiobs4.cs" t="Include" />
-          <e p="20200807145417_modNotificatiobs4.Designer.cs" t="Include" />
-          <e p="20200807163635_modNotificatiobs11.cs" t="Include" />
-          <e p="20200807163635_modNotificatiobs11.Designer.cs" t="Include" />
-          <e p="20200807234146_modNotificatiobs44.cs" t="Include" />
-          <e p="20200807234146_modNotificatiobs44.Designer.cs" t="Include" />
-          <e p="20200808043743_NewDesign.cs" t="Include" />
-          <e p="20200808043743_NewDesign.Designer.cs" t="Include" />
-          <e p="20200808045038_NewDesign1.cs" t="Include" />
-          <e p="20200808045038_NewDesign1.Designer.cs" t="Include" />
-          <e p="20200808060135_NewDesign15.cs" t="Include" />
-          <e p="20200808060135_NewDesign15.Designer.cs" t="Include" />
-          <e p="20200808204801_finishpersitentNotificationService.cs" t="Include" />
-          <e p="20200808204801_finishpersitentNotificationService.Designer.cs" t="Include" />
-          <e p="20200809030943_fixbug1.cs" t="Include" />
-          <e p="20200809030943_fixbug1.Designer.cs" t="Include" />
-          <e p="20200809035807_fixbug2.cs" t="Include" />
-          <e p="20200809035807_fixbug2.Designer.cs" t="Include" />
-          <e p="20200809040155_fixbug3.cs" t="Include" />
-          <e p="20200809040155_fixbug3.Designer.cs" t="Include" />
+          <e p="20200816081132_InitandProc.cs" t="Include" />
+          <e p="20200816081132_InitandProc.Designer.cs" t="Include" />
+          <e p="20200816082349_addMessageReadProp.cs" t="Include" />
+          <e p="20200816082349_addMessageReadProp.Designer.cs" t="Include" />
+          <e p="20200816125948_AddNotificationSytenIndexes.cs" t="Include" />
+          <e p="20200816125948_AddNotificationSytenIndexes.Designer.cs" t="Include" />
+          <e p="20200817083723_addIndextoEventNotification.cs" t="Include" />
+          <e p="20200817083723_addIndextoEventNotification.Designer.cs" t="Include" />
+          <e p="20200818095153_improveNotificationMessageFormat.cs" t="Include" />
+          <e p="20200818095153_improveNotificationMessageFormat.Designer.cs" t="Include" />
+          <e p="20200818185458_addProcedureGetUnradMessages.cs" t="Include" />
+          <e p="20200818185458_addProcedureGetUnradMessages.Designer.cs" t="Include" />
+          <e p="20200818185700_addProcedureGetUnradMessages102.cs" t="Include" />
+          <e p="20200818185700_addProcedureGetUnradMessages102.Designer.cs" t="Include" />
+          <e p="20200818191752_addProcedureGetUnradMessages103.cs" t="Include" />
+          <e p="20200818191752_addProcedureGetUnradMessages103.Designer.cs" t="Include" />
+          <e p="20200819142739_ModifyNamesInCompetition.cs" t="Include" />
+          <e p="20200819142739_ModifyNamesInCompetition.Designer.cs" t="Include" />
+          <e p="20200819152919_ModifyOnEndingProcs.cs" t="Include" />
+          <e p="20200819152919_ModifyOnEndingProcs.Designer.cs" t="Include" />
+          <e p="20200819153015_ModifyOnEndingProcs101.cs" t="Include" />
+          <e p="20200819153015_ModifyOnEndingProcs101.Designer.cs" t="Include" />
+          <e p="20200819184556_ModifyGetCurrentCompetitorsProc.cs" t="Include" />
+          <e p="20200819184556_ModifyGetCurrentCompetitorsProc.Designer.cs" t="Include" />
+          <e p="20200820141314_SolveAbigInallProc.cs" t="Include" />
+          <e p="20200820141314_SolveAbigInallProc.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -161,17 +143,21 @@
             <e p="AddEvaluationDto.cs" t="Include" />
             <e p="CityDto.cs" t="Include" />
             <e p="CompetitionDto.cs" t="Include" />
+            <e p="CompetitionWinnerForAdmin.cs" t="Include" />
             <e p="DoctorDto.cs" t="Include" />
             <e p="EvaluationDto.cs" t="Include" />
             <e p="EventNotificationDTO.cs" t="Include" />
             <e p="GetVisitByCityDto.cs" t="Include" />
             <e p="GetVisitDto.cs" t="Include" />
+            <e p="GlobalMessageDto.cs" t="Include" />
             <e p="GovernmentDto.cs" t="Include" />
             <e p="IdentityUserDto.cs" t="Include" />
             <e p="MedicalRepDto.cs" t="Include" />
             <e p="MedicalRepForVisitDto.cs" t="Include" />
             <e p="MedicalRepPositionDto.cs" t="Include" />
             <e p="MedicalSpecializationDto.cs" t="Include" />
+            <e p="MessageDto.cs" t="Include" />
+            <e p="NotificationTypeDto.cs" t="Include" />
             <e p="VisitBlockingDto.cs" t="Include" />
             <e p="VisitDto.cs" t="Include" />
             <e p="VisitReportDto.cs" t="Include" />
@@ -185,8 +171,8 @@
               <e p="MessageFactory.cs" t="Include" />
             </e>
             <e p="NotificationFactory" t="Include">
-              <e p="INotificationEventFactory.cs" t="Include" />
-              <e p="NotificationEventFactory.cs" t="Include" />
+              <e p="EvaluationEventBuilder.cs" t="Include" />
+              <e p="EventBuilder.cs" t="Include" />
             </e>
             <e p="NotificationTypesEnum.cs" t="Include" />
           </e>
@@ -228,6 +214,7 @@
               <e p="CompetitionService.cs" t="Include" />
               <e p="CompetitionType.cs" t="Include" />
               <e p="ICompetitionService.cs" t="Include" />
+              <e p="TimeOffSetHandler.cs" t="Include" />
             </e>
             <e p="EvaluationsServices" t="Include">
               <e p="EvaluationService.cs" t="Include" />
@@ -255,7 +242,12 @@
               <e p="MedicalRepService.cs" t="Include" />
             </e>
             <e p="NotificationService" t="Include">
+              <e p="EvaluationOpposite.cs" t="Include" />
+              <e p="EventRoute.cs" t="Include" />
+              <e p="IEventRoute.cs" t="Include" />
+              <e p="INotificationOppositer.cs" t="Include" />
               <e p="INotificationService.cs" t="Include" />
+              <e p="MessageKey.cs" t="Include" />
               <e p="NotificationService.cs" t="Include" />
             </e>
             <e p="ReportServices" t="Include">
@@ -279,13 +271,14 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
           <e p="PublishProfiles" t="Include">
+            <e p="CustomProfile.pubxml" t="Include" />
             <e p="FolderProfile.pubxml" t="Include" />
           </e>
         </e>
         <e p="Resources" t="Include">
           <e p="AddEvaluationResponse.cs" t="Include" />
-          <e p="AddGlobalMessageResponse.cs" t="Include" />
           <e p="AddMedicalRepResourcesRequest.cs" t="Include" />
+          <e p="GlobalMessageResponse.cs" t="Include" />
           <e p="ModifyMedicalRepResourcesRequest.cs" t="Include" />
           <e p="RegisterServiceResult.cs" t="Include" />
           <e p="SendNotificationToGroup.cs" t="Include" />
@@ -300,6 +293,7 @@
           <e p="SendAMessageToGroupResponse.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="Structs" t="Include" />
         <e p="wwwroot" t="Include">
           <e p="189ec2e6-92eb-4c3a-b5a2-9dfbfdc9f3f7_21743589_1162103990588313_3722657498792333203_o.jpg" t="Include" />
           <e p="1e42bc59-1afd-46d0-837e-052da4a7dd0f_59456331_2677529995652867_4413706979772465152_n.jpg" t="Include" />

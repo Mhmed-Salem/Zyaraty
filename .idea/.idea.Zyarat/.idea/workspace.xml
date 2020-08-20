@@ -2,50 +2,326 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61e5f741-d18f-472a-b68f-00b96601b2b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/TotalMessage.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Data/Message.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Helpers/StringHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/GlobalMessageFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/IGlobalMessageFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/IMessageFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/MessageFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/INotificationEventFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/NotificationEventFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationTypesEnum.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationRepo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationTypeRepo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationRepo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationTypeRepo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Resources/AddGlobalMessageResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Resources/SendNotificationToGroup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zyarat/Responses/SendAMessageToGroupResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Messages.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/NotificationService.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/ClientsRepo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/INotificationClient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/MessageController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/NotificationController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Controllers/TestController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/CountMessages.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Data/GlobalNotificationReading.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Data/KeysObjs/EventNotificationPrimaryKey.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/EventRead.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/GlobalMessageReadingHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/GlobalMssageRead.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/IReadable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/IReadingHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/MessageRead.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/ReadingHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816125948_AddNotificationSytenIndexes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200817083723_addIndextoEventNotification.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818095153_improveNotificationMessageFormat.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818095153_improveNotificationMessageFormat.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818185458_addProcedureGetUnradMessages.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818185700_addProcedureGetUnradMessages102.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818185700_addProcedureGetUnradMessages102.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818191752_addProcedureGetUnradMessages103.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819142739_ModifyNamesInCompetition.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819152919_ModifyOnEndingProcs.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819153015_ModifyOnEndingProcs101.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819153015_ModifyOnEndingProcs101.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819184556_ModifyGetCurrentCompetitorsProc.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200820141314_SolveAbigInallProc.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionWinnerForAdmin.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/GlobalMessageDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/MessageDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/NotificationTypeDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/EvaluationEventBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/EventBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/EvaluationOpposite.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/EventRoute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/IEventRoute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationOppositer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/MessageKey.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Properties/PublishProfiles/CustomProfile.pubxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Properties/PublishProfiles/CustomProfile.pubxml.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/AutoMapper.Extensions.Microsoft.DependencyInjection.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/AutoMapper.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.AspNetCore.Authentication.JwtBearer.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.AspNetCore.Cryptography.Internal.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Bcl.HashCode.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.EntityFrameworkCore.SqlServer.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Caching.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Caching.Memory.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Configuration.Binder.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Configuration.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Identity.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Identity.Stores.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Logging.Configuration.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Logging.Console.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Logging.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Options.ConfigurationExtensions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Options.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Extensions.Primitives.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.Identity.Client.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Newtonsoft.Json.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Collections.Immutable.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Configuration.ConfigurationManager.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Diagnostics.DiagnosticSource.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Net.WebSockets.WebSocketProtocol.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Runtime.Caching.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Zyarat.deps.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Zyarat.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Zyarat.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Zyarat.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/Zyarat.runtimeconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/appsettings.Development.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/appsettings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win-arm64/native/sni.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win-x64/native/sni.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win-x86/native/sni.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/web.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/189ec2e6-92eb-4c3a-b5a2-9dfbfdc9f3f7_21743589_1162103990588313_3722657498792333203_o.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/1e42bc59-1afd-46d0-837e-052da4a7dd0f_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/230a8862-cc61-48e4-a458-db1c6651d061_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/2e1e7d12-654d-4ed8-9d0e-9e5391597133_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/3b879ea5-7818-4b4a-821f-37af381cfb52_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/49a740d5-4b47-407d-b6d3-8b6510c74968_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/5b796cb4-4da0-45dc-be23-d5d4148cef5c_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/5d8e0bdd-09d9-451f-be45-0c59a0313427_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/6d66ecb0-575d-41a2-bd30-1a2b434ac733_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/73ffe786-6b56-46b8-b1e4-94c0d451dd7b_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/7946c7f1-4a78-4d8a-b7a5-c030a16d9d4f_9_e5eb8e98cc - Copy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/8165c873-e9b0-4cf1-b2c8-c165af25b16c_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/8ac636cf-a79a-49db-aa43-4bc0cb4e5fc6_12313714_10153402663370345_8983252820405287690_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/8b108acc-fa22-40be-a137-367032429fd4_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/8da5c042-608c-46b8-937b-235db559ab79_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/937925b1-dbbf-45e9-9164-136d98187eaf_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/95f9e696-da7f-4d40-8a13-2fc46cf697c2_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/97d9331d-4cc1-43f9-8dc7-4c795a1ac21a_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/9e55d17e-f235-44a2-bd36-358a80b97eea_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/9fcec17b-c946-4d0c-8c88-de5f05820c99_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/ae7dae42-d9bc-4410-a3ce-f2c4245d6e31_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/b445eeba-0450-41b1-9748-7bc1e82449a8_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/b582fcda-20af-46d1-9b50-6593064d5c96_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/c0316131-27b6-4de0-8ec6-180f0fa07fe3_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/cb79e949-9f5f-4ca8-bb8b-0b03c7b25802_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/cf1918ed-75dd-4c7d-b822-c4d11085b167_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/e9c25ff2-596c-4570-9a06-e2eb00986c68_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/f60e3a0c-5a73-483a-8358-009fd6c83072_12313714_10153402663370345_8983252820405287690_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/fc70cea0-1568-422f-81a7-0eca43a05005_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/publish/wwwroot/كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Newtonsoft.Json.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/System.Net.WebSockets.WebSocketProtocol.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/win-x64/Zyarat.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.AspNetCore.Authentication.JwtBearer.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Newtonsoft.Json.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/System.Net.WebSockets.WebSocketProtocol.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/189ec2e6-92eb-4c3a-b5a2-9dfbfdc9f3f7_21743589_1162103990588313_3722657498792333203_o.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/1e42bc59-1afd-46d0-837e-052da4a7dd0f_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/230a8862-cc61-48e4-a458-db1c6651d061_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/2e1e7d12-654d-4ed8-9d0e-9e5391597133_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/3b879ea5-7818-4b4a-821f-37af381cfb52_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/49a740d5-4b47-407d-b6d3-8b6510c74968_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/5b796cb4-4da0-45dc-be23-d5d4148cef5c_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/5d8e0bdd-09d9-451f-be45-0c59a0313427_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/6d66ecb0-575d-41a2-bd30-1a2b434ac733_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/73ffe786-6b56-46b8-b1e4-94c0d451dd7b_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/7946c7f1-4a78-4d8a-b7a5-c030a16d9d4f_9_e5eb8e98cc - Copy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/8165c873-e9b0-4cf1-b2c8-c165af25b16c_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/8ac636cf-a79a-49db-aa43-4bc0cb4e5fc6_12313714_10153402663370345_8983252820405287690_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/8b108acc-fa22-40be-a137-367032429fd4_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/8da5c042-608c-46b8-937b-235db559ab79_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/937925b1-dbbf-45e9-9164-136d98187eaf_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/95f9e696-da7f-4d40-8a13-2fc46cf697c2_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/97d9331d-4cc1-43f9-8dc7-4c795a1ac21a_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/9e55d17e-f235-44a2-bd36-358a80b97eea_59456331_2677529995652867_4413706979772465152_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/9fcec17b-c946-4d0c-8c88-de5f05820c99_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/ae7dae42-d9bc-4410-a3ce-f2c4245d6e31_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/b445eeba-0450-41b1-9748-7bc1e82449a8_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/b582fcda-20af-46d1-9b50-6593064d5c96_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/c0316131-27b6-4de0-8ec6-180f0fa07fe3_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/cb79e949-9f5f-4ca8-bb8b-0b03c7b25802_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/cf1918ed-75dd-4c7d-b822-c4d11085b167_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/e9c25ff2-596c-4570-9a06-e2eb00986c68_كو 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/f60e3a0c-5a73-483a-8358-009fd6c83072_12313714_10153402663370345_8983252820405287690_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/wwwroot/fc70cea0-1568-422f-81a7-0eca43a05005_93269790_1336764853379123_6940602927690022912_o.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Zyarat.Parameters.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Zyarat.SourceManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Zyarat/DesignTimeBuild/.dtbcache" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Zyarat/DesignTimeBuild/.dtbcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Zyarat/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Zyarat/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Zyarat/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Zyarat/v16/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Doctor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Doctor.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Evaluation" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Evaluation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Rep" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Rep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Visit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Visit.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/CityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/CityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/DoctorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/DoctorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationHub.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/City.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/City.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/Competition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/Competition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/TotalMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/TotalMessage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/EventNotification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/EventNotification.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Data/GlobalMessage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/GlobalMessage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/GlobalNotificationReading.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/MessageContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/MessageContent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/Notification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/EventNotification.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/Data/NotificationType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/NotificationType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Data/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Data/Message.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723115945_firstMig.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723115945_firstMig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816081132_InitandProc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723120314_firstMig2.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723120314_firstMig2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819152919_ModifyOnEndingProcs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723120908_firstMig3.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723120908_firstMig3.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723155322_AddActivationOrNotToMedicalRep.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723155322_AddActivationOrNotToMedicalRep.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723223943_ModifyVisitsReport.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723223943_ModifyVisitsReport.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723233530_ModifyVisitsReport2.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200723233530_ModifyVisitsReport2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200724234710_addDefaultValues.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200724234710_addDefaultValues.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728174848_AddCompetitionService.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728174848_AddCompetitionService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728202445_AddStoresProcedureGetCurrentWinners.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728202445_AddStoresProcedureGetCurrentWinners.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728233959_ModifyProc.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200728233959_ModifyProc.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729001357_ModifyProc110.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729001357_ModifyProc110.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729110121_dqpowjdpwqjfdp.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729110121_dqpowjdpwqjfdp.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729111403_Modify.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729111403_Modify.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729211659_Modify112.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729211659_Modify112.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819184556_ModifyGetCurrentCompetitorsProc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729212035_Modify1125.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729212035_Modify1125.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729232301_AddStoredProcedureOnEndingCompetition.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200729232301_AddStoredProcedureOnEndingCompetition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730202807_alterWinner.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730202807_alterWinner.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730221538_alterCompetition.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730221538_alterCompetition.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730222937_ADDPROCEDURESOFEVENTS.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200730222937_ADDPROCEDURESOFEVENTS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200820141314_SolveAbigInallProc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807042322_add Notifications Entityes.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807042322_add Notifications Entityes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807141358_modNotificatiobs.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807141358_modNotificatiobs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807144348_modNotificatiobs1.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807144348_modNotificatiobs1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807145417_modNotificatiobs4.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807145417_modNotificatiobs4.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807163635_modNotificatiobs11.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807163635_modNotificatiobs11.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807234146_modNotificatiobs44.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200807234146_modNotificatiobs44.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816082349_addMessageReadProp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808043743_NewDesign.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200819142739_ModifyNamesInCompetition.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808043743_NewDesign.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808045038_NewDesign1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816125948_AddNotificationSytenIndexes.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808045038_NewDesign1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808060135_NewDesign15.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818191752_addProcedureGetUnradMessages103.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808060135_NewDesign15.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808204801_finishpersitentNotificationService.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200817083723_addIndextoEventNotification.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200808204801_finishpersitentNotificationService.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809030943_fixbug1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200818185458_addProcedureGetUnradMessages.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809030943_fixbug1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809035807_fixbug2.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816081132_InitandProc.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809035807_fixbug2.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809040155_fixbug3.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/20200816082349_addMessageReadProp.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/20200809040155_fixbug3.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/DTO/WinnerDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/WinnerDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/INotificationEventFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/NotificationEventFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/EvaluationRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/EvaluationRepo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/IEvaluationRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/IEvaluationRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/IVisitsRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/IVisitsRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/EvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/EvaluationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/IEvaluationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/IEvaluationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/IVisitService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/IVisitService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/InterActing/VisitInteracting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/InterActing/VisitInteracting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Resources/AddGlobalMessageResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Resources/GlobalMessageResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Responses/SendAMessageToGroupResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Responses/SendAMessageToGroupResponse.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zyarat/WeatherForecast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Zyarat.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Zyarat.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Zyarat.csproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Zyarat.csproj.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Release/netcoreapp3.1/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/Zyarat.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/PubTmp/Out/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Release/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,13 +350,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200729212035_Modify1125.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/CountMessages.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AABF22C8-0443-4F75-A371-6B76C765A950/3f/ed22cba9/Profile.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200729232301_AddStoredProcedureOnEndingCompetition.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200729232301_AddStoredProcedureOnEndingCompetition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200818185700_addProcedureGetUnradMessages102.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200818185458_addProcedureGetUnradMessages.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/MessageKey.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/GlobalMessageDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/MessageDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/ReportRepo/IReportRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200730222937_ADDPROCEDURESOFEVENTS.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/ReportController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -93,23 +371,30 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/MessageContent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Contract/VisitsContracts/AddVisitDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/ReportServices/ReportService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200723233530_ModifyVisitsReport2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Migrations/20200729001357_ModifyProc110.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200820141314_SolveAbigInallProc.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/Hubs/INotificationClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/WinnerDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/ReportRepo/ReportRepo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/Hubs/ClientsRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/CityController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/EventRead.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/VisitReport.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/IReadingHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Doctor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/MedicalRepPositionContoller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Government.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Visit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BBB3B884-123D-47EA-9CD1-5BED540D02AE/80/8ad183de/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Evaluation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/ReadingHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/MedicalSpecialized.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/DoctorsSpecializationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/RefreshingToken.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/MedicalRepPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/City.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Migrations/20200729001357_ModifyProc110.Designer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/MedicalSpecializationDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/EvaluationDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -125,13 +410,13 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/VisitDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/EvaluationService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/MedicalRepDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/EvaluationOpposite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/VisitReportDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/EvaluationRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/GetVisitDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/UnitWork.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/MedicalRepEvaluationsHandlers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IUnitWork.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/INotificationEventFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/InterActing/VisitInteracting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/InterActing/IVisitInteracting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/NotificationTypesEnum.cs" root0="FORCE_HIGHLIGHTING" />
@@ -139,7 +424,7 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IVisitService/VisitsServices/VisitService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IdentityService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/TokenAndRefresh.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/NotificationEventFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/NotificationTypeDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/IdentityServices/IIdentityUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationTypeRepo.cs" root0="FORCE_HIGHLIGHTING" />
@@ -149,9 +434,11 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/TestRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/ContextRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/IGlobalMessageFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/IEventRoute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/VisitRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/VisitsRepo/IVisitsRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/GlobalMessageFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/EventRoute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/IMedicalRepRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/MedicalRepRepo/MedicalRepRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/IEvaluationRepo.cs" root0="FORCE_HIGHLIGHTING" />
@@ -163,7 +450,8 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Options/JwtSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Data/KeysObjs/EventNotificationPrimaryKey.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/NotificationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/MessageFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Message.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/TotalMessage.cs" root0="FORCE_HIGHLIGHTING" />
@@ -180,7 +468,7 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Responses/SendAMessageToGroupResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Responses/MedicalRepResponses/GetMedicalRepResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/SendNotificationToGroup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Resources/AddGlobalMessageResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Resources/GlobalMessageResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Responses/GetEvaluationsResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Helpers/StringHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" root0="FORCE_HIGHLIGHTING" />
@@ -190,89 +478,100 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Competition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/VisitController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200724234710_addDefaultValues.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/TestController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Data/GlobalNotificationReading.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/MessageController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/MessageRead.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CCBFC081-D992-4323-BBE0-950EB247EDCF/1b/a977cea8/Hub.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/GlobalMessageReadingHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/GlobalMssageRead.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationHub.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/Hubs/MyUserProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Responses/DoctorResponse.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Resources/AddEvaluationResponse.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Data/Winner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200723115945_firstMig.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200723115945_firstMig.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/20200816064142_AddOnEndingCompetition.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/ApplicationContextModelSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200723120908_firstMig3.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200723120908_firstMig3.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200728202445_AddStoresProcedureGetCurrentWinners.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200728202445_AddStoresProcedureGetCurrentWinners.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200816081132_InitandProc.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200816081132_InitandProc.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/EventBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationOppositer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Responses/DoctorResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3325C05-7891-45B4-AC78-327FC18BDC7C/d9/017f1448/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Resources/AddEvaluationResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/EvaluationEventBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Data/Winner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/Competitor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200728233959_ModifyProc.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200728233959_ModifyProc.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200729001357_ModifyProc110.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200729001357_ModifyProc110.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/NotificationType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200729110121_dqpowjdpwqjfdp.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200729111403_Modify.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/MedicalRepForVisitDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Migrations/20200729211659_Modify112.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Migrations/20200728202445_AddStoresProcedureGetCurrentWinners.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionWinnerForAdmin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/IReadable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200819184556_ModifyGetCurrentCompetitorsProc.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200819184556_ModifyGetCurrentCompetitorsProc.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200819153015_ModifyOnEndingProcs101.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Migrations/20200729232301_AddStoredProcedureOnEndingCompetition.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/869E6C21-96FE-460F-9B92-1C6D00DF784B/52/cc47a340/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200729211659_Modify112.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200818191752_addProcedureGetUnradMessages103.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/Migrations/20200729211659_Modify112.Designer.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/Competitor.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/City.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/GlobalNotificationReading.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationTypes.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/IEvaluationType.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationType.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/IEvaluationRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/EvaluationRepos/EvaluationRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/Notification.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/INotificationFactory.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/NotificationFactory.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/INotificationEventFactory.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/EventNotification.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/MessageReading.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/MessageContent.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/IMessageFactory.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/IGlobalMessageFactory.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/GlobalMessageFactory.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/GlobalMessageContent.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Startup.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/TotalMessage.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/Message.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/MessageFactory.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Resources/SendNotificationToGroup.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Responses/SendAMessageToGroupResponse.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationService.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Resources/AddGlobalMessageResponse.cs" />
-        <option value="F:/API'SDocumention/Evaluation" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/GlobalMessage.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Data/NotificationType.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Evaluation" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/EvaluationController.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationTypesEnum.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationTypeRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationTypeRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Helpers/StringHelper.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Program.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/KeysObjs/EventNotificationPrimaryKey.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationOppositer.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/EvaluationService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/EvaluationOpposite.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/NotificationTypeDto.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Resources/AddGlobalMessageResponse.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Resources/GlobalMessageResponse.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/MessageDto.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/GlobalMessageDto.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Responses/SendAMessageToGroupResponse.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Structs/MessageKey.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/MessageKey.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Migrations/20200818185458_addProcedureGetUnradMessages.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Migrations/20200818185700_addProcedureGetUnradMessages102.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/CountMessages.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/ApplicationContext.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Migrations/20200818191752_addProcedureGetUnradMessages103.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/INotificationRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/NotificationEventFactory.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/Hubs/NotificationController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/MessageController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Messages.txt" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/NotificationController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/NotificationRepo/NotificationRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/NotificationService.txt" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/Hubs/ClientsRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/IMedicalRepService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/MedicalRepService/MedicalRepService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/MedicalRepController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Rep" />
+        <option value="$PROJECT_DIR$/Zyarat/Migrations/20200816081132_InitandProc.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/Competition.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionDto.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Migrations/20200819153015_ModifyOnEndingProcs101.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/WinnerDto.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Visit.txt" />
+        <option value="$PROJECT_DIR$/Zyarat/Program.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Migrations/20200819184556_ModifyGetCurrentCompetitorsProc.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitonWinner.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionWinnerForAdmin.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Migrations/20200820141314_SolveAbigInallProc.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" />
       </list>
     </option>
   </component>
@@ -303,8 +602,12 @@
     </option>
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Zyarat">
-    <configuration name="Publish Zyarat to custom server" type="DotNetPublishAndUpload" factoryName="Publish to custom server" temporary="true">
+    <configuration name="Publish Zyarat to IIS" type="DotNetMsBuildPublish" factoryName="Publish to IIS" temporary="true">
       <riderPublish uuid_high="-1623461268325774223" uuid_low="-6493439613717727812" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish Zyarat to custom server" type="DotNetPublishAndUpload" factoryName="Publish to custom server" temporary="true">
+      <riderPublish runtime="win-x64" server_id="0ddb2b93-2345-4b58-b28e-95aea47e7959" target_framework="netcoreapp3.1" uuid_high="-1623461268325774223" uuid_low="-6493439613717727812" />
       <method v="2" />
     </configuration>
     <configuration name="Zyarat" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -340,6 +643,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Publish to custom server.Publish Zyarat to custom server" />
+        <item itemvalue="Publish to IIS.Publish Zyarat to IIS" />
       </list>
     </recent_temporary>
   </component>
@@ -399,7 +703,27 @@
       <workItem from="1596860007591" duration="7043000" />
       <workItem from="1596899822151" duration="10848000" />
       <workItem from="1596916640217" duration="5074000" />
-      <workItem from="1596936594817" duration="16877000" />
+      <workItem from="1596936594817" duration="18027000" />
+      <workItem from="1596981842845" duration="2364000" />
+      <workItem from="1597010295349" duration="3726000" />
+      <workItem from="1597033040923" duration="933000" />
+      <workItem from="1597080911676" duration="3846000" />
+      <workItem from="1597206989697" duration="10224000" />
+      <workItem from="1597304447210" duration="9396000" />
+      <workItem from="1597359935522" duration="2367000" />
+      <workItem from="1597476177136" duration="5099000" />
+      <workItem from="1597517319209" duration="1490000" />
+      <workItem from="1597555716269" duration="20385000" />
+      <workItem from="1597581687532" duration="1542000" />
+      <workItem from="1597583827795" duration="1676000" />
+      <workItem from="1597602513937" duration="8106000" />
+      <workItem from="1597645481207" duration="36875000" />
+      <workItem from="1597733036492" duration="22028000" />
+      <workItem from="1597764311211" duration="13614000" />
+      <workItem from="1597826660266" duration="27688000" />
+      <workItem from="1597905886031" duration="10042000" />
+      <workItem from="1597928396654" duration="6716000" />
+      <workItem from="1597940890501" duration="7711000" />
     </task>
     <servers />
   </component>
@@ -458,19 +782,6 @@
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs</url>
-          <line>44</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" initialLine="44">
-            <startOffsets>
-              <option value="1464" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1680" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Helpers/StringHelper.cs</url>
           <line>13</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Helpers/StringHelper.cs" initialLine="13">
@@ -482,6 +793,1132 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>244</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="215">
+            <startOffsets>
+              <option value="9028" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9116" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/MessageController.cs</url>
+          <line>47</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/MessageController.cs" initialLine="48">
+            <startOffsets>
+              <option value="1474" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1531" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/MessageController.cs</url>
+          <line>48</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/MessageController.cs" initialLine="49">
+            <startOffsets>
+              <option value="1544" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1559" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/MessageController.cs</url>
+          <line>50</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/MessageController.cs" initialLine="51">
+            <startOffsets>
+              <option value="1590" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1617" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>122</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="113">
+            <startOffsets>
+              <option value="4087" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4137" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>123</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="114">
+            <startOffsets>
+              <option value="4154" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4168" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>126</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="117">
+            <startOffsets>
+              <option value="4290" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4291" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="206" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>127</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="118">
+            <startOffsets>
+              <option value="4308" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4574" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="207" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>124</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="115">
+            <startOffsets>
+              <option value="4185" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4186" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>125</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="116">
+            <startOffsets>
+              <option value="4207" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4273" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>134</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="125">
+            <startOffsets>
+              <option value="4591" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4642" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>136</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="127">
+            <startOffsets>
+              <option value="4740" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4797" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>135</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="126">
+            <startOffsets>
+              <option value="4659" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4723" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="213" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>137</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="128">
+            <startOffsets>
+              <option value="4814" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4856" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="214" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>138</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="129">
+            <startOffsets>
+              <option value="4873" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4903" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="215" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>140</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="131">
+            <startOffsets>
+              <option value="4921" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4942" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="216" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>142</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="133">
+            <startOffsets>
+              <option value="4981" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4999" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="217" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>143</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="134">
+            <startOffsets>
+              <option value="5016" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5017" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>145</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="136">
+            <startOffsets>
+              <option value="5035" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5075" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="219" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>148</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="139">
+            <startOffsets>
+              <option value="5134" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5135" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="220" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>149</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="140">
+            <startOffsets>
+              <option value="5152" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5209" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="221" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>228</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="219">
+            <startOffsets>
+              <option value="7980" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8191" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>231</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="222">
+            <startOffsets>
+              <option value="8240" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8298" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="223" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>233</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="224">
+            <startOffsets>
+              <option value="8461" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8475" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="224" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>236</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="227">
+            <startOffsets>
+              <option value="8636" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8660" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="225" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>234</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="225">
+            <startOffsets>
+              <option value="8492" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8573" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>232</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="223">
+            <startOffsets>
+              <option value="8315" />
+              <option value="8408" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8444" />
+              <option value="8441" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="227" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>242</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="233">
+            <startOffsets>
+              <option value="8952" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8989" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="228" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>246</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="239">
+            <startOffsets>
+              <option value="9151" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9222" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="231" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>245</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="238">
+            <startOffsets>
+              <option value="9133" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9134" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="232" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>243</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="234">
+            <startOffsets>
+              <option value="9006" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9007" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="233" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>249</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="242">
+            <startOffsets>
+              <option value="9281" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9282" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="234" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>250</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="243">
+            <startOffsets>
+              <option value="9299" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9374" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>251</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="244">
+            <startOffsets>
+              <option value="9387" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9388" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="236" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>259</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="250">
+            <startOffsets>
+              <option value="9575" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9639" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="266" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>260</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="251">
+            <startOffsets>
+              <option value="9656" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9715" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="267" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>261</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="252">
+            <startOffsets>
+              <option value="9732" />
+              <option value="9769" />
+            </startOffsets>
+            <endOffsets>
+              <option value="10783" />
+              <option value="10079" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="268" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>268</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="259">
+            <startOffsets>
+              <option value="10133" />
+            </startOffsets>
+            <endOffsets>
+              <option value="10456" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="269" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>275</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="266">
+            <startOffsets>
+              <option value="10499" />
+            </startOffsets>
+            <endOffsets>
+              <option value="10515" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="270" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>277</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="268">
+            <startOffsets>
+              <option value="10628" />
+            </startOffsets>
+            <endOffsets>
+              <option value="10781" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="271" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>287</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="278">
+            <startOffsets>
+              <option value="10972" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11095" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="272" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>286</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="277">
+            <startOffsets>
+              <option value="10910" />
+            </startOffsets>
+            <endOffsets>
+              <option value="10955" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="273" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>289</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="280">
+            <startOffsets>
+              <option value="11112" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11153" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="274" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>291</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="282">
+            <startOffsets>
+              <option value="11187" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11250" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="275" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>292</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="283">
+            <startOffsets>
+              <option value="11267" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11405" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="276" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>293</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="284">
+            <startOffsets>
+              <option value="11359" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11401" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="277" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>294</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="285">
+            <startOffsets>
+              <option value="11422" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11461" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="278" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>297</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="288">
+            <startOffsets>
+              <option value="11528" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11564" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="279" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>298</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="289">
+            <startOffsets>
+              <option value="11581" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11582" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="280" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>299</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="290">
+            <startOffsets>
+              <option value="11603" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11693" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="281" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>300</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="291">
+            <startOffsets>
+              <option value="11710" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11711" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="282" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>302</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="293">
+            <startOffsets>
+              <option value="11745" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11780" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="283" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>305</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="296">
+            <startOffsets>
+              <option value="11927" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11928" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="284" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>304</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="295">
+            <startOffsets>
+              <option value="11819" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11910" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="285" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>308</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="299">
+            <startOffsets>
+              <option value="12009" />
+            </startOffsets>
+            <endOffsets>
+              <option value="12068" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="286" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs</url>
+          <line>307</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" initialLine="298">
+            <startOffsets>
+              <option value="11962" />
+            </startOffsets>
+            <endOffsets>
+              <option value="11992" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="287" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>134</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="121">
+            <startOffsets>
+              <option value="5119" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5192" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="454" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs</url>
+          <line>119</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" initialLine="119">
+            <startOffsets>
+              <option value="4176" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4276" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="458" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs</url>
+          <line>26</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" initialLine="26">
+            <startOffsets>
+              <option value="791" />
+              <option value="861" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1105" />
+              <option value="1103" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="464" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs</url>
+          <line>29</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" initialLine="29">
+            <startOffsets>
+              <option value="1118" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1127" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="465" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs</url>
+          <line>57</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" initialLine="58">
+            <startOffsets>
+              <option value="2346" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2346" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="467" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs</url>
+          <line>42</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" initialLine="42">
+            <startOffsets>
+              <option value="1580" />
+              <option value="1638" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2346" />
+              <option value="1675" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="468" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>59</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="56">
+            <startOffsets>
+              <option value="2197" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2256" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="472" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>61</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="57">
+            <startOffsets>
+              <option value="2324" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2344" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="473" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>63</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="59">
+            <startOffsets>
+              <option value="2448" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2515" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="474" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>62</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="58">
+            <startOffsets>
+              <option value="2361" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2431" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="475" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>75</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="66">
+            <startOffsets>
+              <option value="3009" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3059" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="479" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>76</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="67">
+            <startOffsets>
+              <option value="3076" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3116" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="480" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>77</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="68">
+            <startOffsets>
+              <option value="3133" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3163" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="481" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>78</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="69">
+            <startOffsets>
+              <option value="3180" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3226" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="482" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>82</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="73">
+            <startOffsets>
+              <option value="3303" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3359" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="483" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>17</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="17">
+            <startOffsets>
+              <option value="393" />
+            </startOffsets>
+            <endOffsets>
+              <option value="435" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="484" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>16</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="16">
+            <startOffsets>
+              <option value="355" />
+            </startOffsets>
+            <endOffsets>
+              <option value="380" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="485" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>15</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="15">
+            <startOffsets>
+              <option value="321" />
+            </startOffsets>
+            <endOffsets>
+              <option value="342" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="486" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>19</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="19">
+            <startOffsets>
+              <option value="466" />
+            </startOffsets>
+            <endOffsets>
+              <option value="486" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="487" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>20</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="20">
+            <startOffsets>
+              <option value="499" />
+            </startOffsets>
+            <endOffsets>
+              <option value="500" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="488" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>22</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="22">
+            <startOffsets>
+              <option value="514" />
+            </startOffsets>
+            <endOffsets>
+              <option value="530" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="489" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="27">
+            <startOffsets>
+              <option value="623" />
+            </startOffsets>
+            <endOffsets>
+              <option value="640" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="490" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>28</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="28">
+            <startOffsets>
+              <option value="653" />
+            </startOffsets>
+            <endOffsets>
+              <option value="678" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="491" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>29</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="29">
+            <startOffsets>
+              <option value="691" />
+            </startOffsets>
+            <endOffsets>
+              <option value="733" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="492" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="31">
+            <startOffsets>
+              <option value="764" />
+            </startOffsets>
+            <endOffsets>
+              <option value="784" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="493" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>35</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="35">
+            <startOffsets>
+              <option value="837" />
+            </startOffsets>
+            <endOffsets>
+              <option value="838" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="494" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
+          <line>34</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" initialLine="34">
+            <startOffsets>
+              <option value="812" />
+            </startOffsets>
+            <endOffsets>
+              <option value="828" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="495" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>73</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="73">
+            <startOffsets>
+              <option value="2904" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2974" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="496" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>70</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="70">
+            <startOffsets>
+              <option value="2720" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2865" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="497" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>72</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="72">
+            <startOffsets>
+              <option value="2882" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2883" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="498" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

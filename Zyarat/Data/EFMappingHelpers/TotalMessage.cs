@@ -9,5 +9,6 @@ namespace Zyarat.Data.EFMappingHelpers
         public string Content { set; get; }
         public NotificationTypesEnum TypesEnum { set; get; }
         public DateTime DateTime { set; get; }
+        public bool Read { set; get; }
     }
 }

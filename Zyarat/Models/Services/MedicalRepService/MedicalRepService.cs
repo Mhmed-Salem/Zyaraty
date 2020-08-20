@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Hosting;
+using Zyarat.Controllers.Hubs;
 using Zyarat.Data;
 using Zyarat.Helpers;
 using Zyarat.Models.Repositories.MedicalRepRepo;
@@ -60,6 +61,11 @@ namespace Zyarat.Models.Services.MedicalRepService
             {
                 return new RegisterServiceResult($"Can not Register :{e.InnerException}");
             }
+        }
+
+        public int GetOnlineUsers()
+        {
+            return ClientsRepo.Users.Count;
         }
 
         public async Task<RegisterServiceResult> AddRepForTestAsync(AddMedicalRepResourcesRequest request)

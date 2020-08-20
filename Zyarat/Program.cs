@@ -6,15 +6,19 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Zyarat.Data;
 using Zyarat.Helpers;
+using Zyarat.Models.Services.NotificationService;
 
 namespace Zyarat
 {
     public class Program
     {
         public static void Main(string[] args)
-        {
+        { 
             CreateHostBuilder(args).Build().Run();
+         
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

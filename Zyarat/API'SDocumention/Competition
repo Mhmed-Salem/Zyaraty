@@ -12,7 +12,8 @@ there are two types of Competition
 
 ==Explanation
 Add the next daily ||monthly Competition.
-if the competition is already had been added ,it will throw a badRequest
+if the competition is already had been added ,
+it will throw a badRequest
 ==Request Contract
  from form send 
  
@@ -64,34 +65,115 @@ URL [GET]
 get the result of the monthly competition that had started in year and month
 
 ==Response
- [
+it will return the top 20 winners in thr competition that had started in the date 
+ year=?&month=?.
+ the data is ordered in DESCENDING Order of rank
+[
     {
-     "CompetitionId":1,
-     "Rank":1,
-     "MedicalRepId":5
+        "id": 70,
+        "rank": 1,
+        "fName": "ahmed19938",
+        "lName": "Embaby19938",
+        "imageUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+        "phone": "01011051728",
+        "userName": "ahmedEmbaby19938"
     },
-    .
-    .
-    .
- ]
+    {
+        "id": 50,
+        "rank": 2,
+        "fName": "ahmed20017",
+        "lName": "Embaby20017",
+        "imageUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+        "phone": "01011051728",
+        "userName": "ahmedEmbaby20017"
+    },
+    {
+        "id": 10,
+        "rank": 3,
+        "fName": "ahmed19999",
+        "lName": "Embaby19999",
+        "imageUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+        "phone": "01011051728",
+        "userName": "ahmedEmbaby19999"
+    },
+    {
+        "id": 100,
+        "rank": 4,
+        "fName": "ahmed19967",
+        "lName": "Embaby19967",
+        "imageUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+        "phone": "01011051728",
+        "userName": "ahmedEmbaby19967"
+    },
+    {
+        "id": 102,
+        "rank": 5,
+        "fName": "ahmed19966",
+        "lName": "Embaby19966",
+        "imageUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+        "phone": "01011051728",
+        "userName": "ahmedEmbaby19966"
+    }
+]
  -----------------------------------------------------------------------------------------------------
  4-
  URL [GET]
- /api/Competition/GetDailyFinalResult?year=2020&month=5
+/api/competition/GetDailyFinalResult?year=2020&month=8&day=20
  ==Explanation
  get the result of the daily competition that had started in year and month
  
  ==Response
-  [
+ it will return the top 20 winners in thr competition that had started in the date 
+ year=?&month=8&day=?.
+ the data is ordered in DESCENDING Order of rank
+ [
      {
-      "CompetitionId":1,
-      "Rank":1,
-      "MedicalRepId":5
+         "id": 70,
+         "rank": 1,
+         "fName": "ahmed19938",
+         "lName": "Embaby19938",
+         "imageUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+         "phone": "01011051728",
+         "userName": "ahmedEmbaby19938"
      },
-     .
-     .
-     .
-  ]
+     {
+         "id": 50,
+         "rank": 2,
+         "fName": "ahmed20017",
+         "lName": "Embaby20017",
+         "imageUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+         "phone": "01011051728",
+         "userName": "ahmedEmbaby20017"
+     },
+     {
+         "id": 10,
+         "rank": 3,
+         "fName": "ahmed19999",
+         "lName": "Embaby19999",
+         "imageUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+         "phone": "01011051728",
+         "userName": "ahmedEmbaby19999"
+     },
+     {
+         "id": 100,
+         "rank": 4,
+         "fName": "ahmed19967",
+         "lName": "Embaby19967",
+         "imageUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+         "phone": "01011051728",
+         "userName": "ahmedEmbaby19967"
+     },
+     {
+         "id": 102,
+         "rank": 5,
+         "fName": "ahmed19966",
+         "lName": "Embaby19966",
+         "imageUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+         "phone": "01011051728",
+         "userName": "ahmedEmbaby19966"
+     }
+ ]
+
 
 ----------------------------------------------------------------------------------------------------------------------------------
 5-
@@ -101,23 +183,64 @@ URL[GET]
 /api/Competition/monthly
 
 ==Explanation
-get the current result for the daily or monthly .
+get the current result for the daily or monthly 
+.plus the  rank of the user who request them if he exists in the competitors
 current result of the current running competition
 
+the result is ordering by Rank DESCENDING.
 ==Response 
-
- [
-     {
-      "CompetitionId":1,
-      "Rank":1,
-      "MedicalRepId":5
-     },
-     .
-     .
-     .
-  ]
--------------------------------------------------------------------------------------------------------------------------------------------------------
- 
- 
- 
- 
+[
+    {
+        "id": 70,
+        "ranking": 1,
+        "fName": "ahmed19938",
+        "lName": "Embaby19938",
+        "gov": "Government21",
+        "cityName": "City30",
+        "uniqueVisits": 1,
+        "uniqueEvaluators": 4
+    },
+    {
+        "id": 50,
+        "ranking": 2,
+        "fName": "ahmed20017",
+        "lName": "Embaby20017",
+        "gov": "Government2",
+        "cityName": "City102",
+        "uniqueVisits": 1,
+        "uniqueEvaluators": 3
+    },
+    {
+        "id": 10,
+        "ranking": 3,
+        "fName": "ahmed19999",
+        "lName": "Embaby19999",
+        "gov": "Government21",
+        "cityName": "City37",
+        "uniqueVisits": 1,
+        "uniqueEvaluators": 2
+    },
+    {
+        "id": 100,
+        "ranking": 4,
+        "fName": "ahmed19967",
+        "lName": "Embaby19967",
+        "gov": "Government1",
+        "cityName": "City35",
+        "uniqueVisits": 2,
+        "uniqueEvaluators": 2
+    },
+    {
+        "id": 102,
+        "ranking": 5,
+        "fName": "ahmed19966",
+        "lName": "Embaby19966",
+        "gov": "Government31",
+        "cityName": "City134",
+        "uniqueVisits": 1,
+        "uniqueEvaluators": 1
+    },
+    .,
+    .
+]
+------------------------------------------------------------------------------------------------------------------------------------------------------- 

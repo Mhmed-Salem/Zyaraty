@@ -10,6 +10,11 @@ namespace Zyarat.Models.Repositories.EvaluationRepos
 {
     public class EvaluationRepo:ContextRepo,IEvaluationRepo
     {
+        public async Task<Evaluation> GetEvaluationById(int evaluationId)
+        {
+            return await Context.Evaluations.FindAsync(evaluationId);
+        }
+
         public async Task<IEnumerable<Evaluation>> GetEvaluationsAsync(int visitId)
         {
             return await Context.Evaluations.Include(evaluation => evaluation.Evaluator)
@@ -41,6 +46,12 @@ namespace Zyarat.Models.Repositories.EvaluationRepos
             return await Context.Evaluations.Include(evaluation => evaluation.Visit).FirstOrDefaultAsync(evaluation =>
                 evaluation.VisitId == visitId && evaluation.EvaluatorId == userId);
 
+        }
+
+        public async  Task<Evaluation> GetAnEvaluationWithItsVisitAsync(int evaluationId)
+        {
+            return await Context.Evaluations.Include(evaluation => evaluation.Visit)
+                .FirstOrDefaultAsync(evaluation => evaluation.Id == evaluationId);
         }
 
         public async Task<bool> IsEvaluatorAsync(int userId, int visitId)

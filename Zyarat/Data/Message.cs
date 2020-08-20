@@ -10,5 +10,6 @@ namespace Zyarat.Data
         public int ReceiverId { set; get; }
         public MessageContent Content { set; get; }
         public int ContentId { set; get; }
+        public bool Read { set; get; }
     }
 }

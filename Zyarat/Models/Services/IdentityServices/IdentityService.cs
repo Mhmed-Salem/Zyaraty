@@ -48,7 +48,7 @@ namespace Zyarat.Models.Services.IdentityServices
             await AddRolesToPrincipalClaims(user, claims);
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Secret));
             var jwt = new JwtSecurityToken(
-                null,
+                  null,
                 null,
                  claims: claims,
                 DateTime.UtcNow,

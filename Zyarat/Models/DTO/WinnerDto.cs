@@ -2,8 +2,10 @@
 {
     public class WinnerDto
     {
-        public int CompetitionId { set; get; }
-        public int Rank { set; get; }
-        public int MedicalRepId { set; get; }
+        public int Rank {set; get;}
+        public int RepId {set; get;}
+        public string FName {set; get;}
+        public string LName {set; get;}
+       
     }
 }

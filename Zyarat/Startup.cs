@@ -96,18 +96,16 @@ namespace Zyarat
                 services.AddScoped(typeof(MedicalRepReportHandlers));
 
                 services.AddScoped<INotificationRepo, NotificationRepo>();
-                services.AddScoped<INotificationEventFactory, NotificationEventFactory>();
                 services.AddScoped<INotificationTypeRepo, NotificationTypeRepo>();
                 
                 services.AddScoped<IGlobalMessageFactory, GlobalMessageFactory>();
                 services.AddScoped<IMessageFactory, MessageFactory>();
                 services.AddScoped<INotificationService, NotificationService>();
+                services.AddScoped<IEvaluationRepo, EvaluationRepo>();
 
 
-                
-                
 
-            
+
                 services.AddSingleton<IUserIdProvider, MyUserProvider>();
 
 

@@ -8,6 +8,7 @@ namespace Zyarat.Models.Services.EvaluationsServices
 {
     public interface IEvaluationService
     {
+        Task<Response<Evaluation>> GetEvaluation(int evaluationId);
         Task<Response<Evaluation>> OppositeEvaluationAsync(int userName,int visitId);
         Task<Response<Evaluation>> AddEvaluationAsync(AddEvaluationDto contract);
         Task<Response<Evaluation>> RemoveEvaluationAsync(int visitId, int userId);

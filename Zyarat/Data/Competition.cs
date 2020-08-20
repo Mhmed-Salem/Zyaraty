@@ -17,8 +17,8 @@ namespace Zyarat.Data
         /// 0 for daily Competition
         /// </summary>
         public bool Type { set; get; }
-        public int MinUniqueUser { set; get; }
-        public int MinUniqueVisit { set; get; }
+        public int MinUniqueUsers { set; get; }
+        public int MinUniqueVisits { set; get; }
         public List<Winner> Winners { set; get; }
     }
 }

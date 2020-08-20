@@ -14,10 +14,6 @@ namespace Zyarat.Controllers
     {
         private readonly ApplicationContext _context;
         private readonly IMapper _mapper;
-        
-        
-        
-        
         public GovController(ApplicationContext context, IMapper mapper)
         {
             _context = context;

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
 using Microsoft.EntityFrameworkCore;
 using Zyarat.Data;
 using Zyarat.Data.EFMappingHelpers;
+using Zyarat.Models.DTO;
 using Zyarat.Models.Repositories;
 
 namespace Zyarat.Models.Repositories.CompetitionRepo
@@ -22,13 +24,40 @@ namespace Zyarat.Models.Repositories.CompetitionRepo
 
         public async Task<Competition> GetCompetition(bool type, int year, int month, int day)
         {
-            return await Context.Competitions.Where(competition =>
-                    competition.Type && competition.DateTime >= new DateTime(year, month, day))
+            var x = await Context.Competitions.FirstOrDefaultAsync(competition => competition.Type == type
+                                                                           && competition.DateTime.Equals(
+                                                                               new DateTime(year, month, day)));
+            return x;
+        }
+
+        public async Task<Competition> GetNextCompetition(bool type)
+        {
+            return await Context.Competitions
+                .Where(competition => competition.Type == type)
+                .OrderByDescending(competition => competition.DateTime)
                 .FirstOrDefaultAsync();
         }
 
-     
-
+        public async Task<IEnumerable<CompetitionWinner>> GetWinnersInCompetition(int competitionId)
+        {
+            return await Context.Winners
+                .Include(winner => winner.MedicalRep)
+                .ThenInclude(rep => rep.IdentityUser)
+                .Where(winner => winner.CompetitionId==competitionId)
+                .Select(winner => new CompetitionWinner
+                {
+                    Id = winner.MedicalRepId,
+                    Rank = winner.Rank,
+                    Phone = winner.MedicalRep.IdentityUser.PhoneNumber,
+                    FName = winner.MedicalRep.FName,
+                    LName = winner.MedicalRep.LName,
+                    ImageUrl =winner.MedicalRep.ProfileUrl,
+                    UserName = winner.MedicalRep.IdentityUser.UserName
+                })
+                .OrderBy(admin => admin.Rank)
+                .ToListAsync();
+        }
+        
         public Competition ModifyCompetition(Competition newCompetition)
         {
              Context.Competitions.Update(newCompetition);
@@ -37,7 +66,8 @@ namespace Zyarat.Models.Repositories.CompetitionRepo
 
         public async Task<Competition> GetLastCompetition(bool type)
         {
-            return await Context.Competitions.OrderByDescending(competition => competition.DateTime).FirstOrDefaultAsync();
+            return await Context.Competitions.OrderByDescending(competition => competition.DateTime)
+                .FirstOrDefaultAsync(competition => competition.Type==type);
         }
 
         public async Task<IEnumerable<Competitor>> GetCurrentResult(DateTime from,int minUniqueUsers,int minUniqueVisits)
@@ -51,6 +81,7 @@ namespace Zyarat.Models.Repositories.CompetitionRepo
         public IEnumerable<Winner>GetFinalResult(int cId)
         {
             return Context.Winners.Include(c => c.Competition)
+                .Include(winner => winner.MedicalRep)
                 .Where(winner => winner.CompetitionId==cId);
         }
 

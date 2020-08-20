@@ -19,6 +19,7 @@ namespace Zyarat.Models.Services.InterActing
             return await _visitService.GetVisitAsync(visitId);
         }
         
+        
 
         public async Task<Response<Visit>> GetVisitWithItsReportsAsync(int visitId)
         {
