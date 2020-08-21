@@ -165,5 +165,56 @@ namespace Zyarat.Controllers
                 return BadRequest(state.Error);
             return Ok(state.Source);
         }
+
+        [HttpGet("getNext/{type}")]
+        public async Task<IActionResult> GetNext([FromRoute]string type)
+        {
+            CompetitionType competitionType;
+
+            if (type.ToLower().Equals("monthly"))
+            {
+                competitionType = CompetitionType.Monthly;
+            }
+            
+            else if (type.ToLower().Equals("daily"))
+            {
+                competitionType = CompetitionType.Daily;
+            }
+            else return BadRequest($"no Type named {type} ");
+
+            var state = await _service.GetNextCompetition(competitionType);
+            if (!state.Success)
+            {
+                return NoContent();
+            }
+
+            return Ok (_mapper.Map<Competition, CompetitionDto>(state.Source));
+        }
+        
+        [HttpGet("GetHackers/{type}/{limit}")]
+        public IActionResult GetHeroes([FromRoute]string type,[FromRoute]int limit)
+        {
+            CompetitionType competitionType;
+
+            if (type.ToLower().Equals("monthly"))
+            {
+                competitionType = CompetitionType.Monthly;
+            }
+            
+            else if (type.ToLower().Equals("daily"))
+            {
+                competitionType = CompetitionType.Daily;
+            }
+            else return BadRequest($"no Type named {type} ");
+
+            var state =  _service.GetHackers(competitionType, limit);
+            if (!state.Success)
+            {
+                return NoContent();
+            }
+
+            return Ok(_mapper.Map<IEnumerable<CompetitionHacker>,IEnumerable<CompetitionWinnerForUser>>(state.Source));
+        }
+        
     }
 }

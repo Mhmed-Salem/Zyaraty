@@ -46,6 +46,8 @@ namespace Zyarat.Mapping
             CreateMap<EventNotification, EventNotificationDto>();
             CreateMap<NotificationType, NotificationTypeDto>();
             CreateMap<NotificationTypeDto, NotificationType>();
+            CreateMap<CompetitionWinner, WinnerForUser>();
+            CreateMap<CompetitionHacker, CompetitionWinnerForUser>();
         }
     }
 }

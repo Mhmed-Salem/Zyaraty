@@ -16,7 +16,7 @@ namespace Zyarat.Models.Services.CompetitionService
         private readonly IUnitWork _unitWork;
         private const int ReturnedRowNumber = 20;
         private const int HourOffset = 2;
-        private TimeOffSetHandler _offSetHandler;
+        private readonly TimeOffSetHandler _offSetHandler;
 
         public CompetitionService(ICompetitionRepo repo, IUnitWork unitWork)
         {
@@ -55,18 +55,9 @@ namespace Zyarat.Models.Services.CompetitionService
             try
             {
                 var last =await _repo.GetLastCompetition(competition.Type);
-              //  var time = DateTime.Now.TimeOfDay;
-              //  var now=addDateTime;
-               var now = _offSetHandler.GetDate(addDateTime);
-
+                var now = _offSetHandler.GetDate(addDateTime);
                 var d1=new DateTime(now.Year,now.Month,now.Day).AddDays(1);//for daily comparison
                 var d2=new DateTime(now.Year,now.Month,1).AddDays(1);//for monthly comparision
-               /** if (!(time.Hours > 0 && time.Hours < 2))
-                {
-                    d1=d1.AddDays(1);
-                    d2 = d2.AddMonths(1);
-                }
-              **/
                 if (last!=null&&(!competition.Type && d1 <= last.DateTime.Date
                                  || competition.Type && d2 <= last.DateTime.Date))
                 {
@@ -83,16 +74,36 @@ namespace Zyarat.Models.Services.CompetitionService
             }
         }
 
-        public Task<Response<Competition>> GetNextCompetition(CompetitionType type)
+        public async Task<Response<Competition>> GetNextCompetition(CompetitionType type)
         {
             try
             {
-                throw new Exception();
+                var now = _offSetHandler.GetDate();
+                var d1 = new DateTime(now.Year, now.Month, now.Day).AddDays(1);
+                var d2 = new DateTime(now.Year, now.Month, 1).AddDays(1);
+                var d = CompetitionType.Monthly == type ? d2 : d1;
+                var c = await _repo.GetCompetition(CompetitionType.Monthly == type, d.Year, d.Month, d.Day);
+                return c==null ? new Response<Competition>("you have not added the next competition Yet") : new Response<Competition>(c);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+              return new Response<Competition>($"Error:{e.Message}");
+            }
+        }
+
+        public Response<IEnumerable<CompetitionHacker>> GetHackers(CompetitionType type,int top)
+        {
+            try
+            {
+                var hackers = _repo.GetHackers(type==CompetitionType.Monthly,top);
+                return hackers == null
+                    ? new Response<IEnumerable<CompetitionHacker>>("No Competition Yet!")
+                    : new Response<IEnumerable<CompetitionHacker>>(hackers);
+
+            }
+            catch (Exception e)
+            {
+                return new Response<IEnumerable<CompetitionHacker>>($"Error :{e.Message}");
             }
         }
 
@@ -167,7 +178,7 @@ namespace Zyarat.Models.Services.CompetitionService
                     return new Response<IEnumerable<Competitor>>("No Competition!");
                 }
                 var allCompetitors = await _repo.GetCurrentResult(
-                    new DateTime(last.DateTime.Year, last.DateTime.Month, last.DateTime.Day, 2, 0, 0),
+                    new DateTime(last.DateTime.Year, last.DateTime.Month, last.DateTime.Day, HourOffset, 0, 0),
                     last.MinUniqueUsers,
                     last.MinUniqueVisits);
                 /**
@@ -209,5 +220,8 @@ namespace Zyarat.Models.Services.CompetitionService
                 return new Response<IEnumerable<CompetitionWinner>>($"Error :{e.Message}");
             }
         }
+        
+        
+        
     }
 }

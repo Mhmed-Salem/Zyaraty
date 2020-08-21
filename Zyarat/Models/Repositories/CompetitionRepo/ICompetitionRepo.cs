@@ -17,5 +17,6 @@ namespace Zyarat.Models.Repositories.CompetitionRepo
          Task<Competition> GetLastCompetition(bool type);
          Task<IEnumerable<Competitor>> GetCurrentResult(DateTime from, int minUniqueUsers, int minUniqueVisits);
          IEnumerable<Winner> GetFinalResult(int cId);
+         IEnumerable<CompetitionHacker> GetHackers(bool type, int limit);
     }
 }

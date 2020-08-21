@@ -4,17 +4,29 @@
     <list default="true" id="61e5f741-d18f-472a-b68f-00b96601b2b7" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Messages.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/NotificationService.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionHacker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionWinnerForUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Zyarat/Models/DTO/WinnerForUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Zyarat/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Rep" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Rep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/API'SDocumention/Visit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/API'SDocumention/Visit.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/bin/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Debug/netcoreapp3.1/Zyarat.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/Zyarat.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zyarat/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Zyarat/obj/project.assets.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +52,7 @@
     <favorites_list name="Zyarat" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Zyarat/API'SDocumention" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/CountMessages.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,6 +92,7 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Government.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Visit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BBB3B884-123D-47EA-9CD1-5BED540D02AE/80/8ad183de/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/WinnerForUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Evaluation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Handlers/NotificationHandlers/ReadingHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/MedicalSpecialized.cs" root0="FORCE_HIGHLIGHTING" />
@@ -145,6 +158,7 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/NotificationService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/KeysObjs/EventNotificationPrimaryKey.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Controllers/NotificationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionWinnerForUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/MessageFactory/MessageFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/Message.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Data/EFMappingHelpers/TotalMessage.cs" root0="FORCE_HIGHLIGHTING" />
@@ -187,6 +201,7 @@
     <setting file="file://$PROJECT_DIR$/Zyarat/Migrations/20200816081132_InitandProc.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Factories/NotificationFactory/EventBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationOppositer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionHacker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Responses/DoctorResponse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F3325C05-7891-45B4-AC78-327FC18BDC7C/d9/017f1448/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Zyarat/Resources/AddEvaluationResponse.cs" root0="FORCE_HIGHLIGHTING" />
@@ -214,11 +229,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Zyarat/Data/KeysObjs/EventNotificationPrimaryKey.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/INotificationOppositer.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Services/EvaluationsServices/EvaluationService.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/NotificationService/EvaluationOpposite.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/NotificationTypeDto.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/EventNotificationDTO.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Resources/AddGlobalMessageResponse.cs" />
@@ -255,16 +266,20 @@
         <option value="$PROJECT_DIR$/Zyarat/Program.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Migrations/20200819184556_ModifyGetCurrentCompetitorsProc.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitonWinner.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionWinnerForAdmin.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Migrations/20200820141314_SolveAbigInallProc.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Data/MedicalRep.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/ICompetitionRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/ICompetitionService.cs" />
-        <option value="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionWinnerForAdmin.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionHacker.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" />
         <option value="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/WinnerForUser.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Models/DTO/CompetitionWinnerForUser.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Mapping/AutoMapping.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" />
+        <option value="$PROJECT_DIR$/Zyarat/API'SDocumention/Competition" />
       </list>
     </option>
   </component>
@@ -416,7 +431,8 @@
       <workItem from="1597826660266" duration="27688000" />
       <workItem from="1597905886031" duration="10042000" />
       <workItem from="1597928396654" duration="6716000" />
-      <workItem from="1597940890501" duration="10194000" />
+      <workItem from="1597940890501" duration="14051000" />
+      <workItem from="1597994827519" duration="8043000" />
     </task>
     <servers />
   </component>
@@ -1220,19 +1236,6 @@
           <option name="timeStamp" value="287" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>162</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="121">
-            <startOffsets>
-              <option value="6508" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6581" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="454" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs</url>
           <line>136</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" initialLine="119">
@@ -1247,176 +1250,59 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs</url>
-          <line>26</line>
+          <line>27</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" initialLine="26">
             <startOffsets>
-              <option value="791" />
-              <option value="861" />
+              <option value="840" />
+              <option value="910" />
             </startOffsets>
             <endOffsets>
-              <option value="1105" />
-              <option value="1103" />
+              <option value="1154" />
+              <option value="1152" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="464" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs</url>
-          <line>29</line>
+          <line>30</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" initialLine="29">
             <startOffsets>
-              <option value="1118" />
+              <option value="1167" />
             </startOffsets>
             <endOffsets>
-              <option value="1127" />
+              <option value="1176" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="465" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs</url>
-          <line>57</line>
+          <line>58</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" initialLine="58">
             <startOffsets>
-              <option value="2346" />
+              <option value="-1" />
             </startOffsets>
             <endOffsets>
-              <option value="2346" />
+              <option value="-1" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="467" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs</url>
-          <line>42</line>
+          <line>43</line>
           <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" initialLine="42">
             <startOffsets>
-              <option value="1580" />
-              <option value="1638" />
+              <option value="1629" />
+              <option value="1687" />
             </startOffsets>
             <endOffsets>
-              <option value="2346" />
-              <option value="1675" />
+              <option value="2395" />
+              <option value="1724" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="468" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>56</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="56">
-            <startOffsets>
-              <option value="2163" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2222" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="472" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>58</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="57">
-            <startOffsets>
-              <option value="2294" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2314" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="473" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>62</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="59">
-            <startOffsets>
-              <option value="2492" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2570" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="474" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>61</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="58">
-            <startOffsets>
-              <option value="2394" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2475" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="475" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>74</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="66">
-            <startOffsets>
-              <option value="3070" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3120" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="479" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>75</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="67">
-            <startOffsets>
-              <option value="3137" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3177" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="480" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>76</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="68">
-            <startOffsets>
-              <option value="3194" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3224" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="481" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>77</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="69">
-            <startOffsets>
-              <option value="3241" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3287" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="482" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>81</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="73">
-            <startOffsets>
-              <option value="3364" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3420" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="483" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/TimeOffSetHandler.cs</url>
@@ -1576,68 +1462,200 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>72</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="73">
+          <line>96</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="96">
             <startOffsets>
-              <option value="2965" />
+              <option value="4109" />
             </startOffsets>
             <endOffsets>
-              <option value="3035" />
+              <option value="4110" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="496" />
+          <option name="timeStamp" value="501" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>69</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="70">
+          <line>97</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="97">
             <startOffsets>
-              <option value="2781" />
+              <option value="4127" />
             </startOffsets>
             <endOffsets>
-              <option value="2926" />
+              <option value="4193" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="497" />
+          <option name="timeStamp" value="502" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>71</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="72">
+          <line>98</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="98">
             <startOffsets>
-              <option value="2943" />
+              <option value="4210" />
             </startOffsets>
             <endOffsets>
-              <option value="2944" />
+              <option value="4399" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="498" />
+          <option name="timeStamp" value="503" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs</url>
+          <line>206</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" initialLine="206">
+            <startOffsets>
+              <option value="7384" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7385" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="510" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs</url>
+          <line>207</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" initialLine="207">
+            <startOffsets>
+              <option value="7403" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7447" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="511" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs</url>
+          <line>209</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" initialLine="209">
+            <startOffsets>
+              <option value="7461" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7518" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="515" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs</url>
+          <line>210</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" initialLine="210">
+            <startOffsets>
+              <option value="7531" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7550" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="516" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs</url>
+          <line>211</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" initialLine="211">
+            <startOffsets>
+              <option value="7563" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7564" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="517" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs</url>
+          <line>212</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" initialLine="212">
+            <startOffsets>
+              <option value="7581" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7600" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="518" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs</url>
+          <line>213</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" initialLine="213">
+            <startOffsets>
+              <option value="7613" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7614" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="519" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs</url>
+          <line>215</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Controllers/CompetitionController.cs" initialLine="215">
+            <startOffsets>
+              <option value="7628" />
+              <option value="7638" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7638" />
+              <option value="7638" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="520" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>55</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="63">
+          <line>104</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="104">
             <startOffsets>
-              <option value="2145" />
+              <option value="4459" />
             </startOffsets>
             <endOffsets>
-              <option value="2146" />
+              <option value="4460" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="499" />
+          <option name="timeStamp" value="521" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
-          <line>59</line>
-          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="67">
+          <line>105</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="105">
             <startOffsets>
-              <option value="2330" />
+              <option value="4477" />
             </startOffsets>
             <endOffsets>
-              <option value="2376" />
+              <option value="4552" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="500" />
+          <option name="timeStamp" value="522" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs</url>
+          <line>106</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Services/CompetitionService/CompetitionService.cs" initialLine="106">
+            <startOffsets>
+              <option value="4565" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4566" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="523" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs</url>
+          <line>112</line>
+          <properties documentPath="$PROJECT_DIR$/Zyarat/Models/Repositories/CompetitionRepo/CompetitionRepo.cs" initialLine="108">
+            <startOffsets>
+              <option value="4799" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4811" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="533" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
