@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Zyarat.Data;
 using Zyarat.Helpers;
+using Zyarat.Models.DTO;
 using Zyarat.Models.RequestResponseInteracting;
 using Zyarat.Resources;
 
@@ -13,7 +14,8 @@ namespace Zyarat.Models.Services.MedicalRepService
     {
         
         Task<RegisterServiceResult> AddRepAsync(AddMedicalRepResourcesRequest rep);
-        int GetOnlineUsers();
+        int GetOnlineUsersCount();
+        Task<Response<IEnumerable<MedicalRepSearchResult>>> Search(string query);
         Task<RegisterServiceResult> AddRepForTestAsync(AddMedicalRepResourcesRequest rep);
 
         Task<Response<List<MedicalRep>>> GetAll(int page ,int pageCount);

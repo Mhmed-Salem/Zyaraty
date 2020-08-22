@@ -1,10 +1,12 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Zyarat.Contract.Doctor;
 using Zyarat.Data;
+using Zyarat.Models.DTO;
 using Zyarat.Responses;
 
 namespace Zyarat.Controllers
@@ -21,7 +23,25 @@ namespace Zyarat.Controllers
             _context = context;
             _mapper = mapper;
         }
+        
+        [HttpGet("GetDoctor/{doctorId}")]
+        public async Task<IActionResult> GetDoctor([FromRoute]int doctorId)
+        {
+            var data=await _context.Doctors
+                .Include(doctor => doctor.City)
+                .ThenInclude(city => city.Government)
+                .Include(doctor => doctor.MedicalSpecialized)
+                .FirstOrDefaultAsync(doctor => doctor.Id==doctorId);
+            if (data==null)
+            {
+                return BadRequest($"Error:No doctor with id = {doctorId}");
+            }
 
+            return Ok(_mapper.Map<Doctor,DoctorDto>(data));
+        }
+        
+        
+        
         [HttpPost]
         public async Task<IActionResult> Add([FromForm] AddDoctorDto doctorDto)
         {
@@ -85,6 +105,58 @@ namespace Zyarat.Controllers
                 .Skip((pageNumber - 1) * pageSize).Take(pageSize)
                 .ToListAsync();
             return Ok(data);
+        }
+
+        class SearchO
+        {
+            public int Id { set; get; }
+            public string Name { set; get; }
+            public string Gov { set; get; }
+            public string City { set; get; }
+            public string Spec{ set; get; }
+        }
+
+        [HttpGet("Search")]
+        public IActionResult Search([FromQuery]string query)
+        {
+            var split = query.ToLower().Split(" ");
+            if (string.IsNullOrEmpty(split[0])||split[0].Length<3)
+            {
+                return NoContent();
+            }
+
+            if (split.Length == 1)
+            {
+                return Ok(
+                    _context.Doctors
+                        .Include(rep => rep.City)
+                        .ThenInclude(city => city.Government)
+                        .Include(doctor => doctor.MedicalSpecialized)
+                        .Where(rep => EF.Functions.Like(rep.FName,$"%{split[0]}%"))
+                        .Select(doctor => new SearchO
+                        {
+                            Id = doctor.Id,
+                            Name = doctor.FName + " " + doctor.LName,
+                            Gov = doctor.City.Government.Gov,
+                            City = doctor.City.CityName,
+                            Spec = doctor.MedicalSpecialized.Type
+                        }).ToList()
+                );
+            } 
+            return Ok(
+                _context.Doctors
+                .Include(rep => rep.City)
+                .ThenInclude(city => city.Government)
+                .Include(doctor => doctor.MedicalSpecialized)
+                .Where(rep => rep.FName.Equals(split[0]) &&EF.Functions.Like(rep.LName,$"%{split[1]}%"))
+                .Select(doctor => new SearchO
+                {
+                    Id = doctor.Id,
+                    Name = doctor.FName + " " + doctor.LName,
+                    Gov = doctor.City.Government.Gov,
+                    City = doctor.City.CityName,
+                    Spec = doctor.MedicalSpecialized.Type
+                }).ToList());
         }
     }
 }

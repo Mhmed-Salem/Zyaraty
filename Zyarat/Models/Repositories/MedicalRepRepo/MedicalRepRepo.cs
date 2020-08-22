@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Zyarat.Data;
+using Zyarat.Models.DTO;
+using Zyarat.Models.RequestResponseInteracting;
 
 namespace Zyarat.Models.Repositories.MedicalRepRepo
 {
@@ -25,6 +28,48 @@ namespace Zyarat.Models.Repositories.MedicalRepRepo
                 .Include(rep => rep.MedicalRepPosition)
                 .Where(rep => !rep.PermanentDeleted)
                 .FirstOrDefaultAsync(rep => rep.Id == id);
+        }
+
+        public async Task<List<MedicalRepSearchResult>> Search([NotNull]string fname,string lname="")
+        {
+            if (string.IsNullOrEmpty(lname))
+            {
+                var x = await Context.MedicalReps.AsNoTracking()
+                    .Include(rep => rep.IdentityUser)
+                    .Include(rep => rep.City)
+                    .ThenInclude(city => city.Government)
+                    .Where(rep => !rep.PermanentDeleted &&
+                                  EF.Functions.Like(rep.FName, $"%{fname}%"))
+                    .Select(rep => new MedicalRepSearchResult
+                    {
+                        Id = rep.Id,
+                        Name = rep.FName + " " + rep.LName,
+                        UserName = rep.IdentityUser.UserName,
+                        Active = rep.Active,
+                        City = rep.City.CityName,
+                        Gov = rep.City.Government.Gov,
+                        ProfileUrl = rep.ProfileUrl,
+                    }).ToListAsync();
+                return x;
+            }
+            return await Context.MedicalReps.AsNoTracking()
+                .Include(rep => rep.IdentityUser)
+                .Include(rep => rep.City)
+                .ThenInclude(city => city.Government)
+                .Where(rep => !rep.PermanentDeleted 
+                              && rep.FName.Equals(fname) 
+                              &&EF.Functions.Like(rep.LName, $"%{lname}%"))
+                .Select(rep => new MedicalRepSearchResult
+                {
+                    Id = rep.Id,
+                    Name = rep.FName + " " + rep.LName,
+                    UserName = rep.IdentityUser.UserName,
+                    Active = rep.Active,
+                    City = rep.City.CityName,
+                    Gov = rep.City.Government.Gov,
+                    ProfileUrl = rep.ProfileUrl,
+                }).ToListAsync();
+            
         }
 
         public async Task<MedicalRep> GetUserByIdentityIdAsync(string identityId)

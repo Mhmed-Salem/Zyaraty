@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Zyarat.Controllers.Hubs;
 using Zyarat.Data;
 using Zyarat.Helpers;
+using Zyarat.Models.DTO;
 using Zyarat.Models.Repositories.MedicalRepRepo;
 using Zyarat.Models.RequestResponseInteracting;
 using Zyarat.Models.Services.IdentityServices;
@@ -63,9 +64,35 @@ namespace Zyarat.Models.Services.MedicalRepService
             }
         }
 
-        public int GetOnlineUsers()
+        public int GetOnlineUsersCount()
         {
             return ClientsRepo.Users.Count;
+        }
+
+        public async  Task<Response<IEnumerable<MedicalRepSearchResult>>> Search(string query)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(query))
+                {
+                    return new Response<IEnumerable<MedicalRepSearchResult>>("Query is empty");
+                }
+                var split = query.Split(" ");
+                if (split[0].Length<3)
+                {
+                    return new Response<IEnumerable<MedicalRepSearchResult>>($"Length should be more than 3 characters ");
+                }
+
+
+                return split.Length == 1 ||string.IsNullOrWhiteSpace(split[1])
+                    ? new Response<IEnumerable<MedicalRepSearchResult>>(await _repo.Search(split[0]))
+                    : new Response<IEnumerable<MedicalRepSearchResult>>(await _repo.Search(split[0], split[1]));
+
+            }
+            catch (Exception e)
+            {
+                return new Response<IEnumerable<MedicalRepSearchResult>>($"Error:{e.Message}");
+            }
         }
 
         public async Task<RegisterServiceResult> AddRepForTestAsync(AddMedicalRepResourcesRequest request)

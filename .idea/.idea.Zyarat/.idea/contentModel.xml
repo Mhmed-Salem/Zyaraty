@@ -136,6 +136,14 @@
           <e p="20200819184556_ModifyGetCurrentCompetitorsProc.Designer.cs" t="Include" />
           <e p="20200820141314_SolveAbigInallProc.cs" t="Include" />
           <e p="20200820141314_SolveAbigInallProc.Designer.cs" t="Include" />
+          <e p="20200821123224_addIndexToDoctor.cs" t="Include" />
+          <e p="20200821123224_addIndexToDoctor.Designer.cs" t="Include" />
+          <e p="20200821124502_Test101.cs" t="Include" />
+          <e p="20200821124502_Test101.Designer.cs" t="Include" />
+          <e p="20200821173043_addIndexForDoctor.cs" t="Include" />
+          <e p="20200821173043_addIndexForDoctor.Designer.cs" t="Include" />
+          <e p="20200822084051_addIndexToRep.cs" t="Include" />
+          <e p="20200822084051_addIndexToRep.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -157,6 +165,7 @@
             <e p="MedicalRepDto.cs" t="Include" />
             <e p="MedicalRepForVisitDto.cs" t="Include" />
             <e p="MedicalRepPositionDto.cs" t="Include" />
+            <e p="MedicalRepSearchResult.cs" t="Include" />
             <e p="MedicalSpecializationDto.cs" t="Include" />
             <e p="MessageDto.cs" t="Include" />
             <e p="NotificationTypeDto.cs" t="Include" />
@@ -203,7 +212,6 @@
               <e p="IReportRepo.cs" t="Include" />
               <e p="ReportRepo.cs" t="Include" />
             </e>
-            <e p="TestRepo.cs" t="Include" />
             <e p="VisitsRepo" t="Include">
               <e p="IVisitsRepo.cs" t="Include" />
               <e p="VisitRepo.cs" t="Include" />

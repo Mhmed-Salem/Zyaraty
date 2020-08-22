@@ -240,7 +240,19 @@ namespace Zyarat.Controllers
         [HttpGet("CountOnlineUsers")]
         public IActionResult OnlineUsers()
         {
-            return Ok(_service.GetOnlineUsers());
+            return Ok(_service.GetOnlineUsersCount());
+        }
+        
+        [HttpGet("Search")]
+        public async Task<IActionResult> Search([FromQuery]string query)
+        {
+            var state =await _service.Search(query.ToLower());
+            if (!state.Success)
+            {
+                return BadRequest(state.Error);
+            }
+
+            return Ok(state.Source);
         }
         
         

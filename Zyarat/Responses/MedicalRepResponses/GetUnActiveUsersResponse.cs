@@ -14,5 +14,6 @@ namespace Zyarat.Responses.MedicalRepResponses
         public int LikeCount { set; get;}
         public int DisLikeCount { set; get; }
         public int UniqueUsers { set; get; }
+        public bool Active { set; get; }
     }
 }

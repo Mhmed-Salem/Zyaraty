@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Zyarat.Data;
+using Zyarat.Models.DTO;
 
 namespace Zyarat.Models.Repositories.MedicalRepRepo
 {
     public interface IMedicalRepRepo
     {
         Task<MedicalRep> GetUserAsyncWithAllHisInfo(int id);
+        Task<List<MedicalRepSearchResult>> Search(string fname, string lname = "");
         Task<MedicalRep> GetUserByIdentityIdAsync(string identityId);
 
         List<MedicalRep> GetAllUsersAsync(int page ,int itemsCount);

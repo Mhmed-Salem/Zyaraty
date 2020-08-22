@@ -42,3 +42,59 @@ the created object
     "adderMedicalRepId": 1000,//th medical rep eho add this doctor 
     "medicalSpecializedId": 1// the spechialization of this doctor it would be 'batna' or 'Qualb'
 }
+
+------------------------------------------------------------------------------------------------------------------------
+3-
+URL[GET]
+/api/Doctor/Search?Query=ahme
+
+==Explanation
+Search for all doctors who has name like the query.if the query length is less than 3 characters then a No Content(204)
+will be the response .
+
+
+==Response 
+[
+    {
+        "id": 1560767,
+        "name": "ahmed Muhammed",
+        "gov": "Government6",
+        "city": "City29",
+        "spec": "Type2"////spechialization
+    },
+    {
+        "id": 1861008,
+        "name": "ahmed ali",
+        "gov": "Government18",
+        "city": "City51",
+        "spec": "Type1"//spechialization
+    },
+   .,
+   .
+]
+
+-------------------------------------------------------------------------------------------------------------------------------------
+4-
+URL[GET]
+/api/Doctor/getdoctor/{id}
+
+ex)
+/api/Doctor/getdoctor/1560767
+
+
+==Explanation
+Get the doctor who have a specific Id
+
+{
+    "id": 1560767,
+    "fName": "100266881125305796",
+    "lName": "725425049883033392",
+    "city": {
+        "id": 237,
+        "cityName": "City29"
+    },
+    "medicalSpecialized": {
+        "id": 2,
+        "type": "Batna"
+    }
+}

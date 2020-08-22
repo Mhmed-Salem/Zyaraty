@@ -83,6 +83,14 @@ namespace Zyarat.Data
            builder.Entity<Message>()
                .HasIndex(message => new {message.ReceiverId, message.DateTime})
                .IsClustered(false);
+           builder.Entity<Doctor>()
+               .HasIndex(doctor => new {doctor.FName, doctor.LName})
+               .IncludeProperties(doctor => new {doctor.CityId, doctor.MedicalSpecializedId})
+               .IsClustered(false);
+           builder.Entity<MedicalRep>()
+               .HasIndex(rep => new {rep.FName, rep.LName})
+               .IncludeProperties(rep => new {rep.Id,rep.IdentityUserId,rep.CityId, rep.Active, rep.ProfileUrl, rep.PermanentDeleted})
+               .IsClustered(false);
            /**End of Adding Indexes*/
            
            /**Seed NotificationType data*/

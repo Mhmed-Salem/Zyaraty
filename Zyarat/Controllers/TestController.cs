@@ -49,8 +49,8 @@ namespace Zyarat.Controllers
                 {
                     Active = true,
                     CityId = r.Next(152,300),
-                    FName = $"ahmed{i}",
-                    LName= $"Embaby{i}",
+                    FName = r.Next(1000,10000650).ToString()+r.Next(1255558,654654654).ToString(),
+                    LName= r.Next(1000,14550000).ToString()+r.Next(155258,654654654).ToString(),
                     ProfileUrl = "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
                     WorkedOnCompany = "VDSKANVKLJDSN;AFKJVNKLDSNVKLNCFSVLK; NFD B;LKNCKLN BCKLNVLKLDFSMNVKMSDNVOKNSKDMFNM",
                     MedicalRepPositionId = r.Next(1,4),
@@ -70,23 +70,25 @@ namespace Zyarat.Controllers
         
         [HttpPost("/addDoctors")]
 
-        public IActionResult AddDoctors()
-        {
-            var doctors = new Doctor[30000];
-            var r=new Random();
-            for (int i = 0; i < 30000; i++)
-            {
-                doctors[i] = new Doctor
+        public IActionResult AddDoctors(){
+        
+                var doctors = new Doctor[720000];
+                var r = new Random();
+                for (int i = 0; i < 720000; i++)
                 {
-                    CityId = r.Next(152, 300),
-                    FName = $"ahmed{i}",
-                    LName = $"Embaby{i}",
-                    MedicalSpecializedId = r.Next(1, 4),
-                    AdderMedicalRepId = r.Next(1, 30000),
-                };
-            }
-            _context.Doctors.AddRange(doctors);
-            _context.SaveChanges();
+                    doctors[i] = new Doctor
+                    {
+                        CityId = r.Next(152, 300),
+                        FName = r.Next(1000000, 1000000000) + r.Next(1000000, 1000000000).ToString(),
+                        LName = r.Next(1000000, 1000000000) + r.Next(1000000, 1000000000).ToString(),
+                        MedicalSpecializedId = r.Next(1, 4),
+                        AdderMedicalRepId = r.Next(1, 30000),
+                    };
+                }
+                _context.Doctors.AddRange(doctors);
+                _context.SaveChanges();
+            
+
             return Ok();
         }
         

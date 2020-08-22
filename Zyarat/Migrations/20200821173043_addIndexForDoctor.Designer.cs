@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Zyarat.Data;
 
 namespace Zyarat.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20200821173043_addIndexForDoctor")]
+    partial class addIndexForDoctor
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -474,13 +476,13 @@ namespace Zyarat.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("FName")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IdentityUserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LName")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("LikeCount")
                         .HasColumnType("int");
@@ -512,10 +514,6 @@ namespace Zyarat.Migrations
                     b.HasIndex("IdentityUserId");
 
                     b.HasIndex("MedicalRepPositionId");
-
-                    b.HasIndex("FName", "LName")
-                        .HasAnnotation("SqlServer:Clustered", false)
-                        .HasAnnotation("SqlServer:Include", new[] { "Id", "IdentityUserId", "CityId", "Active", "ProfileUrl", "PermanentDeleted" });
 
                     b.ToTable("MedicalReps");
                 });

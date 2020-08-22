@@ -104,6 +104,8 @@ Image
     "refreshToken": "fkh4kXyoZf8XyrnHrjv8pNrSXUXRzwd5WABwrh0xZZA="
 }
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
 4-
 ==URL [POST]
 
@@ -348,4 +350,53 @@ URL[GET]
 get the number of online users in the moment this API invoked in;
 ==Response 
 2500
----------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+12-
+URL[GET]
+/api/rep/active/{repId}
+
+ex)
+/api/rep/active/1755
+
+==Explanation
+ReActive the User who have id={repId}
+
+{
+    "id": 40790,
+    "fName": "461440603130071",
+    "lName": "1726324223017773",
+    "profileUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+    "workedOnCompany": "VDSKANVKLJDSN;AFKJVNKLDSNVKLNCFSVLK; NFD B;LKNCKLN BCKLNVLKLDFSMNVKMSDNVOKNSKDMFNM",
+    "cityId": 221,
+    "visitsCount": 0,
+    "likeCount": 0,
+    "disLikeCount": 0,
+    "uniqueUsers": 0,
+    "active": true
+}
+
+-------------------------------------------------------------------------------------------------
+13-
+URL[GET]
+/api/rep/search?query=ahme
+
+==Explanation
+Search for reps by The name.
+the query should be more than 3 characters to search.
+==Response 
+
+[
+    {
+        "id": 62484,
+        "name": "Ahmed Muhammed",
+        "userName": "ahmedEmbaby2125",
+        "gov": "Government1",
+        "city": "City92",
+        "profileUrl": "ceqmnfcpkmfadlmcla;mscplm;V;PLDSMVLMS;DLVM,L;DMVL;D",
+        "active": true
+    },
+    .,
+    .,
+]
+
+------------------------------------------------------------------------------------------------
