@@ -7,15 +7,15 @@ City Id=1
 
 ==Explanation
 Get all the doctors in passed city
-
+/doctors/?cityName=that
 ==Response 
 [
      {
         "fName": "a1",
         "lName": "b1",
-        "cityId": 1,
-        "adderMedicalRepId": 1,
-        "medicalSpecializedId": 1
+        "cityId": 1,  //return the name of the city
+        "adderMedicalRepId": 1,  //get who add the doctor
+        "medicalSpecializedId": 1  //get the specialization
     },
     .
     .
@@ -62,7 +62,8 @@ will be the response .
         "city": "City29",
         "spec": "Type2"////spechialization
     },
-    {
+/api/doctors
+ {
         "id": 1861008,
         "name": "ahmed ali",
         "gov": "Government18",
